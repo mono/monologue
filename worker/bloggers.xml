@@ -1,5 +1,6 @@
 <BloggerCollection>
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
+	<Blogger Name="Cesar Lopez" RssUrl="http://ada.fciencias.unam.mx/~olopez/jscript/cesar.rss2" />
 	<Blogger Name="Miguel de Icaza" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
 	<Blogger Name="Jackson Harper" RssUrl="http://www.jacksonh.net/jackson/blog/jackson.rss2" />
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
