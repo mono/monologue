@@ -47,6 +47,5 @@
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Eric Butler" RssUrl="http://www.extremeboredom.net/rss.php"/>
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/Modules/BlogRSS.aspx?mid=4"/>
-	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?"/>
 	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
 </BloggerCollection>
