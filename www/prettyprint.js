@@ -23,33 +23,36 @@ function paintColors ()
 	for (n=elems.length - 1; n>=0; n--)
 	{
 		if (elems[n].className == "code-csharp") {
-			output = formatCs (elems [n].innerHTML);
-			//elems [n].innerHTML = "";
-			div = document.createElement("div");
-			div.className = "code-csharp";
-			div.innerHTML = output;
-			elems [n].parentNode.replaceChild(div, elems [n]);
+			format (elems [n], formatCs);
 		}
 		else if (elems[n].className == "code-xml") {
-			output = formatXml (elems [n].innerHTML);
-			//elems [n].innerHTML = "";
-			div = document.createElement("div");
-			div.className = "code-xml";
-			div.innerHTML = output;
-			elems [n].parentNode.replaceChild(div, elems [n]);
+			format (elems [n], formatXml);
 		}
 	}
 }
 
-function formatCs (text)
+function format (node, func)
 {
+	text = node.innerHTML;
+
+	div = document.createElement("div");
+	var className = node.className;
+	
 	// remove trailing/leading lines
 	while (text.charAt (0) == "\n" || text.charAt (0) == "\r" )
 		text = text.substr (1);
 	
 	while (text.charAt (text.length) == "\n" || text.charAt (text.length) == "\r" )
 		text = text.splice (0, -1);
-		
+
+	div.innerHTML = func (text);
+	node.parentNode.replaceChild(div, node);
+	div.className = className;
+}
+
+function formatCs (text)
+{
+
 	var re = / /g;
 	text = text.replace (re, "&nbsp;");
 
@@ -83,15 +86,7 @@ function formatCs (text)
 }
 
 function formatXml (text)
-{
-	// remove trailing/leading lines
-	while (text.charAt (0) == "\n" || text.charAt (0) == "\r" )
-		text = text.substr (1);
-	
-	while (text.charAt (text.length) == "\n" || text.charAt (text.length) == "\r" )
-		text = text.splice (0, -1);
-	
-	
+{	
 	var re = / /g;
 	text = text.replace (re, "&nbsp;");
 
