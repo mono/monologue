@@ -93,16 +93,16 @@ function formatXml (text)
 	re = /\t/g;
 	text = text.replace (re, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 	
-	re = /<\s*(\/?)\s*((?:(?!<\>>).)*)\s*(\/?)\s*\>/g;
+	re = /\<\s*(\/?)\s*(.*?)\s*(\/?)\s*\>/g;
 	text = text.replace (re,"{blue:&lt;$1}{maroon:$2}{blue:$3&gt;}");
 	
-	re = /{(\w*):([^}]*)}/g;
+	re = /{(\w*):(.*?)}/g;
 	text = text.replace (re,"<span style='color:$1'>$2</span>");
 
-	re = /"(((?![\"]).)*)"/g;
+	re = /"(.*?)"/g;
 	text = text.replace (re,"\"<span style='color:purple'>$1</span>\"");
 
-	re = /\r?\n/g;
+	re = /\r\n|\r|\n/g;
 	text = text.replace (re, "<br/>");
 	
 	return text;
