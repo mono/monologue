@@ -10,7 +10,7 @@
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" />
 	<Blogger Name="Todd Berman" RssUrl="http://codeblogs.ximian.com/blogs/tberman/index.xml" />
 	<Blogger Name="Mono::" RssUrl="http://www.go-mono.com/index.rss" />
-	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/index.xml" />
+	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalorss.php" />
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
 	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
 	<Blogger Name="Tip Mono" RssUrl="http://aeglos.dyndns.org/tip-mono/rss.php"/>
