@@ -8,7 +8,11 @@
 	
 	<body onload='paintColors();'>
 		<h1>Monologue</h1>
+		
 		<div id='bloggers'>
+			<h2>RSS</h2>
+		        <a href="index.rss"><img src="xml.gif"></a> Monologue.
+			
 			<h2>Bloggers</h2>
 			<ul>
 				<!-- @@BLOGGER@@ -->
