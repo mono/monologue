@@ -412,7 +412,6 @@ public class FeedCache {
 				cenc = cenc.ToLower ().Trim ();
 				if (cenc == "gzip") {
 					Settings.Log ("Gzipped");
-					Console.WriteLine (filename);
 					input = new GZipInputStream (input);
 				}
 			}
