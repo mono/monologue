@@ -218,7 +218,7 @@ public class Blogger {
 		get {
 			if (Channel != null)
 				return Channel.Link;
-			return new Uri ("");
+			return new Uri ("http://www.go-mono.com/monologue");
 		}
 	}
 	
