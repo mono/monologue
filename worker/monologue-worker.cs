@@ -95,40 +95,43 @@ class MonologueWorker {
 	
 	static void Render ()
 	{
-		TextWriter w = new StreamWriter (File.Create (outputFile));
-		
-		w.WriteLine (@"
-			<html><head>
-				<title>Monologue::</title>
-				<link rel='stylesheet' href='monologue.css' type='text/css'>
-				<script src='prettyprint.js'>
-				</script>
-			</head><body onload='paintColors();'>
-			<h1>Monologue</h1>
-			");
-			
-		
-		w.WriteLine (@"<div id='bloggers'><h2>Bloggers</h2><ul>");
+		Template tpl = new Template("default.tpl");
+
+		tpl.selectSection ("BLOGGER");
 		foreach (Blogger b in bloggers.Bloggers) {
-			w.WriteLine (@"<li><a href='{0}'>{1}</a> <a href='{2}'>(rss)</a></li>", b.HtmlUrl, b.Name, b.RssUrl);
+			
+			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
+			tpl.setField ("BLOGGER_NAME", b.Name);
+			tpl.setField ("BLOGGER_RSSURL", b.RssUrl);
+			
+			tpl.appendSection ();
 		}
-		w.WriteLine (@"</ul></div>");
-		
-		w.WriteLine (@"<div id='blogs'>");
+		tpl.deselectSection ();
+
+		tpl.selectSection ("BLOG_DAY");
 		foreach (ArrayList day in GetDaysCollectionList ()) {
-			w.WriteLine (@"<h2>{0}</h2>", ((RssItem)day [0]).PubDate.Date.ToString ("M"));
+			
+			tpl.setField ("DAY_DATE", ((RssItem)day [0]).PubDate.Date.ToString ("M"));
+
+			tpl.selectSection ("DAY_ENTRY");
 			foreach (RssItem itm in day) {
-				w.WriteLine (@"
-					<h3><a href='{0}'>{1}: {2}</a></h3>
-					<div class='blogentry'>
-						{3}
-						<p>Posted at {4}</p>
-					</div>
-				", itm.Link, bloggers [itm.Author].Name, itm.Title, itm.Description, itm.PubDate.ToString ("h:mm tt"));
+				tpl.setField ("ENTRY_LINK", itm.Link.ToString ());
+				tpl.setField ("ENTRY_PERSON", bloggers [itm.Author].Name);
+				tpl.setField ("ENTRY_TITLE", itm.Title);
+				tpl.setField ("ENTRY_HTML", itm.Description);
+				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt"));
+
+				tpl.appendSection ();
 			}
+			
+			tpl.deselectSection ();
+			tpl.appendSection ();
 		}
-		w.WriteLine (@"</div>");
-		w.WriteLine (@"</body></html>");
+		tpl.deselectSection ();
+		
+		
+		TextWriter w = new StreamWriter (File.Create (outputFile));
+		w.Write (tpl.getContent ());
 		w.Flush ();
 	}
 	
