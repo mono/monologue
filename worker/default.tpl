@@ -19,6 +19,8 @@
 				<li><a href='@@BLOGGER_URL@@'>@@BLOGGER_NAME@@</a> <a href='@@BLOGGER_RSSURL@@'>(rss)</a></li>
 				<!-- @@BLOGGER@@ -->
 			</ul>
+			
+			<a href="http://www.go-mono.com"><img src="mono-powered-big.png" /></a>
 		</div>
 		
 		<div id='blogs'>
