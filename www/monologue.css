@@ -37,11 +37,6 @@ body, table {
 	border: 0;
 }
 
-#blogs {
-	margin-left: 1em;
-	margin-right: 1em;
-}
-
 .blogentry {
 	margin-left: 2em;
 	margin-right: 2em;
@@ -58,7 +53,7 @@ img {
 	vertical-align: top;
 }
 
-.code 
+.code, .xml , .script
 {
 	margin:15px;
 	padding:15px;
@@ -69,24 +64,20 @@ img {
 	line-height:110%;
 }
 
-.xml 
-{
-	margin:15px;
-	padding:15px;
-	font-size: small;
-	font-family: "Courier New", Courier;
-	background:whitesmoke;
-	border: solid 1px silver;
-	line-height:110%;
+#blogs { 
+	margin-left: 2em;
+	margin-right: 175px;
+}
+#bloggers {
+	float: right;
+	width: 150px;
 }
 
-.script
-{
-	margin:15px;
-	padding:15px;
-	font-size: small;
-	font-family: "Courier New", Courier;
-	background:whitesmoke;
-	border: solid 1px silver;
-	line-height:110%;
+#bloggers h2 {
+	margin-left:0;
+	font-size: 12px;
+}
+#bloggers ul {
+	padding:0;
+	list-style-type:none;
 }
