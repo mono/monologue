@@ -14,4 +14,5 @@
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
 	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
 	<Blogger Name="Tip Mono" RssUrl="http://aeglos.dyndns.org/tip-mono/rss.php"/>
+	<Blogger Name="Dan Morgan" RssUrl="http://codeblogs.ximian.com/blogs/danmorg/index.rdf"/>
 </BloggerCollection>
