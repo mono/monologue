@@ -40,4 +40,5 @@
 	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/wp-rss2.php"/>
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml"/>
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?"/>
+	<Blogger Name="Jb Evain" RssUrl="http://blogs.dotnetguru.org/xmlsrv/rss2.php?blog=17"///>
 </BloggerCollection>
