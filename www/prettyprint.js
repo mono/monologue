@@ -50,22 +50,23 @@ function formatCs (text)
 	while (text.charAt (text.length) == "\n" || text.charAt (text.length) == "\r" )
 		text = text.splice (0, -1);
 		
-	var re = new RegExp(" ","g");
+	var re = / /g;
 	text = text.replace (re, "&nbsp;");
 
+	// cant get this one to work in the good syntax
 	re = new RegExp ("\"((((?!\").)|\\\")*)\"","g");
 	text = text.replace (re,"<span style='color:purple'>\"$1\"</span>");
 
-	re = new RegExp ("//(((.(?!\\\"\\<\\/span\\>))|\"(((?!\").)*)\"\\<\\/span\\>)*)(\r|\n|\r\n)","g");
+	re = /\/\/(((.(?!\"\<\/span\>))|"(((?!").)*)"\<\/span\>)*)(\r|\n|\r\n)/g;
 	text = text.replace (re,"<span style='color:green'>//$1</span><br/>");
 	
 	re = new RegExp (keywords,"g");
 	text = text.replace (re,"<span style='color:blue'>$1</span>");
 	
-	re = new RegExp("\t","g");
+	re = /\t/g;
 	text = text.replace (re,"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 	
-	re = new RegExp("\n","g");
+	re = /\n/g;
 	text = text.replace (re,"<br/>");
 	
 	div = document.createElement("div");
@@ -91,37 +92,37 @@ function formatXml (text)
 		text = text.splice (0, -1);
 	
 	
-	var re = new RegExp(" ", "g");
+	var re = / /g;
 	text = text.replace (re, "&nbsp;");
 
-	re = new RegExp("\t", "g");
+	re = /\t/g;
 	text = text.replace (re, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
 
-	var re = new RegExp("\r?\n", "g");
+	var re = /\r?\n/g;
 	text = text.replace (re, "_br_\n");
 		
-	var re = new RegExp ("<\\s*\\/([a-zA-Z-]+)(\\s[^>]*)?\\>","g");
+	var re = /<\s*\/([a-zA-Z-]+)(\s[^>]*)?\>/g;
 	text = text.replace (re,"{blue:&lt;/}{maroon:$1}{blue:&gt;}");
 	
-	re = new RegExp ("<\\s*\\/([a-zA-Z-]+)(\\s[^>]*)?\\>","g");
+	re = /<\s*\/([a-zA-Z-]+)(\s[^>]*)?\>/g;
 	text = text.replace (re,"{blue:&lt;/}{maroon:$1}{blue:&gt;}");
 	
-	re = new RegExp ("<\\s*(((?!<\\>>).)*)\\s*\\>\\s*","g");
+	re = /<\s*(((?!<\>>).)*)\s*\>\s*/g;
 	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:&gt;}");
 
-	re = new RegExp ("<\\s*([a-zA-Z-]+)\\s*\\>\\s*","g");
+	re = /<\s*([a-zA-Z-]+)\s*\>\s*/g;
 	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:&gt;}");
 	
-	re = new RegExp ("<\\s*(((?!<\\>>).)*)\\s*/\\s*\\>","g");
+	re = /<\s*(((?!<\>>).)*)\s*\/\s*\>/g;
 	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:/&gt;}");
 	
-	re = new RegExp ("{(\\w*):([^}]*)}","g");
+	re = /{(\w*):([^}]*)}/g;
 	text = text.replace (re,"<span style='color:$1'>$2</span>");
 
-	re = new RegExp ("\"(((?![\"]).)*)\"","g");
+	re = /"(((?![\"]).)*)"/g;
 	text = text.replace (re,"\"<span style='color:purple'>$1</span>\"");
 
-	re = new RegExp("_br_", "g");
+	re = /_br_/g;
 	text = text.replace (re, "<br/>");
 	
 	return text;
