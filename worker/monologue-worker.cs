@@ -213,7 +213,9 @@ public class Blogger {
 	[XmlIgnore]
 	public Uri HtmlUrl {
 		get {
-			return Channel.Link;
+			if (Channel != null)
+				return Channel.Link;
+			return "";
 		}
 	}
 	
