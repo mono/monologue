@@ -13,7 +13,9 @@
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalorss.php" />
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
 	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
+<!-- Removed next one. The server is never up 
 	<Blogger Name="Tip Mono" RssUrl="http://aeglos.dyndns.org/tip-mono/rss.php"/>
+-->
 	<Blogger Name="Dan Morgan" RssUrl="http://codeblogs.ximian.com/blogs/danmorg/index.rdf"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://primates.ximian.com/~atsushi/lb/index.rss2"/>
 	<Blogger Name="Erik Dasque" RssUrl="http://primates.ximian.com/~edasque/erik.rss2"/>

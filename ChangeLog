@@ -1,3 +1,12 @@
+2004-07-22 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* worker/Makefile: added 'clean' target.
+	* worker/bloggers.xml: removed tipmono. It's been a while since the
+	server is not up.
+	* worker/monologue-worker.cs: error out on unknown command line
+	argument. Handle redirects 'by hand' as auto-handling is disabled
+	because otherwise, a "304 Not Modified" is an error.
+
 2004-07-13 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/monologue-worker.cs: excluded ENTRY_PERSON code as it's not in

@@ -9,6 +9,9 @@ run : monologue-worker.exe default.tpl
 mig: monologue-worker.exe
 	$(MONO) --debug $< miguel.xml ../www/index.html ../www/index.rss
 
-
 push:
 	scp bloggers.xml www.go-mono.com:monologue/worker/bloggers.xml
+
+clean:
+	rm -f monologue-worker.exe
+

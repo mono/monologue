@@ -69,6 +69,8 @@ class MonologueWorker {
 				FeedCache.CacheDir = Path.Combine (Environment.CurrentDirectory, args [i]);
 				continue;
 			}
+			Console.Error.WriteLine ("Invalid argument: {0}", args [i]);
+			return 1;
 		}
 		
 		do {
@@ -345,6 +347,17 @@ public class FeedCache {
 
 	public static RssFeed Read (string name, string url, out UpdateStatus st)
 	{
+		return Read (name, url, out st, 0);
+	}
+
+	static RssFeed Read (string name, string url, out UpdateStatus st, int redirects)
+	{
+		if (redirects > 10) {
+			Settings.Log ("Too many redirects.");
+			st = UpdateStatus.Error;
+			return null;
+		}
+			
 		st = UpdateStatus.Downloaded;
 		if (name == null)
 			throw new ArgumentNullException ("name");
@@ -352,6 +365,7 @@ public class FeedCache {
 		Settings.Log ("Getting {0}", url);
 		HttpWebRequest req = (HttpWebRequest) WebRequest.Create (url);
 		req.Headers ["Accept-Encoding"] = "gzip";
+		req.Timeout = 30000;
 
 		string filename = null;
 		bool exists = false;
@@ -383,17 +397,29 @@ public class FeedCache {
 			return null;
 		}
 
-		if (resp.StatusCode == HttpStatusCode.NotModified) {
-			// ==> Enabled
+		HttpStatusCode code = resp.StatusCode;
+		switch (code) {
+		case HttpStatusCode.OK: // 200
+			break; // go ahead
+
+		case HttpStatusCode.MovedPermanently: // 301
+		case HttpStatusCode.Redirect: // 302
+		case HttpStatusCode.SeeOther: //303
+		case HttpStatusCode.TemporaryRedirect: // 307
+			string location = resp.Headers ["Location"];
+			resp.Close ();
+			Settings.Log ("Redirecting to {0}", location);
+			return Read (name, location, out st, ++redirects);
+
+		case HttpStatusCode.NotModified: // 304
 			resp.Close ();
 			Settings.Log ("Not modified since {0}.", req.Headers ["If-Modified-Since"]);
 			st = UpdateStatus.Cached;
 			return RssFeed.Read (filename);
-		}
 
-		if (resp.StatusCode != HttpStatusCode.OK) {
+		default:
 			resp.Close ();
-			Settings.Log ("2 {0} getting {1}", resp.StatusCode, url);
+			Settings.Log ("2 {0} getting {1}", code, url);
 
 			if (exists) {
 				Settings.Log ("Using the cached file.");
@@ -409,14 +435,6 @@ public class FeedCache {
 		Stream input = null;
 		try {
 			input = resp.GetResponseStream ();
-			string cenc = resp.Headers ["Content-Encoding"];
-			if (cenc != null) {
-				cenc = cenc.ToLower ().Trim ();
-				if (cenc == "gzip") {
-					Settings.Log ("Gzipped");
-					input = new GZipInputStream (input);
-				}
-			}
 		} catch (WebException we) {
 			Settings.Log ("3 getting response stream {0} for {1}: {2}",
 					name, url, we.Message);
@@ -430,7 +448,16 @@ public class FeedCache {
 			st = UpdateStatus.Error;
 			return null;
 		}
-		
+
+		string cenc = resp.Headers ["Content-Encoding"];
+		if (cenc != null) {
+			cenc = cenc.ToLower ().Trim ();
+			if (cenc == "gzip") {
+				Settings.Log ("Gzipped");
+				input = new GZipInputStream (input);
+			}
+		}
+
 		if (filename == null)
 			filename = Path.GetTempFileName ();
 
