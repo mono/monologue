@@ -1,3 +1,9 @@
+2004-07-13 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* worker/monologue-worker.cs: excluded ENTRY_PERSON code as it's not in
+	the default.tpl in CVS and make the generated titles for the entries be
+	like "Name: Name: Title".
+
 2004-07-12 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/Makefile: reference ICSharpCode.SharpZipLib.
