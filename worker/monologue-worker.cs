@@ -17,8 +17,8 @@ class MonologueWorker {
 	
 	static void Main (string [] args)
 	{
-		if (args.Length != 3 && args.Length != 4)
-			throw new Exception ("monologue-worker.exe BLOGGERS_FILE HTML_OUTPUT RSS_OUTPUT [--loop]");
+		if (args.Length < 3 || args.Length > 5)
+			throw new Exception ("monologue-worker.exe BLOGGERS_FILE HTML_OUTPUT RSS_OUTPUT [--loop [ms to sleep]]");
 		
 		bloggersFile = args [0];
 		outputFile = args [1];
@@ -26,9 +26,13 @@ class MonologueWorker {
 		if (args.Length != 4 || args [3] != "--loop") {
 			RunOnce ();
 		} else {
+			int msToSleep = 600000;
+			if (args.Length >= 5)
+				msToSleep = int.Parse (args [4]);
+				
 			do {
 				RunOnce ();
-				System.Threading.Thread.Sleep (600000);
+				System.Threading.Thread.Sleep (msToSleep);
 			} while (true);
 		}
 	}
@@ -216,12 +220,17 @@ public class Blogger {
 		Console.WriteLine ("Getting {0}", RssUrl);
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
+			if (feed.Exceptions != null)
+				feed = null;
+			
 			foreach (RssItem i in feed.Channels [0].Items)
 				i.Author = Email;
 			return true;
 		} else {
 			RssFeed old = feed;
 			feed = RssFeed.Read (feed);
+			if (feed.Exceptions != null)
+				feed = old;
 			if (feed != old) {
 				foreach (RssItem i in feed.Channels [0].Items)
 					i.Author = Email;
