@@ -13,4 +13,5 @@
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/index.xml" />
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
 	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
+	<Blogger Name="Tip Mono" RssUrl="http://aeglos.dyndns.org/tip-mono/rss.php"/>
 </BloggerCollection>
