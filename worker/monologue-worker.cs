@@ -93,9 +93,16 @@ class MonologueWorker {
 				<link rel='stylesheet' href='monologue.css' type='text/css'>
 			</head><body>
 			<h1>Monologue</h1>
+			");
 			
-			<div id='blogs'>");
 		
+		w.WriteLine (@"<div id='bloggers'><h2>Bloggers</h2><ul>");
+		foreach (Blogger b in bloggers.Bloggers) {
+			w.WriteLine (@"<li><a href='{0}'>{1}</a> <a href='{2}'>(rss)</a></li>", b.HtmlUrl, b.Name, b.RssUrl);
+		}
+		w.WriteLine (@"</ul></div>");
+		
+		w.WriteLine (@"<div id='blogs'>");
 		foreach (ArrayList day in GetDaysCollectionList ()) {
 			w.WriteLine (@"<h2>{0}</h2>", ((RssItem)day [0]).PubDate.Date.ToString ("M"));
 			foreach (RssItem itm in day) {
@@ -108,8 +115,9 @@ class MonologueWorker {
 				", itm.Link, itm.Author, itm.Title, itm.Description, itm.PubDate.ToString ("t"));
 			}
 		}
-		
-		w.WriteLine (@"</div></body></html>");
+		w.WriteLine (@"</div>");
+		w.WriteLine (@"</body></html>");
+		w.Flush ();
 	}
 	
 	static ArrayList GetDaysCollectionList ()
@@ -140,8 +148,24 @@ public class BloggerCollection {
 		return (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
 	}
 	
+	ArrayList bloggers;
 	[XmlElement ("Blogger", typeof (Blogger))]
-	public ArrayList Bloggers;
+	public ArrayList Bloggers {
+		get {
+			return bloggers;
+		}
+		set {
+			bloggers = value;
+			bloggers.Sort (new BloggerComparer ());
+		}
+	}
+	
+	public class BloggerComparer : IComparer {
+		int IComparer.Compare (object x, object y)
+		{
+			return String.Compare (((Blogger)x).Name, ((Blogger)y).Name);
+		}
+	}
 }
 
 public class Blogger {
@@ -156,6 +180,13 @@ public class Blogger {
 				throw new Exception ("Must update feed before getting the channel");
 			
 			return feed.Channels [0];
+		}
+	}
+	
+	[XmlIgnore]
+	public Uri HtmlUrl {
+		get {
+			return Channel.Link;
 		}
 	}
 	
