@@ -208,7 +208,10 @@ public class Blogger {
 		get {
 			if (feed == null)
 				return null;
-			
+		
+			if (feed.Channels.Count == 0)
+				return null;
+	
 			return feed.Channels [0];
 		}
 	}
@@ -228,6 +231,7 @@ public class Blogger {
 		Console.WriteLine ("Getting {0}", RssUrl);
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
+			if (feed.Channels.Count > 0)
 			foreach (RssItem i in feed.Channels [0].Items)
 				i.Author = ID;
 			return true;
@@ -235,6 +239,7 @@ public class Blogger {
 			RssFeed old = feed;
 			feed = RssFeed.Read (feed);
 			if (feed != old) {
+				if (feed.Channels.Count > 0)
 				foreach (RssItem i in feed.Channels [0].Items)
 					i.Author = ID;
 				
