@@ -444,7 +444,7 @@ public class FeedCache {
 
 			return RssFeed.Read (filename);
 		} catch (Exception e) {
-			Console.Error.WriteLine ("4 {0} reading {1}", url);
+			Console.Error.WriteLine ("4 {0} reading {1}", e, url);
 			File.Delete (filename);
 			st = UpdateStatus.Error;
 			return null;
