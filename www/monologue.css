@@ -82,7 +82,7 @@ img {
 	list-style-type:none;
 }
 
-.code-xml, .code-csharp
+.code-xml, .code-csharp, .code-mdb, .code-gaim
 {
 	margin:15px;
 	padding:15px;

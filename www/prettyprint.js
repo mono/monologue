@@ -28,6 +28,12 @@ function paintColors ()
 		else if (elems[n].className == "code-xml") {
 			format (elems [n], formatXml);
 		}
+		else if (elems[n].className == "code-mdb") {
+			format (elems [n], formatMdb);
+		}
+		else if (elems[n].className == "code-gaim") {
+			format (elems [n], formatGaim);
+		}
 	}
 }
 
@@ -117,6 +123,49 @@ function formatXml (text)
 	re = /"(.*?)"/g;
 	text = text.replace (re,"\"<span style='color:purple'>$1</span>\"");
 
+	re = /\r\n|\r|\n/g;
+	text = text.replace (re, "<br/>");
+	
+	return text;
+}
+
+function formatMdb (text)
+{	
+	var re = / /g;
+	text = text.replace (re, "&nbsp;");
+
+	re = /\t/g;
+	text = text.replace (re, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+	
+	re = /^\$(.*)/g;
+	text = text.replace (re, "{blue:\$}{maroon:$1}");
+
+	re = /\(mdb\)(.*)/g
+	text = text.replace (re,"{blue:(mdb)}{maroon:$1}");
+
+	re = /{(\w*):(.*?)}/g;
+	text = text.replace (re,"<span style='color:$1'>$2</span>");
+
+	re = /\r\n|\r|\n/g;
+	text = text.replace (re, "<br/>");
+	
+	return text;
+}
+
+function formatGaim (text)
+{
+	var re = / /g;
+	text = text.replace (re, "&nbsp;");
+
+	re = /\t/g;
+	text = text.replace (re, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
+
+	re = /\(([0-9]+:[0-9]+:[0-9]+)\)?(.*?):\s*(.*?)/g
+	text = text.replace (re,"{blue:(}{maroon:$1}{blue:)}{red:$2}:$3");
+
+	re = /{(\w*):(.*?)}/g;
+	text = text.replace (re,"<span style='color:$1'>$2</span>");
+	
 	re = /\r\n|\r|\n/g;
 	text = text.replace (re, "<br/>");
 	
