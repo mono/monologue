@@ -1,3 +1,12 @@
+2004-07-12 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* worker/Makefile: reference ICSharpCode.SharpZipLib.
+	* worker/RSS.NET.dll: updated.
+	* worker/monologue-worker.cs: don't trust RSS.NET to download the files.
+	Added --cachedir option that provides a directory to keep a cache of
+	downloaded files. If we have the file, send the If-Modified-Since
+	header. Also allow gzipped responses.
+
 2004-03-10  Duncan Mak  <duncan@ximian.com>
 
 	* worker/monologue-worker.cs (RunOnce): Changed the site url from

@@ -1,7 +1,7 @@
 MCS=mcs /debug
 MONO=mono 
 monologue-worker.exe : monologue-worker.cs template4dotnet.cs
-	$(MCS) /r:RSS.NET.dll /out:$@ $^
+	$(MCS) /r:RSS.NET.dll /r:ICSharpCode.SharpZipLib.dll /out:$@ $^
 	
 run : monologue-worker.exe default.tpl
 	$(MONO) $< bloggers.xml ../www/index.html ../www/index.rss
