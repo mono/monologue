@@ -204,7 +204,7 @@ public class Blogger {
 	public RssChannel Channel {
 		get {
 			if (feed == null)
-				throw new Exception ("Must update feed before getting the channel");
+				return null;
 			
 			return feed.Channels [0];
 		}
