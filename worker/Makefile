@@ -10,7 +10,7 @@ mig: monologue-worker.exe
 	$(MONO) --debug $< miguel.xml ../www/index.html ../www/index.rss
 
 push:
-	scp bloggers.xml www.go-mono.com:monologue/worker/bloggers.xml
+	scp bloggers.xml www.go-mono.com:/home/gonzalo/monologue/worker/bloggers.xml
 
 clean:
 	rm -f monologue-worker.exe
