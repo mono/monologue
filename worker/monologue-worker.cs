@@ -158,7 +158,7 @@ public class BloggerCollection {
 	{
 		return (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
 	}
-	
+static int x;	
 	ArrayList bloggers;
 	Hashtable emailToBlogger;
 	[XmlElement ("Blogger", typeof (Blogger))]
@@ -171,6 +171,8 @@ public class BloggerCollection {
 			bloggers.Sort (new BloggerComparer ());
 			emailToBlogger = new Hashtable ();
 			foreach (Blogger b in bloggers) {
+				if (b.Email == "") b.Email = "" + x++;
+
 				emailToBlogger.Add (b.Email, b);
 			}
 		}
