@@ -92,24 +92,9 @@ function formatXml (text)
 
 	re = /\t/g;
 	text = text.replace (re, "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;");
-
-	var re = /\r?\n/g;
-	text = text.replace (re, "_br_\n");
-		
-	var re = /<\s*\/([a-zA-Z-]+)(\s[^>]*)?\>/g;
-	text = text.replace (re,"{blue:&lt;/}{maroon:$1}{blue:&gt;}");
 	
-	re = /<\s*\/([a-zA-Z-]+)(\s[^>]*)?\>/g;
-	text = text.replace (re,"{blue:&lt;/}{maroon:$1}{blue:&gt;}");
-	
-	re = /<\s*(((?!<\>>).)*)\s*\>\s*/g;
-	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:&gt;}");
-
-	re = /<\s*([a-zA-Z-]+)\s*\>\s*/g;
-	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:&gt;}");
-	
-	re = /<\s*(((?!<\>>).)*)\s*\/\s*\>/g;
-	text = text.replace (re,"{blue:&lt;}{maroon:$1}{blue:/&gt;}");
+	re = /<\s*(\/?)\s*((?:(?!<\>>).)*)\s*(\/?)\s*\>/g;
+	text = text.replace (re,"{blue:&lt;$1}{maroon:$2}{blue:$3&gt;}");
 	
 	re = /{(\w*):([^}]*)}/g;
 	text = text.replace (re,"<span style='color:$1'>$2</span>");
@@ -117,7 +102,7 @@ function formatXml (text)
 	re = /"(((?![\"]).)*)"/g;
 	text = text.replace (re,"\"<span style='color:purple'>$1</span>\"");
 
-	re = /_br_/g;
+	re = /\r?\n/g;
 	text = text.replace (re, "<br/>");
 	
 	return text;
