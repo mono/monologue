@@ -220,17 +220,12 @@ public class Blogger {
 		Console.WriteLine ("Getting {0}", RssUrl);
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
-			if (feed.Exceptions != null)
-				feed = null;
-			
 			foreach (RssItem i in feed.Channels [0].Items)
 				i.Author = Email;
 			return true;
 		} else {
 			RssFeed old = feed;
 			feed = RssFeed.Read (feed);
-			if (feed.Exceptions != null)
-				feed = old;
 			if (feed != old) {
 				foreach (RssItem i in feed.Channels [0].Items)
 					i.Author = Email;
