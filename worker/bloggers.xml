@@ -41,5 +41,6 @@
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml"/>
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?"/>
 	<Blogger Name="Jb Evain" RssUrl="http://blogs.dotnetguru.org/xmlsrv/rss.php?blog=17"/>
+	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/feed/rss2/"/>
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
 </BloggerCollection>
