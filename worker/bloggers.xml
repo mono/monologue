@@ -8,4 +8,5 @@
 	<Blogger Name="Duncan Mak " RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
 	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" />
 	<Blogger Name="Todd Berman" RssUrl="http://codeblogs.ximian.com/blogs/tberman/index.xml" />
+	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" />
 </BloggerCollection>
