@@ -91,7 +91,7 @@ class MonologueWorker {
 		bool somethingChanged = false;
 		int [] counters = new int [(int) UpdateStatus.MAX];
 		
-		foreach (Blogger b in bloggers.Bloggers) {
+		foreach (Blogger b in bloggers.BloggersByUrl) {
 			UpdateStatus st;
 			b.Feed = FeedCache.Read (b.Name, b.RssUrl, out st);
 			b.UpdateFeed ();
@@ -117,7 +117,7 @@ class MonologueWorker {
 		ArrayList stories = new ArrayList ();
 		
 		DateTime minPubDate = DateTime.Now.AddDays (-14);
-		foreach (Blogger b in bloggers.Bloggers) {
+		foreach (Blogger b in bloggers.BloggersByUrl) {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
 				if (i.PubDate >= minPubDate) {
@@ -240,6 +240,7 @@ public class BloggerCollection {
 	}
 
 	ArrayList bloggers;
+	ArrayList bloggersByUrl;
 	Hashtable idToBlogger;
 	[XmlElement ("Blogger", typeof (Blogger))]
 	public ArrayList Bloggers {
@@ -254,17 +255,34 @@ public class BloggerCollection {
 				idToBlogger.Add (b.ID, b);
 		}
 	}
-	
+
+	public ArrayList BloggersByUrl {
+		get {
+			if (bloggersByUrl == null) {
+				bloggersByUrl = new ArrayList (bloggers);
+				bloggersByUrl.Sort (new UrlComparer ());
+			}
+			return bloggersByUrl;
+		}
+	}
+
 	public Blogger this [string id] {
 		get {
 			return (Blogger)idToBlogger [id];
 		}
 	}
-	
+
 	public class BloggerComparer : IComparer {
 		int IComparer.Compare (object x, object y)
 		{
 			return String.Compare (((Blogger)x).Name, ((Blogger)y).Name);
+		}
+	}
+
+	public class UrlComparer : IComparer {
+		int IComparer.Compare (object x, object y)
+		{
+			return String.Compare (((Blogger)x).RssUrl, ((Blogger)y).RssUrl);
 		}
 	}
 }
