@@ -1,0 +1,6 @@
+<BloggerCollection>
+	<Blogger Name="Ben Maurer" Email="bmaurer@users.sourceforge.net" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
+	<Blogger Name="Miguel de Icaza" Email="miguel@ximian.com" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
+	<Blogger Name="Jackson Harper" Email="jackson@ximian.com" RssUrl="http://www.jacksonh.net/jackson/blog/jackson.rss2" />
+
+</BloggerCollection>

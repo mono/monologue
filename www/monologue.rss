@@ -1,0 +1,3049 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rss version="2.0">
+  <channel>
+    <title>Monologue</title>
+    <description>The voices of Mono</description>
+    <link>http://dunno.com/</link>
+    <docs>http://backend.userland.com/rss</docs>
+    <generator>Monologue worker: b-diddy powerd</generator>
+    <item>
+      <title>01 Oct 2003: Grudge match</title>
+      <description>&lt;p&gt;
+        &lt;center&gt;
+        &lt;a href="../images/IMG_0628.JPG" border="0"&gt;&lt;img
+        src="../images/IMG_0628_TB.JPG"&gt;&lt;/a&gt;&lt;/center&gt;
+&lt;p&gt;
+        &lt;br&gt;My dad and I
+        
+        &lt;center&gt;
+        &lt;img
+        src="http://www.jacksonh.net/jackson/images/bowie_ticket.jpg"&gt;
+        &lt;/center&gt;
+&lt;p&gt;
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#10%2F01%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#10%2F01%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 01 Oct 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>01 Oct 2003: SouceGear is done!</title>
+      <description>&lt;p&gt;We completed the &lt;a
+	href="http://www.ximian.com/about_us/press_center/press_releases/index.html?pr=sourcegear"&gt;SouceGear&lt;/a&gt;
+	project!
+
+	&lt;p&gt;The project included adding a lot of functionality to Mono
+	to support Web Services on the client (mostly having a full
+	XmlSerializer implementation as well as its close family
+	members) and making Mono robust.
+
+	&lt;p&gt;To make sure that Mono was robust, SourceGear designed a
+	series of extensive tests that Mono would be put under, and
+	the acceptance criteria for the work we did included running
+	the tests for a 24 hour period of time on a single instance of
+	the virtual machine.  Needless to say, making the Mono VM
+	robust enough to run these tests for 24 hours was not easy,
+	and we ran into all sorts of low-level interesting features,
+	memory leaks, race conditions and other assorted small
+	problems that would not have shown under normal
+	circumstances.  We are very happy about this.
+
+	&lt;p&gt;In the meantime, while parts of the team were tracking down
+	the elusive bugs in the runtime, Lluis took the time to
+	implement the server side component of ASP.NET, so as part of
+	the SourceGear effort, we also got our web services stack
+	implement on the server, which was a nice plus.
+	
+&lt;h3&gt;More on exceptions&lt;/h3&gt;
+
+	&lt;p&gt;I was feeling that I should argue a bit more about
+	exceptions, until I received a mail from Krzysztof Cwalina at
+	Microsoft, he raises a good point about exceptions and the
+	null return pattern: they do not allow an error to be
+	propagated, nor details about the error.
+
+	&lt;p&gt;He is absolutely right, and my example with files was not a
+	good one.  I had in mind APIs that did not need to propagate a
+	rich error or details about the condition.  Krzysztof said:
+
+	&lt;blockquote&gt;&lt;i&gt;
+	One problem with null is that you may get notified about the problem
+	really far away from the point when the error occurred. Exception will
+	be thrown right there at the point where the error occurs. The other
+	problem is that null cannot tell you why the error occurred. Error codes
+	have their own set of problems.
+
+	&lt;p&gt;Of course (as with every design) it's a tradeoff. In this case a
+	tradeoff between better error reporting (fail fast, rich error message)
+	and performance (and other things). In general, we err on the side of
+	better reliability, clarity of errors, etc. when designing the
+	Framework. We have several exceptions to the general rule in explicitly
+	identified performance-sensitive APIs.
+	&lt;/i&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;IXmlSerializable explained&lt;/h3&gt;
+
+	&lt;p&gt;&lt;a href="http://primates.ximian.com/~lluis/blog"&gt;Lluis&lt;/a&gt;
+	the man behind the Mono implementation of Remoting and Xml
+	Serializer explains on his &lt;a
+	href="http://primates.ximian.com/~lluis/blog/archives/000130.html"&gt;latest
+	blog entry&lt;/a&gt; how the undocumented IXmlSerializable interface
+	works.  If you ever wondered how you could have precise
+	control over the Xml mapping in XmlSerializer, this is the
+	interface used internally by the framework.
+
+&lt;h3&gt;Welcome Sebastien Pouliot and Duncan Mak!&lt;/h3&gt;
+
+	&lt;p&gt;Sebastien, the man behind the Mono cryptographic
+	infrastructure now has his &lt;a
+	href="http://pages.infinit.net/ctech/poupou.html"&gt;own
+	blog&lt;/a&gt;.
+
+	&lt;p&gt;Duncan also started &lt;a
+	href="http://primates.ximian.com/~duncan/blog/"&gt;his&lt;/a&gt; 
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#10%2F01%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#10%2F01%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 01 Oct 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>An Improved XmlCachingResolver</title>
+      <description>&lt;p&gt;Recently, I came across Chris Lovett's &lt;a
+href="http://msdn.microsoft.com/library/en-us/dnxmlnet/html/XMLToolsUpdate.asp?frame=true#xmltoolsupdate_topic7"&gt;XmlCachingResolver&lt;/a&gt;. However,
+in its current form, this tool did not meet all my needs, so I decided
+to program an enhanced version of the tool.
+&lt;/p&gt;
+
+&lt;p&gt;In Chris' version, he simply uses the &lt;a
+href="http://msdn.microsoft.com/library/en-us/cpref/html/frlrfsystemxmlxmlurlresolverclasstopic.asp"&gt;XmlUrlResolver&lt;/a&gt;
+to download the URL given, and then stores the resulting stream into
+what basically amounts to a MemoryStream. He then stores the stream in
+a Hashtable, and gives a reference to it. When the same document is
+requested in the future, he seeks to 0 in the MemoryStream and returns
+it again&lt;/p&gt;
+
+&lt;p&gt;This has many problems. Firstly, because the same MemoryStream is
+returned each time, it is not thread safe, making it nearly useless
+for ASP.NET applications. Secondly, the cache is not persisted between
+creations of the XmlCachingResolver, meaning that each time an
+application using it is started up, the XML must be downloaded
+again. Third, his tool does not account for instances where the XML
+might change (such as when loading an XML document, not a DTD).&lt;/p&gt;
+
+&lt;p&gt;So my requirements for an improved version were pretty clear: 
+&lt;ul&gt;
+&lt;li&gt;Save my cache to disk, not in memory&lt;/li&gt; 
+&lt;li&gt;When given an HTTP URL, use If-Modified-Since to see if the document needs to be downloaded again&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;p&gt;I created some code that does exactly this. The code creates a
+cache inside the temporary folder, and holds the downloaded
+items. When the a document is requested, the new XmlCachingResolver
+checks if the request is an HTTP request. If so, it will a see if it
+has been stored in the cache. If not, it will download the item from
+the web server and cache the result. If it is in the cache folder, the
+last modification time of the file is sent as the If-Modified-Since
+header. If the item is not modified, the cached version is returned,
+otherwise the cache is updated.
+&lt;/p&gt;
+
+&lt;p&gt;You can download my code &lt;a href="http://codeblogs.ximian.com/blogs/benm/archives/samples/Mono.Xml.XmlCachingResolver.zip"&gt;here&lt;/a&gt;. The code is under
+the X11 license. It includeds a sample that will create an XmlReader from
+a given URL 5 times. If you use a packet sniffer, you will see that
+only once is the full body downloaded (and if you run it again, the
+full body will only be downloaded if the document has changed).&lt;/p&gt;
+ </description>
+      <link>http://codeblogs.ximian.com/blogs/benm/archives/000039.html</link>
+      <author>Ben Maurer</author>
+      <guid isPermaLink="False">39@http://codeblogs.ximian.com/blogs/benm/</guid>
+      <pubDate>Wed, 01 Oct 2003 19:14:45 GMT</pubDate>
+    </item>
+    <item>
+      <title>Why DTM XPathDocument Rocks</title>
+      <description>&lt;p&gt;Atsushi, the XML super-hacker, implemented our &lt;a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfsystemxmlxpathxpathdocumentclasstopic.asp"
+/&gt;XPathDocument&lt;/a&gt;.  At first, his design is non-intuitive, and looks
+as if it would hurt performance, however with careful consideration
+its great design becomes apparent.
+&lt;/p&gt;
+
+&lt;p&gt;Traditionally, XML has been represented using the DOM API. The DOM
+represents XML as a huge linked tree of nodes. This model gives equal
+treatment to reading and writing to the tree. Reading consists of
+traversing the linked lists inside the object representation of the
+tree, while writing consists of adding a new object to the linked
+list. However, the model comes with a huge disadvantage: memory
+overhead. In Mono, every instance of System.Object takes up a
+&lt;em&gt;minimum&lt;/em&gt; of eight bytes. Take the XML
+&lt;code&gt;&amp;lt;item&gt;Apples&amp;lt;/item&gt;&lt;/code&gt;. In the DOM this is represented
+as an Element class, which probably takes up 50 or more bytes to
+describe the element (name, prefix, namespace, first child, last
+child, first attribute, etc) and a Text element, which probably takes
+up about 12 bytes (not including the string value). This is far more
+than the amount of space in the string
+&lt;code&gt;&amp;lt;item&gt;Apples&amp;lt;/item&gt;&lt;/code&gt;! Even worse, each one of these
+objects must be tracked by the Garbage Collector, which will try to
+find out if there are any dead references inside the tangled mess that
+was once a clean, beautiful string. Furthermore, due to the linked
+list structure of the DOM, nodes can be scattered around memory in any
+order. Thus, the big caches on todays processors are negated as nodes are
+retrieved from all over memory.&lt;/p&gt;
+
+&lt;p&gt;Consider that in most instances there is no need to write
+to the tree of XML, usually it is just read from a file and never
+written to. In this case, none of the benefits of the linked list
+structure are realized. Microsoft created the XPathNavigator API in
+order to solve this problem. Their XSLT and XPath implementations use
+this class to navigate XML. Instead of being based on a tree, it is
+based on a cursor that points to a location on the XML tree. For
+example, when evaluating the XPath expression &lt;code&gt;a/b/c&lt;/code&gt;
+MoveToFirstChild () will be called, and a do...while (MoveToNext ())
+loop will be executed looking for an element with the local-name a,
+then a b child node will be looked for, etc. The preferred provider of
+XPathNavigators is XPathDocument (you can also create a XPathNavigator
+wrapper around XmlDocument). Microsoft's XPathDocument, however, is
+merely a lightweight DOM, it still holds all the old problems of
+over-allocation.
+&lt;/p&gt;
+
+&lt;p&gt;
+Atsushi used an innovative solution to remedy the problem. It is key
+to note that the XPathNavigator &lt;em&gt;does not require&lt;/em&gt; the XML to
+be represented as a linked list, it would be possible (though
+inefficient) to create a version that just read from the file on
+demand. Atsushi picked a compromise between these two
+extremes. Atsushi's version represents the document as a table of
+nodes, represented as a set of parallel arrays. These arrays can be
+thought as holding the exact same data as the classes in Microsoft's
+navigator. However, because the arrays are of primitive types, they do
+not incur the object allocation overhead. Furthermore, the links
+between nodes are just integer pointers to indexes in the array of
+nodes. The garbage collector does not understand this type of link,
+and is not forced to follow the tree. It only tracks the actual
+XPathDocument objects and the arrays it holds.
+&lt;/p&gt;
+
+&lt;p&gt;
+So how much difference does this make? According to Atsushi, "it
+navigates nearly 10 times faster than XPathNavigator created by
+XmlDocument.CreateNavigator(), and even 5 times faster than that of
+XPathDocument [from MS.NET 1.0]." Recently, I asked Atsushi to
+redesign DTM using arrays of structs, rather than parallel arrays. It
+reduces the cost of cloning the XPathNavigator, an operation
+frequently used by XPath. From the testing I have done with the new
+version, this benefit can easily be seen in XSLT and XPath.
+&lt;/p&gt;</description>
+      <link>http://codeblogs.ximian.com/blogs/benm/archives/000036.html</link>
+      <author>Ben Maurer</author>
+      <guid isPermaLink="False">36@http://codeblogs.ximian.com/blogs/benm/</guid>
+      <pubDate>Tue, 30 Sep 2003 02:37:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>29 Sep 2003: Anders Hejlsberg</title>
+      <description>&lt;p&gt;In a recent interview Anders said: 
+
+	&lt;blockquote cite="Anders Hejlsberg"&gt;
+
+	&lt;p&gt;If you ask beginning programmers to write a calendar control, they
+	often think to themselves, "Oh, I'm going to write the world's best
+	calendar control! It's going to be polymorphic with respect to the
+	kind of calendar. It will have displayers, and mungers, and this,
+	that, and the other." They need to ship a calendar application in two
+	months. They put all this infrastructure into place in the control,
+	and then spend two days writing a crappy calendar application on top
+	of it. They'll think, "In the next version of the application, I'm
+	going to do so much more."
+
+	&lt;p&gt;Once they start thinking about how they're actually going to
+	implement all of these other concretizations of their abstract
+	design, however, it turns out that their design is completely
+	wrong. And now they've painted themself into a corner, and
+	they have to throw the whole thing out. I have seen that over
+	and over. I'm a strong believer in being minimalistic. Unless
+	you actually are going to solve the general problem, don't try
+	and put in place a framework for solving a specific one,
+	because you don't know what that framework should look like.
+	[&lt;a href="http://www.artima.com/intv/handcuffs.html"&gt;Artima's
+	interview with Anders&lt;/a&gt;]
+	&lt;/blockquote&gt;
+
+	&lt;p&gt;I like Anders' position regarding Checked Exceptions,
+	contrast this with James Gosling's statement, which I believe
+	does paint a broken picture:
+
+	&lt;blockquote cite="James Gosling"&gt;
+	One of the traditional things to screw up in C code is opening
+	a data file to read. It's semi-traditional in the C world to
+	not check the return code, because you just know the file is
+	there, right? So you just open the file and you read it. But
+	someday months from now when your program is in deployment,
+	some system administrator reconfigures files, and the file
+	ends up in the wrong place. Your program goes to open the
+	file. It's not there, and the open call returns you an error
+	code that you never check. You take this file descriptor and
+	slap it into your file descriptor variable. The value happens
+	to be -1, which isn't very useful as a file descriptor, but
+	it's still an integer, right? So you're still happily calling
+	reads. And as far as you can tell, the world is all rosy,
+	except the data just isn't there. [&lt;a
+	href="http://www.artima.com/intv/solid.html"&gt;Artima's
+	interview with James Gosling&lt;/a&gt;]
+	&lt;/blockquote&gt;
+
+	&lt;p&gt;This is in fact the source of many security problems.  One
+	of the first security code audits I witnessed was by a
+	volunteer that reviewed my first setuid application that I
+	shipped as part of the Midnight Commander (the software only
+	shipped after the security audit).  A 200 line program got
+	back 700 lines worth of comments, many of them related to not
+	checking error conditions from trivial system calls like
+	`close()'.
+
+	&lt;p&gt;But modern C APIs do not use int return codes, in fact not
+	even the C standard library uses those: that is only the
+	low-level Unix C API that has this feature.  The standard C
+	library API returns a FILE * object, and for instance, most of
+	Gtk+ and Gnome &lt;a
+	href="http://developer.gnome.org/doc/API"&gt;APIs&lt;/a&gt; return
+	objects (in the form of a pointer to an object).
+
+	&lt;p&gt;The beauty of returning a pointer to an object, is that you
+	can return NULL as your standard error return value, and if
+	the value mattered, you will most likely take the necessary
+	steps to check its return value, or they application will just
+	crash the moment you try to use it.
+
+	&lt;p&gt;This could be applied to the .NET and Java APIs to reduce
+	the amount of required try/catchs.  For example, the
+	File.IO.OpenRead method could be (shown here is the artist's
+	representation):
+
+	&lt;blockquote&gt;&lt;pre id="code"&gt;
+	public static FileStream OpenRead (string file)
+	{
+		int fd = open (file);
+		
+		if (f == -1)
+			return null;
+		return new FileStreamFromFD (f);
+	}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Which makes null a valid return value.  If you fail to
+	check for the return value, you would get a nice
+	NullReferenceException, but you would allow the expensive
+	creation of an exception object, and the ugly try/catch block
+	in the call site.
+
+	&lt;p&gt;Obviously we can not change the existing APIs, but we could
+	encourage developers to minimize their use of exceptions.  In
+	my limited personal experience with software design, when I
+	have faced applications with tons of Exceptions it was
+	extremely hard to keep up with them.  A rewrite of the
+	software to avoid exceptions and use the more sane
+	API paid for. 
+	
+&lt;h3&gt;More Mono Bloggers&lt;/h3&gt;
+
+	&lt;p&gt;I wrote about Ben previously, he now has a &lt;a
+	href="http://codeblogs.ximian.com/blogs/benm/"&gt;blog&lt;/a&gt; which
+	we are hosting for him at Ximian.
+
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F29%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F29%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 29 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hello</title>
+      <description>&lt;p&gt;Today, &lt;a href="http://primates.ximian.com/~miguel/activity-log.php"&gt;Miguel de Icaza&lt;/a&gt; was kind enough to get me a blog on the &lt;a href="http://www.ximian.com"&gt;Ximian&lt;/a&gt; server, so I should probably make use of it. I am a &lt;a href="http://go-mono.com"&gt;Mono&lt;/a&gt; hacker, currently focusing on Managed XSLT, XML Performance, and working on our home-brewed documentation browser (and now editor), Monodoc.&lt;/p&gt;</description>
+      <link>http://codeblogs.ximian.com/blogs/benm/archives/000035.html</link>
+      <author>Ben Maurer</author>
+      <guid isPermaLink="False">35@http://codeblogs.ximian.com/blogs/benm/</guid>
+      <pubDate>Mon, 29 Sep 2003 23:15:22 GMT</pubDate>
+    </item>
+    <item>
+      <title>27 Sep 2003: Productive day</title>
+      <description>&lt;p&gt;
+            Had a pretty productive day on the mono front. Working on
+            getting PythonNet building with our tools. So far this has
+            entailed a bunch of monodis patches (I'd show you them but
+            it would involve walking into the other room and turning
+            sshd on), and implementing pinvoke in ilasm. The PythonNet
+            runtime is written in C# but it uses monodis/ilasm to
+            convert callbacks calling conventions to cdecl using
+            modopt. This technique is also being used in
+            System.Drawing for interop with an existing library
+            (libjpeg I think). There was talk of this being done in
+            Gtk somewhere too. I dont know if that ever happened.
+&lt;p&gt;
+            &lt;hr&gt;
+&lt;p&gt;
+            Had to force myself to go to bed early. I did cheat and
+            bring the laptop with me but I only have battery power. So
+            I am laying in bed with my dog, my laptop, and a
+            beer. Doesn't get any better then this ;-)...check that,
+            it would be better if I had sshd running, and could access
+            my music.
+&lt;p&gt;
+            &lt;hr&gt;
+&lt;p&gt;
+            Mono hacker Martin has started a &lt;a
+            href="http://primates.ximian.com/~martin/blog/"&gt;blog&lt;/a&gt;.
+            Interesting reading. Mainly about his work on gmcs. I
+            wonder if Martin wrote his own blogging tool? That would
+            be classic.
+&lt;p&gt;
+            &lt;hr&gt;
+&lt;p&gt;
+            So I just checked out miguel's &lt;a
+            href="http://primates.ximian.com/~miguel/activity-log.php"&gt;blog&lt;/a&gt;
+            and he has this cool new "Mono Blogs" section (warning
+            probably doesnt work in internet explorer to take full
+            advantage please click &lt;a
+            href="http://www.mozilla.org/"&gt;here&lt;/a&gt;) that lists all of
+            the mono hackers with blogs. We need to get our advanced
+            LameBlog technology into CVS. A TODO list would be good
+            too.
+&lt;p&gt;
+            &lt;hr&gt;
+&lt;p&gt;
+            OK hopefully the &lt;a
+            href="http://www.gnu.org/licenses/gpl.txt"&gt;GPL&lt;/a&gt; will
+            put me to sleep. Usually does. Lawyers must have to take
+            lots of naps, this stuff is so boring.
+&lt;p&gt;
+            
+&lt;p&gt;
+            
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F27%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F27%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 27 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>27 Sep 2003: Assembling life</title>
+      <description>&lt;p&gt;Laura and myself have been shopping for various items for
+	our new appartment.  Once we had chosen the rug, everything
+	fell into place, and in two hours we swiftly sorted out our
+	color differences.  The rug really ties the room together.
+
+&lt;h3&gt;New Mono Bloggers&lt;/h3&gt;
+
+	&lt;a href="http://primates.ximian.com/~martin/blog/"&gt;Martin
+	Baulig&lt;/a&gt; now has a blog.  He talks mostly about his work on
+	the C# compiler.  He is not lucky enough to be using my
+	LameBlog technology.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F27%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F27%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 27 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>25 Sep 2003: My new shirt is boss yo</title>
+      <description>&lt;p&gt;
+    Just bought a new &lt;a
+    href="http://www.gnu.org/gear/FSFS-tshirt.html"&gt;shirt&lt;/a&gt; from the
+    FSF (and made a donation). If everyone else did the same the world
+    would be a better place :-).
+&lt;p&gt;
+    
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F25%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F25%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 25 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>24 Sep 2003: Madrid</title>
+      <description>&lt;p&gt;Just coming back from the &lt;a
+	href="http://congreso.hispalinux.es"&gt;HispaLinux congress&lt;/a&gt;
+	in Madrid.  This was a very short trip: only two days in
+	Madrid, traveled all this and did not have enough time to eat
+	enough ham.
+
+	&lt;p&gt;Update on Extremadura from Jose: they are 100,000 Linux
+	desktop machines in the administration and 276 machines on
+	public centers.   The public machines are fewer than the 1,500
+	from the Telecentros, but still a healthy number.
+
+&lt;h3&gt;Try Ximian Desktop 2&lt;/h3&gt;
+
+	&lt;p&gt;The fine folks in &lt;a
+	href="http://metadistros.hispalinux.es"&gt;Spain&lt;/a&gt; have a &lt;a
+	href="http://metadistros.hispalinux.es/tiki-index.php?page=gnome2-live"&gt;Live
+	CD with Ximian Desktop 2.&lt;/a&gt;   You can try Ximian Desktop
+	without installing Linux on your machine, the whole system
+	runs from a CD.
+
+&lt;h3&gt;OpenOffice gets .NET support&lt;/h3&gt;
+
+	&lt;p&gt;Federico pointed me to the announcement of OpenOffice's
+	support for C# and the CLI, it is &lt;a
+	href="http://www.openoffice.org/servlets/ReadMsg?msgId=832179&amp;listName=announce"&gt;here:&lt;/a&gt;
+
+	&lt;blockquote&gt;&lt;i&gt;
+	We are pleased to provide a preview of the CLI-UNO language binding. It 
+	gives developers the possibility to write client programs for 
+	OpenOffice.org, as well as stand-alone UNO applications, with CLI 
+	languages, such as C# and VB.NET.
+	&lt;/i&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;The details about the language binding are here: &lt;a
+	href="http://udk.openoffice.org/cli/cli-uno.html"&gt;http://udk.openoffice.org/cli/cli-uno.html&lt;/a&gt;.
+
+&lt;h3&gt;PDC&lt;/h3&gt;
+
+	&lt;p&gt;The Microsoft PDC program is getting more and more
+	interesting.  As a sneak preview of the table of contents of a
+	System.Xml/System.Data based book &lt;a
+	href="http://www.daveandal.net/books/8391/8391-intro-toc.htm"&gt;shows&lt;/a&gt;.
+	Dare also sent me a link to the &lt;a
+	href="http://www.daveandal.net/books/8960/8960-intro-toc.htm"&gt;ASP.NET&lt;/a&gt;
+	changes.  Fantastic!
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F24%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F24%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 24 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>24 Sep 2003: Visualizing and Voting</title>
+      <description>&lt;p&gt;
+&lt;a href="http://www.chrisgates.net/irv/"&gt;Here&lt;/a&gt; is a description of
+instant runoff voting in Flash. This describes the
+voting system I think we should use and it describes it visually,
+something I think we should do more often. 
+&lt;p&gt;
+&lt;hr&gt;
+&lt;p&gt;
+Whoever came up with &lt;a href="http://www.findarticles.com/cf_0/m2519/4_21/62410241/p1/article.jhtml?term="&gt;push polling&lt;/a&gt; is a genius. Slimy and evil, but
+also a genius. I wonder if any big corporations use push polling
+tactics against their competitors?
+&lt;p&gt;
+ &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+&lt;i&gt;Ring, Ring...&lt;/i&gt;
+&lt;br&gt;
+&lt;b&gt;Consumer:&lt;/b&gt; Hello
+&lt;br&gt;
+&lt;b&gt;Operator:&lt;/b&gt; Hello ma'am we are running an independent survey on
+             soft drinks. Would you be willing to answer some
+             questions for us?
+&lt;br&gt;
+&lt;b&gt;Consumer:&lt;/b&gt; Umm, sure.
+&lt;br&gt;
+&lt;b&gt;Operator:&lt;/b&gt; Thank You. Would you be more or less likely to drink
+             Pepsi if you knew it was made of mashed up kitten skulls?
+&lt;br&gt;
+&lt;b&gt;Consumer:&lt;/b&gt;Less, is that true?
+&lt;br&gt;
+&lt;b&gt;Operator:&lt;/b&gt;Thank you ma'am, have a good night.
+&lt;br&gt;
+&lt;i&gt;click&lt;/i&gt;
+&lt;/div&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F24%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F24%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 24 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>22 Sep 2003: More books</title>
+      <description>&lt;p&gt;
+      Maybe I will just buy lots of books instead of a new TV. Today I
+      gave amazon.ca some money and in a few days they will give me &lt;a
+      href="http://www.amazon.ca/exec/obidos/ASIN/0060528370/702-7240094-1806424"&gt;the
+      other side of the story&lt;/a&gt;.
+&lt;p&gt;
+      &lt;hr&gt;
+&lt;p&gt;
+      Allot of people ask me what .NET is. &lt;a
+      href="http://www.microsoft.com/net/basics/framework.asp"&gt;This&lt;/a&gt;
+      is a decent description.
+&lt;p&gt;
+      
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F22%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F22%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 22 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>21 Sep 2003: Bitch slappin bugs</title>
+      <description>&lt;p&gt;
+       Today I fixed my section header problem in PEAPI. I had been
+       avoiding this bug for a few weeks but after a long night of
+       reading &lt;i&gt;Lies&lt;/i&gt; I decided to take it on. Al Franken's
+       sarcasm inspired me to take on section headers face to
+       face. I bitch slapped them the same way he bitch slapped
+       Bernie Goldberg. So what does this bitch slapping mean to the
+       average dude on the street? Well the average dude off the
+       street can now CVS update their ilasm tree and start using
+       .data in their il code. I bet allot of people will be calling
+       in sick tommorow so they can stay home and enjoy the fruits of
+       my labour.
+&lt;p&gt;
+       &lt;hr&gt;
+&lt;p&gt;
+       .data in ilasm is very very sneaky. You can put a .data
+       definition in a class definition or make it global. The sneaky
+       thing is that IT IS ALL GLOBAL! If you put a .data definition
+       in a class you can reference it from another class without
+       using any scope resolution. Here is an example:
+&lt;p&gt;
+       &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+     &lt;pre&gt;
+.class public Stub extends [mscorlib]System.Object {
+       .data some_data = int32 (1)
+}
+.class public T extends [mscorlib]System.Object {
+        .field private static int32 some_field at some_data
+}
+     &lt;/pre&gt;
+     &lt;/div&gt;
+&lt;p&gt;
+     Crazyness, eh? As you can see Stub::some_data is being referenced
+     from T::some_field without using Stub::. Thats because some_data
+     is actually global.
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     Wrote a five minute hack today that reduces memory consumption in
+     jay pretty drastically. Hopefully it gets approved...hint hint ;-)
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     Oh Ben, forgot to mention this this morning when we were talking
+     about parsing. EOF. How you like them apples.
+&lt;p&gt;
+     
+&lt;p&gt;
+       
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F21%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F21%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 21 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>20 Sep 2003: Lluis has a blog</title>
+      <description>&lt;p&gt;Lluis, the developer behind Mono's XML Serialization, a
+	large part of Remoting and our SOAP web services stack has
+	started a &lt;a
+	href="http://primates.ximian.com/~lluis/blog/"&gt;blog&lt;/a&gt;.  His
+	first post is about the his &lt;a
+	href="http://primates.ximian.com/~lluis/blog/archives/000120.html"&gt;GenXS&lt;/a&gt;
+	tool used to create custom XmlSerializers (a feature not found
+	on Microsoft's edition, but that we use in a few places).
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F20%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F20%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 20 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>20 Sep 2003: Broken test cases (please)</title>
+      <description>&lt;p&gt;
+        Sometimes broken test cases that never pass are a really good
+        thing. They force you to really think through your code and
+        find other bugs that your test didnt even cover. Eventually
+        after you have tracked down every possible point of failure
+        and are considering quitting programming and getting a job at
+        McDonalds you will probably (hopefully) notice that your test
+        is broken. Some of the most buried bugs I have fixed have been
+        because of a broken test case. So what we need is a test
+        runner that fails randomly, but we cant know that it fails
+        randomly. If we knew the testing framework failed randomly we
+        would just assume every test failure was a random
+        failure....anyone on the Nant team willing to work on this? If
+        you are dont tell me ;-).
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        Mono hacker Lluis started a &lt;a
+        href="http://primates.ximian.com/~lluis/blog/"&gt;blog&lt;/a&gt; and
+        already posted an interesting entry on creating custom xml
+        serializers. Hopefully more of the Mono hackers (Gonzalo) that
+        have an in-depth knowledge of .NET will start blogs. 
+        
+        &lt;hr&gt;
+&lt;p&gt;
+        I started to write an application that converts the whitespace
+        programming langauge to ilasm. It is about 90% of the way done
+        but is low priority and has been back burnered. If
+        you want the code send me an email.
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        Maybe its just the conspiracy theorist in me but sometimes I
+        think Sun is behind this whole SCO debacle. &lt;a
+        href="http://news.com.com/2452-7344-5079251.html"&gt;This&lt;/a&gt;
+        quote is taken a little out of context but I cant find the
+        full interview anymore. I guess I should watch the trees for
+        snipers tonight ;-).
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        As I begin to leave the house I receive a backlog of 17
+        pages. Guess I get to play ops for a little while. Tempted to
+        leave the pager in Roxys possession.
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        I bought three new books today. Amazingly enough one of them
+        is a non-technical book. &lt;i&gt;Lies&lt;/i&gt; by Al Franken. Very good
+        book so far. I also got an Emacs book (not RMS's) and a intro
+        to Pascal book. Its obvious enough why I got the emacs book. I
+        use emacs for 95% of my computer activities but am not really
+        much of a power user. The reasoning behing the pascal book is:
+&lt;p&gt;
+        &lt;ul&gt;
+                &lt;li&gt;You cant get 5 pages into a compiler book without
+                seeing pascal&lt;/li&gt;
+                &lt;li&gt;Oberon is a member of the pascal family&lt;/li&gt;
+                &lt;li&gt;It was only 5 dollars&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;p&gt;
+        
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F20%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F20%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 20 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>17 Sep 2003: Please open your text books to chapter 11</title>
+      <description>&lt;p&gt;
+        The fault block and finally block cant coexist with other SEH
+        blocks. If you create a try catch finally block in C# what you
+        are really getting is this:
+&lt;p&gt;
+        &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+             &lt;pre&gt;
+ .try {
+         .try {
+                 // do some stuff
+         } catch [mscorlib]System.Exception {
+                 // handle exception
+         }
+ } finally {
+         // do some stuff
+ }
+ &lt;/pre&gt;
+        &lt;/div&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F17%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F17%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 17 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>16 Sep 2003: Binary XML.</title>
+      <description>&lt;p&gt;&lt;a
+	href="http://www.kuro5hin.org/user/Carnage4Life/diary"&gt;Dare&lt;/a&gt;
+	linked to &lt;a
+	href="http://www.gazitt.com/OhmBlog/PermaLink.aspx/13178f4f-b851-4568-972b-2886048490a2"&gt;Omri's&lt;/a&gt;
+	posting about why binary serialization for XML is a bad idea.
+
+	&lt;p&gt;I have not really formed an opinion, and am definitely not
+	an expert on the matter of binary serialization for XML, but I
+	believe that Omri's position is an incorrect one.  Omri's
+	thesis is that there are multiple things that you might want
+	to opmize for: size, parsing speed and overhead for generating
+	the data and that it is not possible to define a file format
+	that satisfies all of those different needs.
+
+	&lt;p&gt;This is not new, and this happens with everything we build
+	today: as software developers we constantly have to balance
+	multiple needs: maintainability, performance, extensibility,
+	perfection, scalability, configurability, usability.  The job
+	of an architect is precisely to find a good balance taking
+	input from multiple sources.  We are going to make mistakes,
+	every step of the way, but the sooner we start making those
+	mistakes, the earlier we will be able to collect real data on
+	the issues at hand.
+
+	&lt;p&gt;The other problem with Omri's thesis is that it misses one
+	bit: who are those likely to benefit from a binary format?
+	They probably will fall in two camps: those who want smaller
+	chunks of data transfered, and those who want faster
+	encoding/decoding of the infoset not the average XML user.
+
+	&lt;p&gt;We do not need to satisfy everyone, just a large percentage
+	of the user base.  The others can feel free to define a
+	different format, or ignore this solution altogether or build
+	on top of this in the future.
+
+	&lt;p&gt;For instance TCP/IP makes no guarantees on quality of
+	service despite the fact that many people have valid and
+	important uses for it.  Still, it did serve a large community
+	of people and what is even more interesting: clever people
+	found ways to work with these limitations and do a reasonable
+	job given the foundation.  
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F16%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F16%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 16 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>14 Sep 2003: Best Xml tool ever</title>
+      <description>&lt;p&gt;
+      &lt;p&gt;
+      &lt;a href="http://www.xmlhack.com/read.php?item=2061"&gt;nXML&lt;/a&gt;
+      mode is very nice. I wish more tools were like this. Fast,
+      simple, and easy to install.
+      &lt;/p&gt;
+&lt;p&gt;
+      &lt;hr&gt;
+&lt;p&gt;
+      &lt;p&gt;Taking Roxy to &lt;a
+      href="http://www.britishcolumbia.com/ParksAndTrails/Parks/details/?ID=457"&gt;Thetis
+      Lake Park&lt;/a&gt;. I am going to take the camera and hope I can get
+      a cool dog-in-mid-air-jumping-into-water picture.&lt;/p&gt;
+&lt;p&gt;
+      &lt;hr&gt;
+&lt;p&gt;
+      &lt;p&gt;
+      Sunset pictures are such a cop-out....so are dog pictures. So
+      here are some:
+      &lt;/p&gt;
+&lt;p&gt;
+      &lt;a href="../images/IMG_0601.JPG"&gt;&lt;img
+      src="../images/IMG_0601_tb.JPG" border="0"&gt;&lt;/a&gt;
+       &lt;a href="../images/IMG_0602.JPG"&gt;&lt;img
+      src="../images/IMG_0602_tb.JPG" border="0"&gt;&lt;/a&gt;
+       &lt;a href="../images/IMG_0607.JPG"&gt;&lt;img
+      src="../images/IMG_0607_tb.JPG" border="0"&gt;&lt;/a&gt;
+&lt;p&gt;
+      
+      
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F14%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F14%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 14 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>14 Sep 2003: XSLT in Mono: the story of a young hacker.</title>
+      <description>&lt;p&gt;Some time ago, I spoke to Daniel Veillard the author of &lt;a
+	href="http://www.xmlsoft.org/"&gt;Libxslt and Libxml&lt;/a&gt;.  When
+	Mono started, we wanted to reuse as code as possible, and
+	those two libraries made a lot of sense to reuse.
+
+	&lt;p&gt;The problem is that .NET Framework defines three mechanism
+	for handling Xml: the Dom model, the pull parser, and the path
+	navigator (a DOM-like &lt;i&gt;interface&lt;/i&gt;).  It was not possible
+	for us to just use libxml to implement our Xml needs, it would
+	have added too much overhead, and would have been an ugly
+	hack.
+
+	&lt;p&gt;.NET contains two pretty clever tricks: the pull parser
+	(XmlTextReader and XmlTextWriter) and the path navigator,
+	which exposes a cursor-based navigation interface.  The
+	beauty of the interface is that you can wrap any kind of data
+	source and expose it to the XML subsystem with this interface.
+	So you can wrap a database, a comma separated value file, a
+	file system, anything you can think of, and dynamically
+	provide the content.  Interesting because it is possible to
+	use XPath queries on top of it, or apply xslt
+	transformations.  XSLT in .NET is built completely on top of
+	the XPathNavigator.
+
+	&lt;p&gt;For a long time, in Mono we used libxslt: we would dump all
+	the data from an XmlDocument, or a XPathNavigator into a
+	temporary file, and then use libxslt to do the heavy lifting.
+
+	&lt;p&gt;This approach had various problems: libxslt was not designed
+	to be thread safe (a requirement for us: on ASP.NET we need to
+	be able to do xslt transformations from multiple threads), so
+	we had to add big locks around the xslt invocations.  Also, it
+	was not possible to create a context for the transformation,
+	so extension functions were global to all the
+	transformations.  The only solution was to shutdown and
+	restart the libxslt engine every time we did a transformation,
+	not really optimal.
+
+	&lt;p&gt;Fixing the problem was not going to be easy.  Libxslt is a
+	very large piece of code, and Daniel estimated that
+	re-implementing it would take about a year.  That is why I
+	discouraged 16-year old Mono developer Ben Maurer from working
+	on this project.  He was not really ready to spend a year of
+	hairy coding, and would likely not be able to do something
+	even as fast as Libxslt.
+
+	&lt;p&gt;Ben ignored my advise and went on to implement a managed
+	implementation of XSLT.  The idea was to remove the libxsl
+	dependency: remove the temporary files, fix the extension
+	object problem, and the locks.
+
+	&lt;p&gt;In the course of a couple of weeks this summer, Ben had the
+	basics of XSLT done, and he recruited the help of Atsushi to
+	help with problems and missing features in the XML core, and
+	Piers to fix and improve our XPath implementation.
+
+	&lt;p&gt;The three hacker team in less than a month did a tremendous
+	amount of progress implementation was able to be used instead
+	of Libxslt for Monodoc.
+
+	&lt;p&gt;The surprising news this week is that Ben has made Mono's
+	managed XSLT faster than the C-based libxslt. Faster on a
+	number of the XSLTMark tests and on other practical
+	stylesheets (including the stylesheet used in Monodoc).  The
+	performance can be attributed partially to some performance
+	improvements Atsushi did to our handling of XPathDocuments.
+	The other part was the tireless work of Ben in doing
+	performance tuning in our implementation: from profile-driven
+	changes like removing calls to foreach on ArrayLists with
+	loops to architectural changes.  The biggest improvement was
+	adding an interface for resolving functions/variables at
+	compile time.
+
+	&lt;p&gt;Atsushi mentioned that lots of the performance
+	improvements came from Ben reusing concepts from SAXON.  SAXON
+	is the fastest xslt implementation out there, and its written
+	in Java. 
+
+	&lt;p&gt;Congratulations to all the Mono XML crazy hackers for
+	achieving this fantastic progress in so little time.
+
+&lt;h3&gt;Oberon in Mono&lt;/h3&gt;
+
+	&lt;p&gt;The Mono IL assembler has finally matured to the point
+	where it can be used to bootstrap the Oberon IL compiler on
+	Mono.  The details are in &lt;a
+	href="http://www.jacksonh.net/jackson/blog/"&gt;Jackson's
+	Blog&lt;/a&gt;.
+
+	&lt;p&gt;Of course, some of you might want to laugh because we got
+	generics support before Oberon worked ;-)
+	
+	&lt;p&gt;Go Jackson!&lt;/p&gt;
+
+&lt;h3&gt;Jakarta and Mono&lt;/h3&gt;
+
+	&lt;p&gt;&lt;a
+	href="http://www.burtongroup.com/weblogs/annethomasmanes/"&gt;Anne&lt;/a&gt;
+	talks about our recent discussion.  She wants to reuse the
+	Mono CLI, and build on top of it patent-free technologies
+	along the lines of the technologies done in the past for Java
+	(Cocoon, Struts).
+
+	&lt;p&gt;She is absolutely right about the need to build a parallel
+	universe of technologies.  In Mono we have already started
+	this process:&lt;/p&gt;
+
+	&lt;img src="http://primates.ximian.com/~miguel/tmp/map.png"&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F14%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F14%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 14 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>13 Sep 2003: P/Invoke limitations</title>
+      <description>&lt;p&gt;&lt;a href="http://www.jprl.com/~jon/"&gt;Jonathan Pryor&lt;/a&gt; has
+	written a tutorial about Marshaling on Mono and the .NET
+	Framework.  Hopefully this will become a chapter on the &lt;a
+	href="http://www.go-mono.com:8080"&gt;Mono Handbook&lt;/a&gt;&lt;/p&gt;
+
+	&lt;p&gt;One of the points discussed on the document is about string
+	marshalling in .NET and the limitation imposed by the current
+	specification.  Sadly the ECMA specification (and .NET) only
+	cover Ansi and Unicode as encodings for strings.   Both are
+	also underspecified, they are both `platform independent
+	encodings'.
+
+	&lt;p&gt;This is a problem, because there is no such thing as
+	`Unicode encoding'.  There are specific ways of encoding:
+	utf-8, utf-16, ucs-2, ucs-4 and others.  Which one are we
+	talking about.
+	
+	&lt;p&gt;The issue we face on Unix and Windows is that there are
+	plenty of libraries that have very specific requirements.  We
+	first ran into this problem with the Python bindings to .NET.
+	Python can be compiled to either use utf-8 or ucs-4 API entry
+	points.  
+
+	&lt;p&gt;Another example is &lt;a
+	href="http://gtk-sharp.sf.net"&gt;Gtk#&lt;/a&gt;.  Currently it
+	generates bindings like this:
+
+	&lt;blockquote&gt;&lt;pre id="code"&gt;
+[DllImport("libgtk-win32-2.0-0.dll")]
+static extern void gtk_label_set_text(IntPtr raw, string str);
+
+public string Text { 
+	set {
+		gtk_label_set_text(Handle, value);
+	}
+}		
+	&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;The above uses the default "Ansi" encoding, which we have
+	conveniently mapped in Mono to do a conversion from Unicode to
+	utf-8 (Gtk+ uses utf-8 as input).  But this is not entirely
+	correct.  The trouble is that to be &lt;i&gt;entirely&lt;/i&gt; correct we
+	will have to generate code like this:
+
+	&lt;blockquote&gt;&lt;pre id="code"&gt;
+[DllImport("libgtk-win32-2.0-0.dll")]
+static extern void gtk_label_set_text(IntPtr raw, IntPtr str);
+
+public string Text { 
+	set {
+		// Marshaller is a helper class that every developer
+		// has to roll on its own.
+                IntPtr raw_str = Marshaller.ConvertToUTF8 (value);
+		gtk_label_set_text(Handle, raw_str);
+		Marshaller.PtrToStringGFree (raw_str);
+	}
+}		
+	&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;This is not a problem for Gtk# which is generating the
+	bindings for us, just a bit more of annoyance, but it is a
+	problem for newcomers to .NET who will find the above just too
+	complicated for average use.  Not only that, but the other
+	problem is that most of the time the app &lt;i&gt;appears&lt;/i&gt; to
+	work.  It is only under stress conditions found during
+	deployment (or testing if you are lucky) that the developer
+	will be bit by this missing functionality. &lt;/p&gt; 
+	
+	&lt;p&gt;We identified a couple of unused bits on the encoding for
+	this attribute in the ECMA spec, and suggested that they get
+	used for the most populate encodings (utf-8 and ucs-2 I
+	believe), but we were turned down by Microsoft.  The current
+	position is to use a platform specific attribute to encode
+	this.  This has problems, because we can not be compatible
+	with .NET unless we all adopt the same scheme.  The other
+	problem is that by using a real custom attribute to do this,
+	as opposed to a synthesized one (the attribute being turned
+	into a bit value) is that we will loose performance.&lt;/p&gt;
+
+	&lt;p&gt;Anyways, too bad that Microsoft is not interested in fixing
+	this platform usability issue, specially since they have been
+	focusing on fixing things that would force programmers to
+	write more code.  This seems like one of those things.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F13%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F13%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 13 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>13 Sep 2003: Fixed my compiler so it could compile another compiler which can compile itself.</title>
+      <description>&lt;p&gt;
+        &lt;p&gt;
+        I fixed a few bugs in ilasm today and got it to the point that
+        Oberon could assemble and display its usage text. Feeling
+        brave I tried a hello world.
+        &lt;/p&gt;
+&lt;p&gt;
+        &lt;img src="../images/Screenshot-Oberon.png"&gt;
+&lt;p&gt;
+        &lt;p&gt;It worked!!! Here is a quick rundown of what you just
+        looked at:
+        &lt;/p&gt;
+&lt;p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;The Oberon compiler is assembled by ilasm&lt;/li&gt;
+        &lt;li&gt;The newly created Oberon compiler compiles a hello
+        world&lt;/li&gt;
+        &lt;li&gt;Oberon launches ilasm to assemble the hello world (1970s
+        style of writing a compiler)&lt;/li&gt;
+        &lt;li&gt;The compiled and assembled hello world is run&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;p&gt;
+        &lt;p&gt;The Active Oberon for .net compiler is self hosting on
+        Mono. This means that the compiler can compile itself. This is
+        possible because the Oberon compiler actually just creates
+        ilasm code files and then uses the ilasm assembler to convert
+        these code files into a binary application or library. So I
+        can now compile the Oberon compiler with the Oberon compiler,
+        then take that newly compiled compiler and compile the Oberon
+        compiler, .....&lt;/p&gt;
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        &lt;p&gt;I wrote this really small and really pointless program in
+        ilasm today. Thought I would post it because lots of people
+        ask me what ilasm looks like.
+        &lt;/p&gt;
+&lt;p&gt;
+        &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+             &lt;pre&gt;
+.assembly extern mscorlib { }
+.assembly 'test-a.exe' { }
+&lt;p&gt;
+.class public T {
+&lt;p&gt;
+        .method public static void Main ()
+        {        
+                .entrypoint
+                .locals init (class [mscorlib]System.IO.StreamWriter)
+&lt;p&gt;
+                ldstr "test"
+                newobj void [mscorlib]System.IO.StreamWriter::.ctor (string)
+                stloc.0
+&lt;p&gt;
+                ldloc.0
+                ldstr "TEST"
+                callvirt void [mscorlib]System.IO.StreamWriter::WriteLine (string)
+&lt;p&gt;
+                ldloc.0
+                callvirt void [mscorlib]System.IO.StreamWriter::Close ()
+&lt;p&gt;
+                ret
+        }
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;
+        &lt;p&gt;This is a really simple app that just creates a file named
+        'test' and writes the word 'TEST' to it. It then closes the
+        file. This should be wrapped in a try/catch/finally block but
+        I didnt feel like blowing anyones mind tonight. We will do
+        that tommorow ;-).
+        &lt;/p&gt;
+&lt;p&gt;
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F13%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F13%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 13 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>12 Sep 2003: Mono, .NET and Java</title>
+      <description>&lt;p&gt;Microsoft recently sponsored a research to compare the
+	development costs of using .NET and J2EE to build enterprise
+	applications.  The story is &lt;a
+	href="http://story.news.yahoo.com/news?tmpl=story&amp;cid=581&amp;ncid=581&amp;e=5&amp;u=/nm/20030909/tc_nm/tech_microsoft_linux_dc"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;p&gt;The results are not surprising to me.  The study claims
+	that .NET is on aveage 28% cheaper than developing with
+	J2EE-based frameworks.  Both J2EE and Swing have been
+	over-engineered and over-designed.  It is probably a very
+	solid design, but has abused the model-view-controller
+	architecture.  If not kept under adult supervision architects
+	designing MVC platforms make the development of average
+	applications cumbersome.&lt;/p&gt;
+	
+	&lt;p&gt;The results are exactly along the lines of the input we
+	received in March 2003 when we did the &lt;a
+	href="http://www.go-mono.com/index.html#Mar25th:SecondMonoSurvey"&gt;Second
+	Mono Survey&lt;/a&gt;.  Our Survey focused on ASP.NET as a
+	technology for developing web-based applications, and the
+	people we had a chance to interview gave us that same message:
+	ASP.NET saves them on average 20% of their development
+	time.&lt;/p&gt;
+
+	&lt;p&gt;The research study we did shed some light into the debate.
+	The application serving market can be divided in three
+	groups:&lt;/p&gt;
+
+	&lt;table border=1 cellpadding=3&gt;
+	     &lt;td&gt;Market&lt;/td&gt;
+	     &lt;td&gt;Development&lt;br&gt;Price Range (dollars)&lt;/td&gt;
+	     &lt;td&gt;Technologies&lt;/td&gt;
+	     &lt;td&gt;State&lt;/td&gt;
+	   &lt;/tr&gt;
+	   &lt;tr&gt;
+	     &lt;td&gt;Entry level&lt;/td&gt;
+	     &lt;td&gt;0-200,000&lt;/td&gt;
+	     &lt;td&gt;Php, Python, Zope, Perl, home-grown, cgi-bin, 
+	     asp, aps.net, jsp, j2ee&lt;/td&gt;
+	     &lt;td&gt;Plenty of offerings, no dominant player.&lt;br&gt;
+	   &lt;/tr&gt;
+	   &lt;tr&gt;
+	     &lt;td&gt;Mid level&lt;/td&gt;
+	     &lt;td&gt;200,000 to 5,000,000&lt;/td&gt;
+	     &lt;td&gt;J2EE, ASP.NET&lt;/td&gt;
+	     &lt;td&gt;J2EE had an early start, but ASP.NET is taking over.&lt;br&gt;
+	     These are multi-developer projects of six to twelve
+	     months.  This market is very sensitive to development
+	     times, and a 20% to 28% increase in productivity makes
+	     ASP.NET solutions more competitive price-wise and more
+	     profitable.   The Windows-only nature of ASP.NET its the
+	     only thing stopping its mass adoption.
+	   &lt;/tr&gt;
+	   &lt;tr&gt;
+	     &lt;td&gt;High level&lt;/td&gt;
+	     &lt;td&gt;5,000,000+&lt;/td&gt;
+	     &lt;td&gt;J2EE and ASP.NET&lt;/td&gt;
+	     &lt;td&gt;J2EE is considered the standard to use.  These projects
+	     require hardware mobility and are large
+	     organizational projects.  The availability of many J2EE
+	     providers is considered a big plus.&lt;br&gt;
+	     The lack of third-party providers for ASP.NET slows down
+	     its adoption in this market.
+	   &lt;/tr&gt;
+	&lt;/table&gt;
+
+	&lt;p&gt;Mono is by no means ready to be an ASP.NET provider on the
+	high-level application server market today, but the mid-market
+	is the sweet spot for Mono and will help drive the adoption of
+	ASP.NET.  This is very compelling, because developers can use
+	the state-of-the-art Visual Studio to create their
+	applications (cutting costs there), and deploy on Linux
+	(cutting costs on the server side).&lt;/p&gt;
+
+&lt;h3&gt;Plugins in Mono&lt;/h3&gt;
+
+	&lt;p&gt;Nat asked me to write a small document for people who are
+	interesting in creating applications with plugins.  The
+	following is the smallest setup I could think of (this is the
+	same model I used on the &lt;a
+	href="http://www.nat.org/dashboard/"&gt;Dashboard&lt;/a&gt;).
+	
+&lt;h3&gt;Plugins in Mono: (&lt;a href="http://primates.ximian.com/~miguel//texts/cli-plugins.html"&gt;Article Permalink&lt;/a&gt;)&lt;/h3&gt;
+	&lt;p&gt;The Common Language Infrastructure has various mechanisms
+	that developers can use to extend their applications with
+	plugins.  This document describes the facilities available and
+	some possible implementation strategies.&lt;/p&gt;
+
+	&lt;p&gt;Plugins are dynamically loaded modules that extend the
+	functionality of an application.  Plugins can be used to
+	enable developers to extend an application after it has
+	shipped, and also as a modularization technique.  Applications
+	like the GIMP use a plugin architecture to implement
+	transformation and file formats.&lt;/p&gt;
+
+&lt;h3&gt;CLI Foundations&lt;/h3&gt;
+
+	&lt;p&gt;When a program or a library are compiled into assemblies
+	(the binary file format used by the CLI)the information about
+	the available classes, methods, variables, names, parameters
+	are stored into the resulting .exe or .dll.  This information
+	can be later retrieved through the Reflection API.
+
+	&lt;p&gt;Technically, the only difference between a .exe and a .dll in
+	the CLI world is that executable files contain an entry point,
+	and libraries do not.&lt;/p&gt;
+	
+	&lt;p&gt;For example, the following program will list all of the
+	types available in an assembly.  Both a .exe or a .dll will
+	work:&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #ddddff; border-width: 1px; padding: 2pt;"&gt;
+using System;
+using System.Reflection;
+
+class ListTypes {
+	static void Main (string [] args)
+	{
+		foreach (string file in args){
+			Assembly a = Assembly.LoadFrom (file);
+
+			Type [] types = a.GetTypes ();
+
+			Console.WriteLine ("Assembly: " + file);
+			foreach (Type t in types)
+				Console.WriteLine ("   Type: " + t.Name);
+		}
+	}
+}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Compile and run: &lt;/p&gt;
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #000000; color: #777777; border-width: 1px; padding: 2pt;"&gt;
+$ mcs query.cs
+Compilation succeeded
+$ mono query.exe demo.exe
+Assembly: query.exe
+   Type: Class1
+$ _&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Once an assembly is loaded, it is also possible to extract
+	the available methods or dynamically invoke methods in the
+	recently loaded assembly.  For example, the following program
+	will invoke the method "Boot" on any types passed on the
+	command line.&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #ddddff; border-width: 1px; padding: 2pt;"&gt;
+using System;
+using System.Reflection;
+
+class ListTypes {
+	static void Main (string [] args)
+	{
+		foreach (string file in args){
+			Assembly a = Assembly.LoadFrom (file);
+
+			Type [] types = a.GetTypes ();
+
+			Console.WriteLine ("Assembly: " + file);
+			foreach (Type t in types){
+				MethodInfo boot = t.GetMethod ("Boot");
+				if (boot == null)
+					continue;
+
+				if (!boot.IsStatic)
+					continue;
+					
+				boot.Invoke (null, new Type [0]);
+			}
+		}
+	}
+}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;We are using the Type's GetMethod to fetch the public
+	method named "Boot".   If we find such a method, we invoke
+	it.  In this particular example, we want to invoke static
+	methods, so we test for this and we also pass `null' as the
+	first argument to Invoke.&lt;/p
+
+	&lt;p&gt;The following sample program can be used to test our new
+	loader:&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #ddddff; border-width: 1px; padding: 2pt;"&gt;
+using System;
+	
+public class Demo {
+	public static void Boot ()
+	{
+		Console.WriteLine ("Demo.Boot invoked");
+	}
+}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;We compile and run:&lt;/p&gt;
+	
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #000000; color: #777777; border-width: 1px; padding: 2pt;"&gt;
+$ mcs loader.cs
+Compilation succeeded
+$ mcs -target:library demo.cs
+Compilation succeeded
+$ mono loader.exe demo.dll
+Assembly: demo.dll
+Demo.Boot invoked
+$ _&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Access to the Main Application&lt;/h3&gt;
+
+	&lt;p&gt;It is now possible to load code dynamically, but a
+	plugin-system often will need to access the internal data
+	structures and methods to carry out a more interesting job.
+	Our plugins can invoke easily any methods that is available to
+	thme at compilation time.&lt;/p&gt;
+
+	&lt;p&gt;The following sample program shows a tiny spreadsheet
+	application which provides support for invoking plugins. 
+	
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #ddddff; border-width: 1px; padding: 2pt;"&gt;
+using System;
+using System.Reflection;
+
+public class Spreadsheet {
+	string [,] cells = new string [10, 10];
+
+	public string this [int col, int row] {
+		get {
+			return cells [col, row];
+		}
+
+		set {
+			cells [col,row] = value;
+		}
+	}
+}
+
+public class Driver {
+	static public Spreadsheet sheet = new Spreadsheet ();
+	
+	static void Main ()
+	{
+		string cmd, r;
+
+		do {
+			Console.Write ("cmd&gt; ");
+			cmd = Console.ReadLine ();
+
+			string [] args = cmd.Split (new char [] {' '});
+			
+			switch (args [0]){
+			case "set": 
+				sheet [Byte.Parse (args [1]),
+				       Byte.Parse (args [2])] = args [3];
+				break;
+
+			case "get":
+			        r = sheet [Byte.Parse (args [1]),
+				           Byte.Parse (args [2])];
+				Console.WriteLine ("value: {0}", r);
+				break;
+
+			case "plugin":
+				InvokePlugin (args [1]);
+				break;
+			}
+		} while (cmd != "quit");
+	}
+
+	static void InvokePlugin (string plugin)
+	{
+		Assembly a = Assembly.LoadFrom (plugin);
+
+		foreach (Type t in a.GetTypes ()){
+			MethodInfo method = t.GetMethod ("SheetPlugin");
+
+			if (method != null &amp;&amp; method.IsStatic){
+				method.Invoke (null, new Type [0]);
+				break;
+			}
+		}
+	}
+}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Compile the above like this:&lt;/p&gt;
+	
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #000000; color: #777777; border-width: 1px; padding: 2pt;"&gt;
+$ mcs sheet.cs
+Compilation succeeded
+$ _&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Here is the `export.cs' program that we will compile as a
+	plugin:&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #ddddff; border-width: 1px; padding: 2pt;"&gt;
+using System;
+	
+public class DumpSheet {
+	public static void SheetPlugin ()
+	{
+		for (int r = 0; r &lt; 10; r++){
+			for (int c = 0; c &lt; 10; c++)
+				Console.Write ("{0}, ", Driver.sheet [r, c]);
+			Console.WriteLine ();
+		}
+	}
+}&lt;/pre&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;Notice that this plugin needs to access the sheet object in
+	the Driver class from the main program.  We will compile this
+	as a library which &lt;b&gt;references&lt;/b&gt; the main application.
+	This effectively treats the main application as a library
+	consumed by the plugin.&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #000000; color: #777777; border-width: 1px; padding: 2pt;"&gt;
+$ mcs export.cs -r:sheet.exe -target:library
+Compilation succeeded
+$ _&lt;/pre&gt;&lt;/blockquote&gt;
+	
+	&lt;p&gt;A sample session looks like this:&lt;/p&gt;
+	&lt;blockquote&gt;&lt;pre style="border-style: solid; background: #000000; color: #777777; border-width: 1px; padding: 2pt;"&gt;
+$ mono sheet.exe
+cmd&gt; set 0 0 hello
+cmd&gt; set 0 1 world
+cmd&gt; set 8 8 Eight
+cmd&gt; plugin export.dll
+hello, world, , , , , , , , , 
+, , , , , , , , , , 
+, , , , , , , , , , 
+, , , , , , , , , , 
+ , , , , , , , , , 
+, , , , , , , , , , 
+, , , , , , , , , , 
+, , , , , , , , , , 
+, , , , , , , , Eight, , 
+, , , , , , , , , , 
+cmd&gt; _&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;h3&gt;Details&lt;/h3&gt;
+	
+	&lt;p&gt;There are plenty of other scenarios and ways of structuring
+	your program to have a plugin system.  Currently part of the
+	contract used in this document was to use the public classes,
+	methods and fields exposed by the host application.  A common
+	pattern used in plugin systems is to provide a class method to
+	register objects and handlers with the host application.&lt;/p&gt;
+
+	
+
+&lt;h3&gt;Gnome 2.4 is out&lt;/h3&gt;
+
+	&lt;p&gt;The anticipated release of Gnome 2.4 is &lt;a
+	href="http://www.gnome.org/start/2.4/"&gt;out now&lt;/a&gt;.  It
+	includes a list of &lt;a
+	href="http://www.gnome.org/start/2.4/notes/rnwhy.html"&gt;Why
+	use Gnome?&lt;/a&gt;
+
+	&lt;p&gt;Ars Technica has a &lt;a
+	href="http://arstechnica.com/reviews/003/software/gnome-2.4/gnome2.4-1.html"&gt;pretty
+	good review.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F12%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F12%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 12 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>12 Sep 2003: Nothing is official until you see it on IRC</title>
+      <description>&lt;p&gt;
+         &lt;p&gt; I will be joining the Novell Ximian Services business
+         unit of Novell in October. Needless to say, I am jack's total
+         excitment. I would write more about this but I have lots of
+         hacking to do ;-).  &lt;/p&gt;
+&lt;p&gt;
+         &lt;hr&gt;
+&lt;p&gt;
+         &lt;p&gt;Trying to get &lt;a
+         href="http://www.oberon.ethz.ch/lightning/"&gt;Active Oberon for
+         .net&lt;/a&gt; working on Mono this weekend. This a great test for
+         ilasm.
+         &lt;/p&gt;
+&lt;p&gt;
+         &lt;hr&gt;
+&lt;p&gt;
+         &lt;p&gt;
+         I am now on &lt;a
+         href="http://www.advogato.org/person/jackson/"&gt;Advogato&lt;/a&gt;.
+         Should be a humbling experience ;-).
+         &lt;/p&gt;
+&lt;p&gt;
+&lt;p&gt;
+         
+         
+&lt;p&gt;
+         
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F12%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F12%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 12 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>11 Sep 2003: Barcelona</title>
+      <description>&lt;p&gt;Plenty of us the Mono developers and Linux developer got
+	together during the Brainshare event in Barcelona.  Lluis (the
+	man behind the implementation of Mono's Remoting and Mono's
+	WebServices support) lives in Barcelona, and Gonzalo (Mono's
+	ASP.NET developer) was coming back from vacation from
+	Istambul.  It was the perfect chance to discuss Mono. &lt;/p&gt;
+
+	&lt;p&gt;Juantomás (&lt;a
+	href="http://www.hispalinux.es"&gt;HispaLinux's&lt;/a&gt; president)
+	joined us on Monday night, and Man, Andreu and Osorio showed
+	up on Tuesday for a few hours for dinner.  We had a great time
+	with both our new co-workers are Novell and the Spanish Linux
+	crowd in Barcelona.&lt;/p&gt;
+
+	&lt;p&gt;Jordi Mas who has been working on Abiword and on the
+	catalonian support for various free software projects is
+	developing an interest for Mono.  He has plenty of Win32
+	experience, and he is interested in helping us move Mono's
+	Windows.Forms support forward.  He advocates following a
+	single path: Wine-based Windows.Forms and customizations to
+	Wine to make it track the Gtk+ theme and dropping our support
+	for the Gtk+ based toolkit.&lt;/p&gt;
+
+	&lt;p&gt;Spent a fair amount of time with &lt;a
+	href="http://www.nat.org"&gt;Nat&lt;/a&gt;: mostly at night when
+	tracking the best restaurants that served jamón and the bars
+	afterwards.  Nat had a little accident with his new cell
+	phone.&lt;/p&gt;
+
+&lt;h3&gt;Novell&lt;/h3&gt;
+
+	&lt;p&gt;One of the benefits of joining Novell for us was that our
+	products have a much bigger audience now.  This is due to the
+	fantastic channel that Novell has with enterprises.  During
+	the conference we met many sales and solution engineers of
+	Novell, many of them already with contacts of people
+	interested in Linux-based solutions (both the Novell Linux
+	software stack for servers as well as the desktop side).&lt;/p&gt;
+
+	&lt;p&gt;Plenty of people at the confere are considering Linux on
+	the desktop, a recurrent topic with people we met on the
+	hallways was large scale enterprise deployments.&lt;/p&gt;
+
+	&lt;p&gt;XD2 has the right mix of components to make the Linux
+	Desktop on enterprises a reality:
+
+	&lt;ul&gt;
+		&lt;li&gt;GNOME 2.4 has been making tremendous progress in
+		terms of accessibility, ease-of-use, simplicity, API
+		stability and the &lt;a
+		href="http://foundation.gnome.org"&gt;Gnome
+		Foundation&lt;/a&gt; who has helped focus the development on
+		these important projects. 
+
+		&lt;li&gt;OpenOffice is maturing, and we are commited to
+		keep improving the common code base on which
+		OpenOffice is built to help people migrate and reduce
+		their costs of deployment. 
+		
+		&lt;li&gt;Mozilla: a fantastic standards compliant browser.
+		My favorite feature today: tabbed browsing, the
+		smartbar plugin.
+
+		&lt;li&gt;Red Carpet: A recurrent theme we hear about people
+		doing large desktop deployments is that they need a
+		way of managing these machines.  Red Carpet does a lot
+		today, and the management roadmap is at the center of
+		the development effort right now.
+
+		&lt;li&gt;Evolution: Mail, calendar and addressbook, with
+		groupware collaboration.
+	&lt;/ul&gt;
+
+	&lt;p&gt;Nat did one of the most amazing presentations I have ever
+	seen on why the above software stack is the right one for
+	Linux on the desktop.&lt;/p&gt;
+
+	&lt;p&gt;We are collaborating with other teams inside Novell to
+	support the Novell software stack: Groupwise, i-Folder,
+	e-Directory and Liberty Aliance authentication&lt;/p&gt;
+
+&lt;h3&gt;More Gnome Deployments&lt;/h3&gt;
+
+	&lt;p&gt;In Andalucía, 20,000 Gnome desktops were just &lt;a
+	href="http://www.20minutos.es/sevilla/?noti=66321"&gt;launched&lt;/a&gt;.
+	I have to take a trip there to witness this again.  20,000
+	Gnome-based machines on 1,800 schools in Andalucia.  I
+	&lt;i&gt;have&lt;/i&gt; to go see this.  Congrats Gnome folks!
+
+	&lt;p&gt;The &lt;a href="http://www.telecentros.sp.gov.br"&gt;Telecentros
+	experience&lt;/a&gt; in Sao Paolo was very interesting, because the
+	site I went to was one of the centros equipped with
+	accessibility hardware.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F11%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F11%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 11 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>11 Sep 2003: One more form!</title>
+      <description>&lt;p&gt;
+     &lt;p&gt; Cats out of the bag! Tommorow I will explain. Tonight I am
+     jacks tedious paper work. One more form. So instead of
+     filling out that last form I am blogging ;-).  &lt;/p&gt;
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt;
+     Thinking about doing something impractical: (not for a few
+     more months though)
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+     &lt;blockquote&gt;
+      Classic &amp; Collectibles  (08/28/03)
+      '66 IMPALA "SS" STYLE rally whls, lthr buckets, nice looking cruiser.
+     &lt;/blockquote&gt;
+     &lt;/div&gt;
+&lt;p&gt;
+     &lt;p&gt;Why have a reliable car when you could have an un-reliable but
+     cool car? I am going to hold out for a convertible though. Roxy
+     would love it and I bet they get real cheap during the winters in
+     BC.&lt;/p&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F11%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F11%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 11 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>10 Sep 2003: Today I didnt even have to use my AK (&lt;a href="#ak_discl"&gt;*&lt;/a&gt;)</title>
+      <description>&lt;p&gt;
+       &lt;p&gt;
+       I am still undecided about &lt;a
+       href="http://www.famousplayers.com/movies/movie_information.asp?movie=97B1C6E6-D1F2-441A-BFC8-3F1BD1CCCA92"&gt;this&lt;/a&gt;
+       I am not sure if it is super awesome or super lame. Either way
+       I am going ;-). Tommorow I am going to help fund the &lt;a
+       href="http://www.foxnews.com/story/0,2933,96797,00.html"&gt;war on
+       12 year old girls&lt;/a&gt; by purchasing Bowie's new album.
+       &lt;/p&gt;
+&lt;p&gt;
+       &lt;p&gt;
+       I have a feeling that the link in todays title bar is going to
+       break the RSS.....lets see what happens.
+       &lt;/p&gt;
+&lt;p&gt;
+       &lt;p&gt;
+       &lt;a name="ak_discl"&gt;*&lt;/a&gt;&lt;small&gt;For those of you over 30 I do
+       not actually own an AK this is a reference to an Ice Cube song about
+       having a good day.
+       &lt;/p&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F10%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F10%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 10 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>09 Sep 2003: New domain name</title>
+      <description>&lt;p&gt;
+     &lt;p&gt; This site has been moved to &lt;a
+     href="http://www.jacksonh.net"&gt;jacksonh.net&lt;/a&gt;. So update your
+     bookmarks, update your RSS feeds, and update your links (I know
+     there are two). I will make the switch in my rss files tonight.
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt; Hockey tonight. Tommorow I will have a post something like
+     this:
+     &lt;/p&gt;
+&lt;p&gt;
+        &lt;blockquote&gt;
+        Played hockey last night for the first time this
+        season. Couldn't control my rebounds at all. I am really sore
+        this morning.
+        &lt;/blockquote&gt;
+&lt;p&gt;
+             
+     
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F09%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F09%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 09 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>08 Sep 2003: Wet paws</title>
+      <description>&lt;p&gt;
+     &lt;p&gt;
+     Roxy just passed up walking in the park because she didn't want
+     to get her paws wet. Crazy dog.
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt;
+     Read &lt;a
+     href="http://www.guardian.co.uk/comment/story/0,3604,1036571,00.html"&gt;this&lt;/a&gt;.
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt;
+     Note to everyone. Please start calling BenM b-diddy.
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt;
+     ilasm has a couple of cool exception handling mechanisms that C#
+     does not (sorry miguel ;-)). The first neato exception handling
+     mechanism is the filter block. Filter blocks allow you to perform
+     some logic and decide whether or not to enter a handler
+     block. Here is some pseudo code:
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+     &lt;pre&gt;
+     try {
+         exception thrown
+     } filter {
+         decide whether or not we want to handle this exception
+     } {
+         block that handles the exception
+     }
+     &lt;/pre&gt;
+     &lt;/div&gt;
+     
+     &lt;p&gt;
+     The second and maybe even cooler exception handling mechanism is
+     the fault block. A fault block is like a finally block except it
+     only gets called if an exception is thrown in the gaurded
+     block. Here is a some pseudo code:
+     &lt;/p&gt;
+&lt;p&gt;
+     &lt;div style="margin-left: 1cm; margin-right:1cm;
+             background: #c0d0ff; margin: 0px 0px 0px 0px;
+             padding: 1px; border-style: solid; border-width: 1px;"&gt;
+     &lt;pre&gt;
+             try {
+                exception thrown sometimes
+             } fault {
+                this code is executed whenever an exception is thrown
+             }
+     &lt;/pre&gt;  
+     &lt;/div&gt;     
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F08%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F08%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 08 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>07 Sep 2003: Barcelona</title>
+      <description>&lt;p&gt;Yesterday I arrived to Barcelona for the Novell &lt;a
+	href="http://www.novell.com/brainshare/europe/"&gt;Brainshare&lt;/a&gt;
+	event.  
+
+	&lt;p&gt;Got together with Chema, Lluis and Nat.  Went relatively
+	early back to the hotel, and discovered that we had wireless
+	access, so we hung around until 4am.  Nat's humor quality is
+	directly proportional to how long he has gone without
+	sleeping. &lt;/p&gt;
+
+&lt;h3&gt;Monodoc editing&lt;/h3&gt;
+
+	&lt;p&gt;In our effort to improve the documentation in Mono we have
+	been working on a GUI tool to browse all kinds of
+	documentation (Monodoc), but we need more people documenting
+	our APIs.&lt;/p&gt;
+
+	&lt;p&gt;To address this problem, we are making it &lt;i&gt;really&lt;/i&gt;
+	simple for people to contribute documentation: we have made
+	our documentation editable.  When you are viewing a stub, you
+	have the choice to edit it; For example:&lt;/p&gt;
+
+	&lt;blockquote&gt;&lt;blockquote&gt;
+	&lt;div style="margin-left: 1cm; margin-right:1cm; background: #c0d0ff; margin: 0px 0px 0px 0px; padding: 1px; border-style: solid; border-width: 1px;"&gt;
+	&lt;b&gt;Summary&lt;/b&gt;&lt;br&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; To be added &lt;a
+	href=""&gt;[Edit]&lt;/a&gt; &lt;/div&gt;
+	       
+	&lt;/blockquote&gt;&lt;/blockquote&gt;
+
+	&lt;p&gt;I recently added a preview viewer for it, for example here
+	we are editing some documentation:&lt;/p&gt;
+
+	&lt;img src="http://primates.ximian.com/~miguel/images/Screenshot-LiveEdit.png"&gt;
+
+	&lt;p&gt;All those changes are saved into a changeset, that the
+	contributor can submit when he is ready.   We will submit
+	those using Mono's web services infrastructure.  When the
+	changes are reviewed and approved, we commit those to CVS, and
+	they appear on the next release of the code.&lt;/p&gt;
+
+	&lt;p&gt;This same infrastructure will help for our collaborative
+	annotations for the documentation.  This is important to have
+	people share their personal experiences and samples for any
+	given API.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F07%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F07%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 07 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>07 Sep 2003: Interesting night</title>
+      <description>&lt;p&gt;
+             &lt;p&gt;
+             Went to a friends farewell-to-my-house party last
+             night. Made some new interesting and intriguing
+             friends. Should have brought Camera.
+             &lt;/p&gt;
+&lt;p&gt;
+             &lt;hr&gt;
+&lt;p&gt;
+             &lt;p&gt;
+             Malloc and Calloc have arrived. Roxy really likes the
+             smell of their food.
+             &lt;/p&gt;
+&lt;p&gt;
+             &lt;hr&gt;
+&lt;p&gt;
+             &lt;p&gt;
+             Just made some damn good chicken...yum. The best part is
+             that I washed the dishes while it was cooking so there is
+             no post dinner mess. Pure genius. Now its time to clear
+             out the backlog of stuff I need to do on my home
+             computers. Here is a quick list:
+             &lt;/p&gt;
+&lt;p&gt;
+             &lt;ul&gt;
+                &lt;li&gt;Get wireless card startup script working with
+                ifup/ifdown&lt;/li&gt;
+                &lt;li&gt;Remove the 100 lines of debugging info that my
+                wireless card drivers spews every time I boot&lt;/li&gt;
+                &lt;li&gt;Script for uploading my blog files&lt;/li&gt;
+                &lt;li&gt;In emacs I want meta-x lb to create and upload my
+                blog&lt;/li&gt;
+                &lt;li&gt;Setup some NFS&lt;/li&gt;
+                &lt;li&gt;Take NAT off my desktop (the router will handle
+                this now)&lt;/li&gt;
+             &lt;/ul&gt;   
+             
+&lt;p&gt;
+             
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F07%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F07%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 07 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>06 Sep 2003: Mexico it is!</title>
+      <description>&lt;p&gt;
+        &lt;p&gt;
+        Well I went back and forth and back and forth on this
+        one. Bottom line is Mexico City has all sorts of things I want
+        to see and people I want to meet. The size of the city
+        fascinates me, and I cant wait to see it. I cant wait to see
+        some ruins, meet jscript hacker Cesar face to face , see
+        Miguel on his home turf, and hopefully visit with some other
+        Mono hackers. I have 6 days to decide on a date for visiting
+        Mexico City.
+        &lt;/p&gt;
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        &lt;p&gt;
+        Meanwhile north of the 49th parallel I have moved back into my
+        apartment. I am suffering from lack of stuff
+        syndrome that will clear up over the next few months. I setup
+        my wireless access point and can sit out on the couch with
+        Roxy and hack away.
+        &lt;/p&gt;
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        &lt;p&gt; Tommorow Roxy and I will recruit two new members into our
+        gang. I have already decided on names for the new
+        recruits. Malloc and Calloc will become the newest additions
+        to the posie. They will be gold fish, or some other type of
+        fish. &lt;/p&gt;
+&lt;p&gt;
+        &lt;hr&gt;
+&lt;p&gt;
+        &lt;p&gt; What I really like about blogs is that people write about
+        other peoples &lt;a
+        href="http://primates.ximian.com/~miguel/all.html#09%2F05%2F2003+12%3A00%3A00"&gt;blogs&lt;/a&gt;
+        &lt;/p&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#09%2F06%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#09%2F06%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 06 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>05 Sep 2003: If you read one web page this month</title>
+      <description>&lt;p&gt;What I really like about blogs is that sometimes people sit
+	down, and write little essays reflecting on their experience.
+	My personal choice is from the craftsmen: because they tell
+	you tales and lesson from the trenches.&lt;/p&gt;
+
+	&lt;p&gt;I can not make justice to the beauty of Eric's latest
+	entry: &lt;a
+	href="http://software.ericsink.com/20030903.html"&gt;F5&lt;/a&gt;.
+
+
+	
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F05%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F05%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 05 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>04 Sep 2003: The history of SWT and Swing</title>
+      <description>&lt;p&gt;While doing my daily reading of the SWT-port-to-C# reading
+	this morning, found this &lt;a
+	href="http://www.mail-archive.com/jug-discussion@tucson-jug.org/msg00355.html"&gt;post&lt;/a&gt;
+	that describes the torrid story of Swing and SWT.&lt;/p&gt;
+
+	&lt;p&gt;&lt;b&gt;Update:&lt;/b&gt; That document contains various errors on the
+	side of the origins of Swing.  For more details see this &lt;a
+	href="http://www.javalobby.com/threadMode2.jsp?forum=61&amp;thread=7034&amp;start=-1"&gt;thread&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;p&gt;Amy describes her experiences with the iPod and a native
+	user interface &lt;a
+	href="http://weblogs.java.net/pub/wlg/244"&gt;here&lt;/a&gt;.  Very
+	good point about using native interfaces.  Firebird already
+	has a couple of XUL-based clients that let the user browse
+	Amazon more comfortably than using the regular Web interface.&lt;/p&gt;
+
+&lt;h3&gt;Al Franken's book&lt;/h3&gt;
+
+	&lt;p&gt;I have been reading Al Franken's &lt;a
+	href="http://www.amazon.com/exec/obidos/tg/detail/-/0525947647/qid=1062691957/sr=8-1/ref=sr_8_1/103-9624440-8714218?v=glance&amp;s=books&amp;n=507846"&gt;Lies&lt;/a&gt;
+	book.  It has been entertaining for the past couple of days,
+	but it turned out &lt;b&gt;&lt;i&gt;really&lt;/i&gt;&lt;/b&gt; interesting on the
+	chapter on the Clinton efforts on the war against terror and
+	how the Bush administration dropped the ball on that (chapter
+	15, but it shines on chapter 16).&lt;/p&gt;
+
+	&lt;p&gt;I tried writting a summary, but its impossible to make
+	justice to those two chapters.  It is particularly
+	interesting, because Franken got a team of Harvard graduates
+	from the Kennedy school to fact-check everything he wrote.&lt;/p&gt;
+
+	&lt;p&gt;Anyways: mandatory reading if you stop by a book store.&lt;/p&gt;
+
+
+&lt;h3&gt;Cant wait&lt;/h3&gt;
+
+	&lt;p&gt;To see The Band on the Runtime &lt;a
+	href="http://www.gotdotnet.com/team/dbox/default.aspx?key=2003-09-04T07:00:42Z"&gt;perform&lt;/a&gt;
+
+	
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F04%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F04%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 04 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>03 Sep 2003: My new T40 and Linux.</title>
+      <description>&lt;p&gt;I am using a new IBM T40 now as my main computer.  I was
+	about to go for the X31 which is lighter and smaller, but I
+	have gotten used to the large resolution from my old T30.&lt;/p&gt;
+
+	&lt;p&gt;&lt;a
+	href="http://primates.ximian.com/~notzed/diary.html"&gt;Michael
+	Zucchi&lt;/a&gt; provided me with a few links to people running
+	Linux on the T40.  Most hardware is supported on the T40, but
+	the speed of the hard drive left much to be desired.  The new
+	T40 felt like it could not handle the load the T30 did.  Any
+	IO would make the system very slow.&lt;/p&gt;
+
+	&lt;p&gt;After dropping by the #kernel channel on LinuxNet, I was
+	told to upgrade my Kernel to the latest RH update.  So far the
+	speed of my hard drive went from 2.5 MB/second to 25
+	Mb/second.  An e-mail expunge that used to take about two
+	minutes seconds, now takes 13 seconds.&lt;/p&gt;
+
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F03%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F03%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 03 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>02 Sep 2003: The PDC</title>
+      <description>&lt;p&gt;I am going to the PDC, hoping to listen to Don's &lt;a
+	href="http://www.gotdotnet.com/team/dbox/default.aspx?key=2003-09-02T06:22:36Z"&gt;new
+	single&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;p&gt;Gonzalo and Lluis from the Mono team are coming as
+	well.&lt;/p&gt;
+
+	&lt;p&gt;Also found the &lt;a
+	href="http://pdcbloggers.net/Default.aspx"&gt;PDC Bloggers&lt;/a&gt; site.
+	
+
+&lt;h3&gt;Moving day&lt;/h3&gt;
+
+	&lt;p&gt;A completely unproductive day.  I just moved into my new
+	apartment, where I will be &lt;a
+	href="http://www.nat.org"&gt;Nat's&lt;/a&gt; neighbor.
+
+	&lt;p&gt;Verizon cancelled my DSL during the move, and am using a
+	kind soul's wireless access.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#09%2F02%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#09%2F02%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 02 Sep 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>31 Aug 2003: The Big Apple</title>
+      <description>&lt;p&gt;
+     &lt;p&gt;
+     Five star suggested a combo of NY and Boston for my upcoming
+     trip. He is old and wise and I agree with him. I am worried about
+     the cost of visiting NY. It will mean sacrificing my new TV and
+     iPod fund.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     I really want to get an iPod but am a little worried
+     about Linux support. If anyone reading this is using an iPod with
+     Linux could you send me a &lt;a
+     href="mailto:jackson@latitudegeo.com"&gt;message&lt;/a&gt;? I would like
+     to get a mac but Linux is too important to me, and x86 has been
+     kind to me for many years.
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     I am looking forward to moving back into my apartment. Still dont
+     know when that will be. I feel like I am in &lt;a
+     href="http://www.4degreez.com/misc/dante-inferno-information.html#1"&gt;limbo&lt;/a&gt;
+     right now but Homer and Socrates and all the pagans aren't around. I am going to
+     have a pretty empty place so maybe I will succum to the dreaded
+     &lt;a
+     href="http://www.antiessays.com/show.php?cat=arts&amp;eid=2113"&gt;IKEA
+     nesting instinct&lt;/a&gt;. 
+     &lt;/p&gt;
+     
+     &lt;p&gt;
+     Here is a quick rundown of the last few years of my relationship life in
+     internet lingo:  BF -&gt; FH -&gt; DH -&gt; STBX. No I am not the store
+     byte indexed instruction ;-).
+     &lt;/p&gt;
+     
+     &lt;hr&gt;
+&lt;p&gt;
+     &lt;p&gt;     
+     This weekend I am going to finally get the error reporting fixed
+     in ilasm. This will make it allot more fun to write programs
+     with. So maybe I will write some more tests too :-).
+     &lt;/p&gt;
+     
+&lt;p&gt;
+     
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F31%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F31%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 31 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>29 Aug 2003: Congrats Leah!!</title>
+      <description>&lt;p&gt;
+          Leah got a job at what looks like a really cool design firm today.
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F29%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F29%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 29 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>29 Aug 2003: The largest Gnome deployment: The Sao Paulo Telecentros</title>
+      <description>&lt;p&gt;The Sao Paulo &lt;a
+	href="http://www.telecentros.sp.gov.br."&gt;Telecentros&lt;/a&gt;
+	provide service to 150,000 users.   Each Telecentro is running
+	a small cluster of computers: a high-end server and 20
+	diskless workstations (Pentium class machines).
+
+	&lt;p&gt;The diskless Linux workstations are hooked up to the server
+	with a 100mb network, and each workstation boots in 20 to 30
+	seconds (this is from memory).  Very fast.  All applications
+	run on a pretty big server, and OpenOffice is pre-loaded, so
+	it starts in no time.&lt;/P&gt;
+
+	&lt;p&gt;Each Telecentro offers service to about 3,000 users;
+	People schedule time on the workstations in slots of half an
+	hour or an hour.&lt;/p&gt;
+	
+	&lt;p&gt;They have written lots of tutorials in Portuguese in each
+	of the Telecentros and cover the basics: the Gnome desktop,
+	Star Writer, Star Calc, Galeon and Gnome Paint.
+
+	&lt;p&gt;Today there are &lt;a
+	href="http://www.telecentros.sp.gov.br/mapa.php"&gt;72
+	telecentros&lt;/a&gt; open for a total of 107 planned.  The cost of
+	setting up a telecentro is 10,000 dollars.
+
+	&lt;p&gt;During my visit to the Telecentro's headquarters, I heard a
+	few new arguments I had not heard before about the advantages
+	of free software:
+
+	&lt;ul&gt;
+		&lt;li&gt;Cost-wise: They were able to deploy 80
+		tele-centros instead of 20.
+
+		&lt;li&gt;The government initiative of
+		&lt;i&gt;Digital-inclusion&lt;/i&gt; means that users that use the
+		software setups today can take the software home and
+		replicate *the exact* functionality.
+
+		&lt;li&gt;Number of applications: There are 1,700 software
+		programs available as part of the Debian Linux
+		distribution which are both free and legal for the
+		users to copy.
+	&lt;/ul&gt;
+
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F29%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F29%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 29 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>28 Aug 2003: Generics, generics</title>
+      <description>&lt;p&gt;Martin reports:
+	&lt;tt&gt;
+* baulig just compiled his first "Hello Generic World" :-)
+	&lt;/tt&gt;
+	&lt;/p&gt;
+
+	&lt;p&gt;The Mono C# compiler today compiled it first generics
+	program (see the various generic tests on CVS).  It is still
+	lacking support for method overloading.  All the goodies are
+	in mcs/gmcs (the special tree for our generics compiler).&lt;/p&gt;
+
+	&lt;p&gt;Paolo had previously added the Generics support to our
+	class libraries (System.Reflection and System.Reflection.Emit)
+	and added the code to JIT generics code.  This was helped
+	enormously by Jackson's earlier work on the IL Assembler which
+	was already generics aware.&lt;/p&gt;
+
+	&lt;p&gt;In .NET 2.0, Generics are part of the instruction set,
+	and the metadata in an executable.   Some of the advantages of
+	this approach vs the C++ mechanism of having the templates
+	defines in .h files is that we keep getting the performance
+	increase from having the generics information "pre-compiled".
+	Those of us with a Turbo Pascal background, cant help but
+	think `These are like the Turbo Pascal Units (TPUs): they were
+	just so much better than C libraries and header files'.&lt;/p&gt;
+
+	&lt;p&gt;Its surprising how a good idea like TPUs did not take over
+	the industry, and instead the C libraries and headers was kept
+	on use for so long.   GC was also around a long time ago, and
+	it is surprising that today C and C++ are still the standard
+	for software production.&lt;/p&gt;
+
+&lt;h3&gt;Monodoc progres&lt;/h3&gt;
+
+	&lt;p&gt;Even more progress on Monodoc.  Ben now got an `error
+	messages provider', and we have included all the errors mcs
+	produces (all 311 of them) with sample files in the
+	documentation.  Mandatory &lt;a
+	href="http://users.hawken.edu/05mauben/Screenshot-mdoc-error.png"&gt;screenshot&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F28%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F28%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 28 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>28 Aug 2003: Travel suggestions</title>
+      <description>&lt;p&gt;
+        I have until Sept. 14th to book a flight to anywhere within
+        700 dollars of Victoria. So I am looking for
+        &lt;a
+        href="mailto:jackson@latitudegeo.com"&gt;suggestions&lt;/a&gt;. Anyone
+        know of anything cool I should try to visit in a few months?
+&lt;p&gt;
+        &lt;p&gt;
+&lt;p&gt;
+        Here is a list of places I am thinking about, in a random
+        order ;-).
+&lt;p&gt;
+        &lt;ul&gt;
+                &lt;li&gt;Boston&lt;/li&gt;
+                &lt;li&gt;Orlando&lt;/li&gt;
+                &lt;li&gt;Mexico City&lt;/li&gt;
+        &lt;/ul&gt;
+&lt;p&gt;
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F28%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F28%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 28 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>27 Aug 2003: Time to tell the world</title>
+      <description>&lt;p&gt;
+      A few people already know this, but not everybody that
+      should. I really don't feel like talking about this much so I am
+      just going to blog it, because I know everyone reads my blog
+      ;-).
+&lt;p&gt;
+      &lt;p&gt;
+&lt;p&gt;
+      Leah and I are permanently separated. We are not taking some
+      time apart, or 'just dating'. This is pretty final. I'm not
+      going to go into the details of why because I really don't fully
+      understand. Everyone has questions for me now about my life. I
+      really don't have that many answers and I find trying to answer
+      the questions I do not have answers for very frustrating. So I
+      will give the world the answers I have.
+&lt;p&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Are you going to move from Victoria? &lt;b&gt;No&lt;/b&gt;&lt;/li&gt;
+        &lt;li&gt;Who is going to take care of Roxy? &lt;b&gt;Leah is taking care
+        of Roxy right now. Once she moves out I will take care of her
+        until Leah has more permanent plans.&lt;/b&gt;&lt;/li&gt;
+        &lt;li&gt;Where are you staying? &lt;b&gt;At my dads&lt;/b&gt;&lt;/li&gt;
+        &lt;li&gt;How long are you staying there? &lt;b&gt;Until Leah finds a
+        job/apartment hopefully within the month.&lt;/b&gt;&lt;/li&gt;
+        &lt;li&gt;Are you still going to Mexico? &lt;b&gt;No&lt;/b&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+&lt;p&gt;
+      &lt;p&gt;
+&lt;p&gt;
+      These are the only answers I have right now, as things become
+      less blurry I will post more.
+&lt;p&gt;
+      &lt;p&gt;
+&lt;p&gt;
+      I prefer to think of this as a 'reclassification of relationship
+      status' we have changed from being husband and wife to friend
+      and friend. I hope that we can remain as good friends. 
+&lt;p&gt;
+&lt;p&gt;
+      
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F27%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F27%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 27 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>27 Aug 2003: Mono Developments</title>
+      <description>&lt;p&gt;Zoltan Varga has removed the big locks we had on the Mono
+	runtime, and has replaced them with fine-grained locks using a
+	lattice to describe the order in which the locks are to be
+	obtained to avoid dead-lock situations.   This was part of the
+	thread safety audit on the Mono runtime engine.&lt;/p&gt;
+
+	&lt;p&gt;&lt;a href="www.atoker.com"&gt;Alp&lt;/a&gt; improved the UI of
+	Monodoc, so it now looks a lot prettier:&lt;/p&gt;
+
+	&lt;img
+	src="http://primates.ximian.com/~miguel/images/monodoc-2.png"&gt;
+
+	&lt;p&gt;Other changes in Monodoc during the past week include the
+	display of extra information for matches, in this case, I
+	selected the "ToString" method from the incremental search
+	window, and a list of matches is displayed:&lt;/p&gt;
+
+	&lt;img
+	src="http://primates.ximian.com/~miguel/images/monodoc-matches.png"&gt;
+
+	&lt;p&gt;Johannes today contributed a patch to Mono's Windows.Forms
+	that makes it track the Gtk theme colors; His new patch will
+	also pick the default font settings.  You can see it &lt;a
+	href="http://www.sport-huettn.de/jroith/swfsample.png"&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;p&gt;Gonzalo in the meantime made me very happy with the changes
+	to XSP (our ASP.NET server) that allow for multiple
+	applications to be hosted on a single server.  This finally
+	will let me run all my web apps and web services under
+	Apache.&lt;/p&gt;
+
+	&lt;p&gt;The SharpWT team has a full C#-based version of SWT ready
+	to run, and they have made tremendous progress on the toolkit
+	in the last two weeks (working both on Windows and on
+	Gtk+).&lt;/p&gt;
+
+	&lt;p&gt;The Mono Brazil site is &lt;a
+	href="http://monobrasil.redesolbrasil.org/twiki/bin/view/Main/MonoBrasil"&gt;Up&lt;/a&gt;.
+	It is TWiki based, but the content is there now.&lt;/p&gt;
+
+&lt;h3&gt;Hip stuff&lt;/h3&gt;
+
+	&lt;p&gt;Today's hip thing is of course the text-mode &lt;a
+	href="http://zemljanka.sourceforge.net/cursed/"&gt;Gtk+&lt;/a&gt;.  I
+	love this hack, and am puzzled by their effort to build a
+	Midnight Commander-like program using it, but the &lt;a
+	href="http://zemljanka.sourceforge.net/"&gt;pages&lt;/a&gt; are in
+	Czech.
+
+	&lt;p&gt;&lt;a href="http://blogs.gotdotnet.com/cbrumme/"&gt;Chris&lt;/a&gt;
+	Brumme's &lt;a
+	href="http://blogs.gotdotnet.com/cbrumme/PermaLink.aspx/dac5ba4a-f0c8-42bb-a5cf-097efb25d1a9"&gt;last
+	post&lt;/a&gt; on his blog is also fascinating: many internal
+	details about the CLR are exposed, but also, I am still quite
+	surprised by the layering done by NT on their low-level
+	loading interfaces, it seems too complicated when you contrast
+	it with ELF file loading (seems to me like a backwards
+	compatibility feature).  Mono happily can avoid a lot of this,
+	but for a price: they are today executing C++ code out of the
+	box, we cant yet.&lt;/p&gt;
+
+	&lt;p&gt;Michael Meeks is also &lt;a
+	href="http://www.gnome.org/~michael/index.html#2003-08-27"&gt;showing
+	off&lt;/a&gt; what &lt;i&gt;seems&lt;/i&gt; to the uninformed viewer like a
+	Gtk-like layout system for Open Office.&lt;/p&gt;
+
+&lt;h3&gt;Guadec, and Linux at Work?&lt;/h3&gt;
+
+	&lt;p&gt;There are various cities in Europe that want to host the
+	Guadec, and we can only host it in one place.  I was thinking
+	that maybe after Guadec, or before Guadec, the tutorial
+	speakers for Guadec could tour Europe for a week or two,
+	delivering tutorials on the various subjects: not really a
+	tour aimed at Gnome developers, but aimed at users and
+	developers interested in using the Gnome platform.  Very much
+	like what the Linux at Work folks do.&lt;/p&gt;
+
+	&lt;p&gt;That has the advantage of getting Gnome better known in
+	various places in Europe, but focusing our Guadec effort in a
+	single city.  What do you think?  &lt;a
+	href="mailto:miguel@ximian.com"&gt;Mail me&lt;/a&gt; your thoughts.
+
+&lt;h3&gt;Don: what is that cell phone of yours?&lt;/h3&gt;
+
+	&lt;p&gt;Don is going around with an absolutely hip SmartPhone
+	running the .NET Framework, which am in love with.  But after
+	using all my internet browsing powers, I have failed to locate
+	the model and provider for it.  It seems to be available only
+	in Europe.&lt;/p&gt;
+
+	&lt;p&gt;If you run into Don, get him to mail me the information
+	;-)&lt;/p&gt;
+
+&lt;h3&gt;Sao Paolo&lt;/h3&gt;
+
+	&lt;p&gt;Maria Laura and myself arrived to Sao Paolo.  Tomorrow we
+	will be visiting the Joao at the telecentros in the Favelas
+	where they are using Gnome, Debian and Linux to operate those
+	centers.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F27%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F27%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 27 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>25 Aug 2003: </title>
+      <description>&lt;p&gt;
+        OK, PEAPI definatly is not writing Section headers
+        correctly. Should be really easy to fix but I don't have my
+        book with me (surprise, surprise).
+&lt;p&gt;
+        &lt;p&gt;
+&lt;p&gt;
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F25%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F25%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 25 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>25 Aug 2003: Mono from Brazil</title>
+      <description>&lt;p&gt;During the &lt;a
+	href="http://www.congresso.gov.br/softwarelivre"&gt;free
+	software&lt;/a&gt;meeting in Brasilia, we launched the Mono Brazil
+	effort: a community of Brazilian hackers is creating a
+	Portuguese community around Mono.  This is an important step
+	for the local community, just like the creation of &lt;a
+	href="http://www.monohispano.org"&gt;Mono Hispano&lt;/a&gt; was.&lt;/p&gt;
+
+	&lt;p&gt;In the meantime in Mono-land things keep moving, I logged
+	into IRC recently, only to be bombarded with news about the
+	progress in Mono-land: Windows.Forms widget rendering was
+	re-structured to better match the rendering model.  Plenty of
+	bug fixes in this area, so you might want to get your
+	mono-wine packages from the Mono site.
+
+	&lt;p&gt;Duncan also contributed our Cairo bindings to
+	System.Drawing (we previously were using Xr, and we have
+	finally migrated to the new API).   For those who want to use
+	Cairo directly, we do provide a nice Cairo binding as well
+	without using System.Drawing.&lt;/p&gt;
+
+	&lt;p&gt;Atsushi Enomoto continues his work on the XML Schema
+	validation.  After watching the XML editor demo after &lt;a
+	href="http://www.eweek.com/article2/0,3959,1224399,00.asp"&gt;Don's
+	presentation&lt;/a&gt;, I am quite interested in seeing more smart
+	XML editors based on this code.  Although &lt;a
+	href="http://www.conglomerate.org"&gt;Conglomerate&lt;/a&gt; looks a
+	lot nicer, it is very fragile (due to its C heritage ;-) and
+	whatever is the language use to describe the graphical
+	rendering is not simple.&lt;/p&gt;
+
+	&lt;p&gt;Microsoft instead chose a different approach: instead of
+	making a mapping from the XML schema to describe the rendering
+	using the 2 or 3 level system used by Conglomerate, they have
+	pluggable renderers into Visual Studio.  So it is possible to
+	provide custom editors or renderers for SVG files or
+	well-known XML configuration files.&lt;/p&gt;
+
+	&lt;p&gt;Lluis has got all the SourceGear regression tests running
+	with Mono now, so I am sure Eric will be very pleased to see
+	his product running on Linux (and soon on the Mac, as Paolo
+	has been busily hacking on it)&lt;/p&gt;
+
+	&lt;p&gt;Vladimir has been busily implementing a .NET version of the
+	&lt;a href="http://www.zeroc.com"&gt;Internet Communications
+	Engine&lt;/a&gt;: the new hip OO-RPC protocol in the world.  Several
+	of the people involved with CORBA contributed to the design of
+	this vastly simplified and high-performance RPC system.&lt;/p&gt;
+
+	&lt;p&gt;Gonzalo has got XSP to support multiple-applications.  This
+	means one thing: I am migrating my blog finally to ASP.NET,
+	running side-by-side with the ASP.NET-based &lt;a
+	href="http://mono.ximian.com:8080"&gt;online Mono docs&lt;/a&gt;&lt;/p&gt;
+
+	&lt;p&gt;Martin and Zoltan continue their bug hunting on the
+	compiler, class libraries and runtime.  Martin's debugger is
+	also becoming more and more stable, but he wont get to work on
+	it too much, as C# Generics await him ;-)&lt;/p&gt;
+
+	&lt;p&gt;Yuri Astrakhan discovered &lt;a
+	href="http://www.openi18n.org/subgroups/lade/locale/"&gt;Open
+	Internationalization&lt;/a&gt; effort to create a data-base of all
+	the things localizable/internationalizable that a framework
+	needs to provide.  Dick has been working on this based on some
+	empty skeletons we created, but having real data files to work
+	with will make our effort more interesting&lt;/p&gt;
+
+	&lt;p&gt;Piers again impressed everyone with his Javascript skills:
+	he implemented a lighter, more portable, less buggy Javascript
+	dynamic tree, which can be seen on the &lt;a
+	href="http://mono.ximian.com:8080"&gt;mono docs site&lt;/a&gt;.  Ben in
+	the meantime helped me fix a few issues in Monodoc, in
+	particular now we get a better hint on multiple matches for
+	the same entry on the index, and he also implemented &lt;a
+	href="http://users.hawken.edu/05mauben/Screenshot-mdoc-overload.png"&gt;method
+	grouping&lt;/a&gt;.
+
+&lt;h1&gt;Porto Alegre&lt;/h1&gt;
+
+	&lt;p&gt;Been spending most of my time visiting friends and family
+	of Laura in Porto Alegre.  Also we have visited Marcelo and
+	Suzana a few times at their place.&lt;/p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F25%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F25%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 25 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>23 Aug 2003: Play day for Roxy</title>
+      <description>&lt;p&gt;
+      Roxy is coming to visit today, I'm going to take her to Gowlland
+      Todd park, and down to the beach for some refreshing ocean
+      swimming, way better then the swamp stuff she has been swimming
+      in lately.
+&lt;p&gt;
+      &lt;p&gt;
+&lt;p&gt;
+&lt;p&gt;
+    
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F23%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F23%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 23 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>22 Aug 2003: Congrats Miguel and Laura!!</title>
+      <description>&lt;p&gt;
+          Good luck Miguel and Laura best wishes for your new future.
+&lt;p&gt;
+          &lt;p&gt;
+&lt;p&gt;
+          
+          
+&lt;p&gt;
+          
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F22%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F22%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 22 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>22 Aug 2003: Married</title>
+      <description>I got married at 5:30pm in Porto Alegre to Maria Laura.  
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F22%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F22%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 22 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>21 Aug 2003: OMG it is early</title>
+      <description>&lt;p&gt;
+     5:59 sitting in McDonalds because I can't get into my office and
+     this is the only place in town that is open. Also I am damn
+     hungry. I think PEAPI isn't writing section headers properly. 
+&lt;p&gt;
+     &lt;p&gt;
+     
+     I guess 3 minutes for a hashbrown means 30. I don't think I could
+     eat one right now anyways.
+&lt;p&gt;
+     &lt;p&gt;
+&lt;p&gt;
+     A few things I want to do in the next year.
+&lt;p&gt;
+     &lt;ul&gt;
+        &lt;li&gt;Snowboard&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.bennerboat.com/" target="_new"&gt;Build
+        my own kayak&lt;/a&gt; (yes I know that I can not afford that kit)&lt;/li&gt;
+        &lt;li&gt;Get decent at basketball&lt;/li&gt;
+        &lt;li&gt;Learn to read Roxy's &lt;a
+        href="http://www.amazon.com/exec/obidos/ASIN/0806976772/lacetoleather/103-5052997-8327057"&gt;mind-brain function&lt;/a&gt;&lt;/li&gt;
+     &lt;/ul&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F21%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F21%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 21 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>20 Aug 2003: A fresh new chapter?</title>
+      <description>&lt;p&gt;
+        The rules for data are a little hard to figure out from
+        looking at the grammar and once again I have forgotten my
+        specs. I get the impression that you can not reference data in
+        any scope other then the scope you are in. So while you are in
+        a type definition you can not reference global data. This is
+        not much of a handicap because global data can be mapped to
+        global fields that can be referenced from a type definition. I
+        know this is exciting info for everyone so I will keep you
+        posted.
+&lt;p&gt;
+        &lt;p&gt;
+&lt;p&gt;
+        Sitting on the bus feeling very ill tracking down what I think
+        might be a really nasty hard to find bug in PEAPI....still
+        possible it is in ilasm bug though. Despite being on a wild
+        bug hunt, feeling sick, riding on a hot bumpy bus, and all of
+        the other negatives in my life I am in a really good mood
+        right now. Great news today, check back soon for more info
+        :-).
+&lt;p&gt;
+        
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F20%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F20%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 20 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>19 Aug 2003: Flan in the face</title>
+      <description>&lt;p&gt;
+      About half way through my hour long busride to work. Just
+      finished implementing long form overrides in ilasm. If I ever
+      meet someone that uses long form overrides in ilasm I would be
+      very surprised. Overall ilasm is starting to look pretty good, I
+      think I will go on a robustness rampage over the next few days,
+      and get all the reporting/error handling implemented. I'v said
+      that before though ;-).
+&lt;p&gt;
+      Sitting on the bus wishing I had my ilasm book with me. I want
+      to finish implementing mapped data values but I don't have the
+      spec with me. The ILASM book comes with a digital version. I
+      should see if I can get that running on GNU/Linux....odds are
+      not good. It is microsoft press. I also need to get the ecma
+      specs on this machine.
+&lt;p&gt;
+      
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F19%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F19%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 19 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>18 Aug 2003: Sleeping in their shoes</title>
+      <description>Sitting on the bus listening to two dudes talking about
+          firewalls. Kinda entertaining. Also trying to fix overrides
+          in ilasm but I think I broke my runtime last night and I
+          don't want to waste the battery power to rebuild right
+          now. Still have another hour of bussing it. NOTE TO
+          BCTRANSIT: Get wireless internet on busses, and
+          blinds.
+&lt;p&gt;
+          &lt;p&gt;
+           
+          Update. Implemented overrides on the ride home and still had
+          time for another log entry. Writing code that actually works
+          while riding on a bumpy bus with the hot sun glaring down on
+          my monitor makes me feel kinda studly.....thats kinda sad ;-).
+&lt;p&gt;
+          &lt;p&gt;
+&lt;p&gt;
+          &lt;a href="http://www.google.com/search?q=Jackson%20Harper"&gt;I
+          have finally overtaken the bull notes.&lt;/a&gt;
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F18%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F18%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 18 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>17 Aug 2003: Going to Brazil</title>
+      <description>&lt;p&gt;Today am flying to Brazil.  First stop will be Brasilia,
+	for the Congress-sponsored event on &lt;a
+	href="http://www.congresso.gov.br/softwarelivre"&gt;Free
+	Software&lt;/a&gt;.
+
+	Then am off to Porto Alegre to marry &lt;a
+	href="http://primates.ximian.com/~miguel/images/bombon.jpg"&gt;Maria
+	Laura&lt;/a&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F17%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F17%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 17 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>17 Aug 2003: A purple dog that wears spats</title>
+      <description>I always have fun looking at my sites referal URLs. My fav so
+         far has been &lt;a
+         href="http://statist.chungbuk.ac.kr/~ng/ng/zboard.php?id=talk"&gt;this&lt;/a&gt;
+         there was a link to my site in that message board. No idea
+         why.
+         
+         &lt;p&gt;
+         
+         Overall a pretty good day. Went for a hike, bought groceries,
+         made tacos, did laundry, watched TV, and wrote some &lt;a
+         href="http://lists.ximian.com/archives/public/mono-list/2003-August/015461.html"&gt;code&lt;/a&gt;.
+         
+         
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F17%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F17%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 17 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>16 Aug 2003: New RSS feed</title>
+      <description>&lt;p&gt;After months of keeping on my TODO list `write a blog
+	system', I gave up and wrote a small C# program to pull the
+	existing messy files massage them and upload them to the site.
+	Part of the problem is that I need something that will work in
+	disconnected mode and let me use Emacs to compose these
+	entries. 
+
+	&lt;p&gt;I also gave up waiting for BlogX to be released: I like it,
+	but the &lt;a
+	href="http://www.gotdotnet.com/Community/Workspaces/Workspace.aspx?id=ddc98753-6559-489b-a533-57034790a93a"&gt;GotDotNet
+	workspaces&lt;/a&gt; software is just horrible to use.  Even with
+	Windows its horrible.
+
+	&lt;p&gt;Microsoft still has some things to learn from the existing
+	open source tools.
+
+	&lt;p&gt;The next step is to write my own ASP.NET-based weblog
+	system, but I have to overcome the the feeling of guilt
+	everytime am not working on the core of Mono.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F16%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F16%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 16 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>16 Aug 2003: First Post</title>
+      <description>&lt;p&gt;
+        Seems like a good time to start a blog. Nice little app for
+        rendering my entries provided by Miguel.
+&lt;p&gt;
+        &lt;p&gt;
+        
+        Worked out. In pretty bad shape, but I think I can change that
+        pretty quickly. Now its time to rock ilasm overrides.
+       
+</description>
+      <link>http://www.jacksonh.net/jackson/blog/all.html#08%2F16%2F2003+12%3A00%3A00</link>
+      <author>Jackson Harper</author>
+      <guid isPermaLink="True">http://www.jacksonh.net/jackson/blog/all.html#08%2F16%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sat, 16 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>15 Aug 2003: My problems with C# and .NET</title>
+      <description>&lt;p&gt;I love C# very much, and the new extensions that are being
+	added to C# will improve the language in many areas:
+	
+	&lt;ul&gt;
+		&lt;li&gt;Iterators: they simplify authoring the
+		IEnumerable/IEnumerator interfaces in a class.  Very
+		nice.
+
+		&lt;li&gt;Anonymous methods: reduce the glue required for
+		small use cases.  For large cases, you dont want to
+		use them anyways, as they make your code look ugly
+		(remember: if a function does not fit on the screen,
+		its probably buggy). 
+	&lt;/ul&gt;
+
+	&lt;p&gt;Those will reduce the amount of coding required in some
+	scenarios, but they do not address some of the most common
+	problems that programmers face: strings and regular
+	expressions.
+
+	&lt;p&gt;.NET ships with a very powerful regex engine.  The engine
+	is so powerful, that it is possible to use it to implement
+	very advanced regexp-based applications.  Its as easy to use
+	as the POSIX regex API is: slightly more verbose due to its OO
+	heritage, but in general, very similar.
+
+	&lt;p&gt;The problem is that there is no simple way of using this
+	API from a language like C#: the developer is stuck with this
+	low-level API.  Perl and Python both bundle powerful regular
+	expression engines that are bound in a fairly usable way in
+	the language.
+
+	&lt;p&gt;Its a shame that C# does not have any simple way, or a nice
+	syntactic sugar to manipulate this common idiom.
+
+	&lt;p&gt;Strings manipulation in C# falls on the same category: some
+	work was done, but it was not really completed.  Adding a few
+	overloads to the class libraries would make C# a sweet
+	language for string processing.
+
+	&lt;p&gt;A two parameter indexer: string this [int start, int end]
+	would clear a lot of the confussion with Substring arguments
+	(a previous log entry has more details).
+	
+	&lt;p&gt;Although we could add this to Mono, the result would not be
+	portable to .NET.
+
+	&lt;p&gt;Finally, there is the Stream problem.  Reading a file in
+	.NET involves two steps: opening the stream, and then creating
+	a streamreader to read from it.  The code looks a bit like
+	this:
+
+&lt;pre&gt;
+	Stream st = File.OpenRead ("notes.txt");
+	StreamReader re = new StreamReader (st);
+        string line;
+			
+	while ((line = re.ReadLine ()) != null)
+		Console.WriteLine (line);
+&lt;/pre&gt;
+
+	&lt;p&gt;Wouldn't it be nicer, if you could just do:
+
+&lt;pre&gt;
+	string line;
+	while ((line = File.OpenRead ("notes.txt")) != null){
+		Console.WriteLine (line);
+	}
+&lt;/pre&gt;
+
+	&lt;p&gt;The above could be easily implemented by having the
+	FileStream implement IEnumerator as Guido does in Python.
+	
+	
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F15%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F15%2F2003+12%3A00%3A00</guid>
+      <pubDate>Fri, 15 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>14 Aug 2003: Mono 0.26</title>
+      <description>&lt;p&gt;
+	A new version of Mono has hit the streets.  This version is
+	obviously the best Mono release ever.  A roadmap to Mono 1.0
+	is also being prepared as we speak, for the joy of all the
+	Mono users.
+&lt;p&gt;
+	Duncan surprised me on Sunday with a C# Cairo binding.  This
+	was fast, and am really glad to see it happen so quickly.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F14%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F14%2F2003+12%3A00%3A00</guid>
+      <pubDate>Thu, 14 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>13 Aug 2003: Don Box in town.</title>
+      <description>&lt;p&gt;
+	Duncan and myself left the office early today to attend &lt;a
+	href="http://www.gotdotnet.com/team/dbox/default.aspx?key=2003-08-15T12:39:29Z"&gt;Don's&lt;/a&gt;
+	keynote at the XML web services conference.
+&lt;p&gt;
+	It was good to see Don, despite having taking a red eye the
+	day before, he did an outstanding presentation on web services
+	and showed some of the new features in C#.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F13%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F13%2F2003+12%3A00%3A00</guid>
+      <pubDate>Wed, 13 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>12 Aug 2003: Novell</title>
+      <description>&lt;p&gt;
+	Went to Provo today to do a small presentation about Mono in
+	an open session to Novell engineers.   It went pretty well,
+	and I also got to talk with various developers about Novell's
+	existing product line.
+&lt;p&gt;
+	Of particular interest are iFolder and NetMail
+&lt;p&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F12%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F12%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 12 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>10 Aug 2003: New apartment</title>
+      <description>&lt;p&gt;
+	I signed my lease for my new apartment, which will be just a
+	few blocks away from my current place.   Nat will be my neighbor.
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F10%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F10%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 10 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>04 Aug 2003: New Chapter</title>
+      <description>&lt;p&gt;
+        A fresh new chapter begins.
+&lt;p&gt;
+        More updates at &lt;a href="http://www.nat.org/2003/august"&gt;Nat's site&lt;/a&gt;
+&lt;p&gt;
+        Two fantastic movies this weekend.  I just finished
+        watching &lt;a href="http://us.imdb.com/Title?0207198"&gt;Was tun, wenn's
+        brennt? &lt;/a&gt; which Laura recommended.  Yesterday Alex, Nat and
+        myself went to see &lt;a
+        href="http://us.imdb.com/Title?0283900"&gt;L'Auberge Espagnole&lt;/a&gt;.
+&lt;p&gt;
+        Maria Laura in Mexico:&lt;p&gt;
+&lt;p&gt;
+        &lt;img src="http://primates.ximian.com/~miguel/images/bombon.jpg"&gt;
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#08%2F04%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#08%2F04%2F2003+12%3A00%3A00</guid>
+      <pubDate>Mon, 04 Aug 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>22 Jul 2003: VMs</title>
+      <description>&lt;p&gt;Guido recently quoted a conversation we had about Parrot.
+	I said to him that the Parrot VM design was based on ideology
+	(Guido quoted me as saying religion ;-).  &lt;/p&gt;
+	
+	&lt;p&gt;One of my favorite books is &lt;a
+	href="http://www.amazon.com/exec/obidos/tg/detail/-/1558603298/ref=lib_dp_TFCV/103-7978374-1827822?v=glance&amp;s=books&amp;vi=reader#reader-link"&gt;Computer
+	Architecture: A quantitative approach&lt;/a&gt;. 
+	
+	&lt;p&gt;The parrot design is based on ideology because some of the
+	core design considerations are just that: `real machine use
+	registers, hence register-based intermediate code is faster'.
+	An ideology-based design is one where the design decisions are
+	driven by punch lines and not by a careful and quantitative
+	study of the problem at hand.  &lt;/p&gt;
+
+
+	&lt;p&gt;Mono implements the .NET virtual execution system; This
+	execution system uses a stack-based instruction set to
+	&lt;i&gt;transport&lt;/i&gt; code.  Mono never actually sees the stack
+	operations, because we treat the stack-based operations by
+	their name: a serialization format for a tree representation
+	of the original code.&lt;/p&gt;
+
+	&lt;p&gt;So for example, if you have an operation like:&lt;/p&gt;
+
+&lt;pre&gt;
+		a = b + c;
+&lt;/pre&gt;
+
+	&lt;p&gt;The code can be thought of as:&lt;/p&gt;
+
+	&lt;img src="http://primates.ximian.com/~miguel/images/Diagram1.png"&gt;
+
+	&lt;p&gt;A possible serialization of this tree is easily expressed
+	by a lisp-like expression:&lt;/p&gt;
+
+&lt;pre&gt;
+	(assign a (add b c))
+&lt;/pre&gt;
+
+	&lt;p&gt;Another possible serialization is using bytecodes, for a
+	stack machine&lt;/p&gt;:
+
+&lt;pre&gt;
+	ldloc b
+	ldloc c
+	add
+	stloc a
+&lt;/pre&gt;
+
+	&lt;p&gt;The above set of stack instructions can be easily decoded
+	back into its original form (see drawing above).  This is what
+	the Mono JIT does: it transforms its input CIL bytecodes into
+	various trees like this (we call these the forest of trees):
+
+&lt;pre&gt;
+(stind.i4 regoffset[0xfffffff8(%ebp)] (add (ldind.i4 regoffset[0xfffffff4(%ebp)]) 
+				      (ldind.i4 regoffset[0xfffffffc(%ebp)])))
+&lt;/pre&gt;
+
+	&lt;p&gt;The above if the debugging output that renders our C-based
+	trees.  We then use a code generator generator to transform
+	the high-level operations (not listed in this example) into a
+	list of low-level instructions:
+
+&lt;pre&gt;
+        1  loadi4_membase R9 &lt;- %ebp
+        2  loadi4_membase R10 &lt;- %ebp
+        3  add R8 &lt;- R9 R10 clobbers: 1
+        4  move %eax &lt;- R8
+&lt;/pre&gt;
+
+	&lt;p&gt;Depending on the optimizations turned on, there might be
+	other steps involved, the end result is:&lt;/p&gt;
+
+&lt;pre&gt;
+	mov    0x8(%ebp),%eax
+	mov    0xc(%ebp),%ecx
+	add    %ecx,%eax
+&lt;/pre&gt;
+
+	&lt;p&gt;(Actually, I had to trick the JIT compiler into doing this,
+	because dead-code elimination and inlining in Mono eliminate
+	redundant code).&lt;/p&gt;
+
+&lt;h4&gt;Scripting languages&lt;/h4&gt;
+
+	&lt;p&gt;Now, am interested in this debate, because I think that
+	Mono and the .NET VM are ideal virtual machines for scripting
+	languages.  Since the .NET folks have done a fair ammount of
+	work into the interop issues (The &lt;a
+	href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconwhatiscommonlanguagespecification.asp"&gt;Common
+	Language Specification&lt;/a&gt;) and it is a fairly advance virtual
+	machine, my interest is making Mono a good host for those
+	languages.&lt;/p&gt;
+
+	&lt;p&gt;It has been said `.NET works great for static languages,
+	but not for scripting'.  Which is not true; VB.NET and JScript
+	are both dynamic languages that happen to work just fine on
+	the .NET Framework.  And we are convinced that the virtual
+	machine can be improved.
+
+	&lt;p&gt;The main issue we have today with Mono and scripting
+	languages is that nobody has done a quantitatie study of what
+	are the performance problems of running a dynamic language in
+	the .NET/Mono CLR: Without an attempt to have a native
+	compiler for the platform, and studying the problems, it is
+	not possible to solve them. &lt;/p&gt;
+
+	&lt;p&gt;In one particular case (Lisp), we know that implementors
+	will likely want to structure their code (or their generated
+	code) like this:&lt;/p&gt;
+&lt;pre&gt;
+class Cell {
+	Atom Head;
+	Cell tail;
+}
+
+Method ()
+{
+	if (object is Cell){
+		...
+	} if (object is Atom){
+		...
+	}
+}
+&lt;/pre&gt;
+
+	&lt;p&gt;So what they need in this particular case is a fast
+	implementation of the `is' operator (the `isinst'
+	instruction).  For this, we did a &lt;a
+	href="http://lists.ximian.com/archives/public/mono-list/2003-May/013897.html"&gt;proposal&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <link>http://primates.ximian.com/~miguel/all.html#07%2F22%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#07%2F22%2F2003+12%3A00%3A00</guid>
+      <pubDate>Tue, 22 Jul 2003 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>13 Jul 2003: Back!</title>
+      <link>http://primates.ximian.com/~miguel/all.html#07%2F13%2F2003+12%3A00%3A00</link>
+      <author>Miguel de Icaza</author>
+      <guid isPermaLink="True">http://primates.ximian.com/~miguel/all.html#07%2F13%2F2003+12%3A00%3A00</guid>
+      <pubDate>Sun, 13 Jul 2003 12:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
