@@ -1,5 +1,7 @@
-2004-11-12  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
+2004-11-29  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
+	* worker/default.tpl: Oops!!! it should be "<link ... href='index.rss' ... />" not "... href='index.css' ..."
 
+2004-11-12  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
 	* worker/default.tpl: Added "<link rel='alternate' title='Monologue' href='index.css' type='application/rss+xml' />"
 	for the benefit of Firefox users, like the www.mono-project.com does
 
