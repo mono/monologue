@@ -173,6 +173,7 @@ class MonologueWorker {
 			tpl.selectSection ("DAY_ENTRY");
 			foreach (RssItem itm in day) {
 				tpl.setField ("ENTRY_LINK", itm.Link.ToString ());
+				/*
 				Blogger bl = bloggers [itm.Author];
 				if (bl != null) {
 					tpl.setField ("ENTRY_PERSON", bl.Name);
@@ -189,6 +190,7 @@ class MonologueWorker {
 						}
 					}
 				}
+				*/
 				tpl.setField ("ENTRY_TITLE", itm.Title);
 				tpl.setField ("ENTRY_HTML", itm.Description);
 				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt"));
