@@ -81,3 +81,14 @@ img {
 	padding:0;
 	list-style-type:none;
 }
+
+.code-xml, .code-csharp
+{
+	margin:15px;
+	padding:15px;
+	font-size: small;
+	font-family: "Courier New", Courier;
+	background:whitesmoke;
+	border: solid 1px silver;
+	line-height:110%;
+}

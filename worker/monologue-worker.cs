@@ -91,7 +91,8 @@ class MonologueWorker {
 			<html><head>
 				<title>Monologue::</title>
 				<link rel='stylesheet' href='monologue.css' type='text/css'>
-			</head><body>
+				<script src='prettyprint.js' />
+			</head><body onload='paintColors();'>
 			<h1>Monologue</h1>
 			");
 			
