@@ -2,6 +2,7 @@
 	<head>
 		<title>Monologue::</title>
 		<link rel='stylesheet' href='monologue.css' type='text/css' />
+		<link rel='alternate' title='Monologue' href='index.css' type='application/rss+xml' />
 		<script src='prettyprint.js' type='text/javascript'>
 		</script>
 	</head>

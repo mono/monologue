@@ -1,3 +1,8 @@
+2004-11-12  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
+
+	* worker/default.tpl: Added "<link rel='alternate' title='Monologue' href='index.css' type='application/rss+xml' />"
+	for the benefit of Firefox users, like the www.mono-project.com does
+
 2004-10-03  Alex Graveley  <alex@beatniksoftware.com>
 
 	* worker/bloggers.xml: Add myself.
