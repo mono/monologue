@@ -103,7 +103,7 @@ class MonologueWorker {
 					<h3><a href='{0}'>{1}: {2}</a></h3>
 					<div class='blogentry'>
 						{3}
-						<div>Posted at {4}</div>
+						<p>Posted at {4}</p>
 					</div>
 				", itm.Link, itm.Author, itm.Title, itm.Description, itm.PubDate.ToString ("t"));
 			}
