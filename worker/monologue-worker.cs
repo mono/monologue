@@ -64,8 +64,11 @@ class MonologueWorker {
 		foreach (Blogger b in bloggers.Bloggers) {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
-				if (i.PubDate >= minPubDate)
+				if (i.PubDate >= minPubDate) {
+					string realTitle = b.Name + ": " + i.Title;
+					i.Title = realTitle;
 					stories.Add (i);
+				}
 			}
 		}
 		

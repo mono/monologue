@@ -28,7 +28,7 @@
 			<h2>@@DAY_DATE@@</h2>
 			
 				<!-- @@DAY_ENTRY@@ -->
-				<h3><a href='@@ENTRY_LINK@@'>@@ENTRY_PERSON@@: @@ENTRY_TITLE@@</a></h3>
+				<h3><a href='@@ENTRY_LINK@@'>@@ENTRY_TITLE@@</a></h3>
 				<div class='blogentry'>
 					@@ENTRY_HTML@@
 					<p>Posted at @@ENTRY_DATE@@</p>
