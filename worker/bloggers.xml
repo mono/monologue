@@ -5,4 +5,5 @@
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
 	<Blogger Name="Mike Kestner" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
 	<Blogger Name="Lluis Sanchez " RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
+	<Blogger Name="Duncan Mak " RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
 </BloggerCollection>
