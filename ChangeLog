@@ -1,3 +1,7 @@
+2004-07-23 Francisco T. Martinez <paco@mfcon.com>
+
+	* worker/bloggers.xml: Added Paco Martinez to the Bloggers
+
 2004-07-22 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/Makefile: added 'clean' target.

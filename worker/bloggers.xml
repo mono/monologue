@@ -30,4 +30,5 @@
 	<Blogger Name="Kristian" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss"/>
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2"/>
 	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php"/>        
+	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf"/>        
 </BloggerCollection>
