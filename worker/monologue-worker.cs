@@ -56,7 +56,7 @@ class MonologueWorker {
 		ch.Title = "Monologue";
 		ch.Generator = "Monologue worker: b-diddy powered";
 		ch.Description = "The voices of Mono";
-		ch.Link = new Uri ("http://monologue.go-mono.com");
+		ch.Link = new Uri ("http://go-mono.com/monologue");
 		
 		ArrayList stories = new ArrayList ();
 		
