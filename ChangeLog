@@ -1,3 +1,7 @@
+2004-09-20  Jackson Harper  <jackson@ximian.com>
+
+	* worker/bloggers.xml: newer cooler home for my blog.
+
 2004-08-09  Duncan Mak  <duncan@ximian.com>
 
 	* worker/monologue-worker.cs (Blogger.Author): Add new property to
