@@ -28,7 +28,7 @@ class MonologueWorker {
 		} else {
 			do {
 				RunOnce ();
-				System.Threading.Thread.Sleep (1000);
+				System.Threading.Thread.Sleep (600000);
 			} while (true);
 		}
 	}
