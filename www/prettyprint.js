@@ -56,6 +56,12 @@ function formatCs (text)
 	var re = / /g;
 	text = text.replace (re, "&nbsp;");
 
+	re = /</g;
+	text = text.replace (re, "&lt;");
+
+	re = />/g;
+	text = text.replace (re, "&gt;");
+
 	// cant get this one to work in the good syntax
 	re = new RegExp ("\"((((?!\").)|\\\")*?)\"","g");
 	text = text.replace (re,"<span style='color:purple'>\"$1\"</span>");
