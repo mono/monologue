@@ -7,7 +7,7 @@ run : monologue-worker.exe default.tpl
 	$(MONO) $< bloggers.xml ../www/index.html ../www/index.rss
 
 mig: monologue-worker.exe
-	$(MONO) $< miguel.xml ../www/index.html ../www/index.rss
+	$(MONO) --debug $< miguel.xml ../www/index.html ../www/index.rss
 
 
 push:
