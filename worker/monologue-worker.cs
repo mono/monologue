@@ -112,7 +112,7 @@ class MonologueWorker {
 						{3}
 						<p>Posted at {4}</p>
 					</div>
-				", itm.Link, itm.Author, itm.Title, itm.Description, itm.PubDate.ToString ("h:m tt"));
+				", itm.Link, bloggers [itm.Author].Name, itm.Title, itm.Description, itm.PubDate.ToString ("h:m tt"));
 			}
 		}
 		w.WriteLine (@"</div>");
@@ -149,6 +149,7 @@ public class BloggerCollection {
 	}
 	
 	ArrayList bloggers;
+	Hashtable emailToBlogger;
 	[XmlElement ("Blogger", typeof (Blogger))]
 	public ArrayList Bloggers {
 		get {
@@ -157,6 +158,16 @@ public class BloggerCollection {
 		set {
 			bloggers = value;
 			bloggers.Sort (new BloggerComparer ());
+			emailToBlogger = new Hashtable ();
+			foreach (Blogger b in bloggers) {
+				emailToBlogger.Add (b.Email, b);
+			}
+		}
+	}
+	
+	public Blogger this [string email] {
+		get {
+			return (Blogger)emailToBlogger [email];
 		}
 	}
 	
@@ -171,6 +182,7 @@ public class BloggerCollection {
 public class Blogger {
 	[XmlAttribute] public string Name;
 	[XmlAttribute] public string RssUrl;
+	[XmlAttribute] public string Email;
 		
 	RssFeed feed;
 	[XmlIgnore]
@@ -196,14 +208,14 @@ public class Blogger {
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
 			foreach (RssItem i in feed.Channels [0].Items)
-				i.Author = Name;
+				i.Author = Email;
 			return true;
 		} else {
 			RssFeed old = feed;
 			feed = RssFeed.Read (feed);
 			if (feed != old) {
 				foreach (RssItem i in feed.Channels [0].Items)
-					i.Author = Name;
+					i.Author = Email;
 				
 				Console.WriteLine ("Updated {0}", Name);
 			}
