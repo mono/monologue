@@ -49,13 +49,16 @@ class MonologueWorker {
 		ch.Title = "Monologue";
 		ch.Generator = "Monologue worker: b-diddy powerd";
 		ch.Description = "The voices of Mono";
-		ch.Link = new Uri ("http://dunno.com");
+		ch.Link = new Uri ("http://monologue.go-mono.com");
 		
 		ArrayList stories = new ArrayList ();
 		
+		DateTime minPubDate = DateTime.Now.AddDays (-14);
 		foreach (Blogger b in bloggers.Bloggers) {
-			foreach (RssItem i in b.Channel.Items)
-				stories.Add (i);
+			foreach (RssItem i in b.Channel.Items) {
+				if (i.PubDate >= minPubDate)
+					stories.Add (i);
+			}
 		}
 		
 		stories.Sort (new ReverseRssItemComparer ());
@@ -70,7 +73,7 @@ class MonologueWorker {
 	public class ReverseRssItemComparer : IComparer {
 		int IComparer.Compare( Object x, Object y )
 		{
-			return DateTime.Compare (((RssItem)y).PubDate, ((RssItem)x).PubDate.Date);
+			return DateTime.Compare (((RssItem)y).PubDate, ((RssItem)x).PubDate);
 		}
 	}
 }
@@ -89,7 +92,6 @@ public class BloggerCollection {
 
 public class Blogger {
 	[XmlAttribute] public string Name;
-	[XmlAttribute] public string Email;
 	[XmlAttribute] public string RssUrl;
 		
 	RssFeed feed;
@@ -105,6 +107,7 @@ public class Blogger {
 	
 	public bool UpdateFeed ()
 	{
+		Console.WriteLine ("Getting {0}", RssUrl);
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
 			foreach (RssItem i in feed.Channels [0].Items)
