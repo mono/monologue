@@ -43,4 +43,5 @@
 <!-- Removed this one until the feed is usable
 	<Blogger Name="Jb Evain" RssUrl="http://blogs.dotnetguru.org/xmlsrv/rss.php?blog=17"/>mono/rss.php"/>
 -->
+	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
 </BloggerCollection>
