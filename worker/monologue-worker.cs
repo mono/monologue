@@ -215,7 +215,7 @@ public class Blogger {
 		get {
 			if (Channel != null)
 				return Channel.Link;
-			return "";
+			return new Uri ("");
 		}
 	}
 	

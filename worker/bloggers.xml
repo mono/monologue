@@ -1,13 +1,38 @@
 <BloggerCollection>
-	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
-	<Blogger Name="Miguel de Icaza" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
-	<Blogger Name="Jackson Harper" RssUrl="http://www.jacksonh.net/jackson/blog/jackson.rss2" />
-	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
-	<Blogger Name="Mike Kestner" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
-	<Blogger Name="Lluis Sanchez " RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
-	<Blogger Name="Duncan Mak " RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
-	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" />
-	<Blogger Name="Todd Berman" RssUrl="http://codeblogs.ximian.com/blogs/tberman/index.xml" />
-	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" />
-	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.xml" />
+  <Blogger Name="Ben Maurer" Email="bmaurer@users.sourceforge.net" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
+  <Blogger Name="Miguel de Icaza" Email="miguel@ximian.com" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
+  <Blogger Name="Sebastien Pouliot" Email="spouliot@videotron.ca" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
+  <Blogger Name="Mike Kestner" Email="mkestner@ximian.com" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
+  <Blogger Name="Lluis Sanchez " Email="lluis@ximian.com" RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
+  <Blogger Name="Duncan Mak " Email="duncan@ximian.com" RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
+  <Blogger Name="Brad Adams" Email="brada@microsoft.com" RssUrl="http://blogs.gotdotnet.com/BradA/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Joshua Alen" Email="XXjoshua@microsoft.com" RssUrl="http://allenjs.gearhost.net/blog/SyndicationService.asmx/GetRss" />
+  <Blogger Name="Movable Type" Email="" RssUrl="http://movabletype.org/index.xml" />
+  <Blogger Name="JWZ" Email="jwz@jwz.org" RssUrl="http://www.livejournal.com/~jwz/rss.xml" />
+  <Blogger Name="Chris Brumme" Email="" RssUrl="http://blogs.gotdotnet.com/cbrumme/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Dive into mark" Email="" RssUrl="http://diveintomark.org/xml/rss.xml" />
+  <Blogger Name="IKVM.NET" Email="" RssUrl="http://weblog.ikvm.net/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Joi Ito" Email="" RssUrl="http://joi.ito.com/index.xml" />
+  <Blogger Name="Jon Udell" Email="" RssUrl="http://weblog.infoworld.com/udell/rss.xml" />
+  <Blogger Name="Dare Obasanjo" Email="" RssUrl="http://www.25hoursaday.com/rss091.xml" />
+  <Blogger Name="Don Box" Email="" RssUrl="http://www.gotdotnet.com/team/dbox/rss.aspx" />
+  <Blogger Name="Guido" Email="" RssUrl="http://www.artima.com/weblogs/feeds/bloggers/guido.rss" />
+  <Blogger Name="Jeremy Allaire" Email="" RssUrl="http://radio.weblogs.com/0113297/rss.xml" />
+  <Blogger Name="Kingsley" Email="" RssUrl="http://www.openlinksw.com/blog/~kidehen/gems/rss.xml" />
+  <Blogger Name="Mitch Kapor" Email="" RssUrl="http://blogs.osafoundation.org/mitch/index.rdf" />
+  <Blogger Name="Ray Ozzie" Email="" RssUrl="http://www.ozzie.net/blog/rss.xml" />
+  <Blogger Name="Chris Sells" Email="" RssUrl="http://www.sellsbrothers.com/news/rss.aspx" />
+  <Blogger Name="Clauer" Email="" RssUrl="http://weblogs.asp.net/clauer/Rss.aspx" />
+  <Blogger Name="Lutz Roeder" Email="" RssUrl="http://aisto.com/roeder/frontier/rss.xml" />
+  <Blogger Name="Nikhilk" Email="" RssUrl="http://www.nikhilk.net/Rss.ashx?id=1" />
+  <Blogger Name="ScottGu" Email="" RssUrl="http://weblogs.asp.net/scottgu/Rss.aspx" />
+  <Blogger Name="Brian" Email="" RssUrl="http://blog.neoteny.com/brian/index.rdf" />
+  <Blogger Name="Tim Sneath" Email="" RssUrl="http://blogs.gotdotnet.com/tims/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Eric Sink" Email="" RssUrl="http://software.ericsink.com/rss.xml" />
+  <Blogger Name="Eric Gunnerson" Email="" RssUrl="http://blogs.gotdotnet.com/ericgu/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Nathan" Email="" RssUrl="http://blogs.gotdotnet.com/anathan/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Anne Thomas Manes" Email="" RssUrl="http://www.burtongroup.com/weblogs/annethomasmanes/index.rdf" />
+  <Blogger Name="Raymond Chen" Email="" RssUrl="http://blogs.gotdotnet.com/raymondc/blogxbrowsing.asmx/GetRss?" />
+  <Blogger Name="Richard" Email="" RssUrl="http://java.thn.htu.se/~toor/blog/index.rdf" />
+  <Blogger Name="Jason Zander" Email="" RssUrl="http://blogs.gotdotnet.com/jasonz/blogxbrowsing.asmx/GetRss?"/>
 </BloggerCollection>
