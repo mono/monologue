@@ -16,7 +16,7 @@
 <!-- Removed next one. The server is never up 
 	<Blogger Name="Tip Mono" RssUrl="http://aeglos.dyndns.org/tip-mono/rss.php"/>
 -->
-	<Blogger Name="Dan Morgan" RssUrl="http://codeblogs.ximian.com/blogs/danmorg/index.rdf"/>
+	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/index.rdf"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://primates.ximian.com/~atsushi/lb/index.rss2"/>
 	<Blogger Name="Erik Dasque" RssUrl="http://primates.ximian.com/~edasque/erik.rss2"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf"/>
