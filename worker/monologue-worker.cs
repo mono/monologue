@@ -112,7 +112,7 @@ class MonologueWorker {
 						{3}
 						<p>Posted at {4}</p>
 					</div>
-				", itm.Link, itm.Author, itm.Title, itm.Description, itm.PubDate.ToString ("t"));
+				", itm.Link, itm.Author, itm.Title, itm.Description, itm.PubDate.ToString ("h:m tt"));
 			}
 		}
 		w.WriteLine (@"</div>");
