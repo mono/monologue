@@ -6,6 +6,6 @@
 	<Blogger Name="Mike Kestner" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
 	<Blogger Name="Lluis Sanchez " RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
 	<Blogger Name="Duncan Mak " RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
-	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/index.rss2" />
+	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" />
 	<Blogger Name="Todd Berman" RssUrl="http://codeblogs.ximian.com/blogs/tberman/index.xml" />
 </BloggerCollection>
