@@ -18,4 +18,5 @@
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://primates.ximian.com/~atsushi/blog/index.rss"/>
 	<Blogger Name="Erik Dasque" RssUrl="http://primates.ximian.com/~edasque/erik.rss2"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf"/>
+	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
 </BloggerCollection>
