@@ -53,10 +53,10 @@ function formatCs (text)
 	var re = new RegExp(" ","g");
 	text = text.replace (re, "&nbsp;");
 
-	re = new RegExp ("\"(((?!\").)*)\"","g");
+	re = new RegExp ("\"((((?!\").)|\\\")*)\"","g");
 	text = text.replace (re,"<span style='color:purple'>\"$1\"</span>");
 
-	re = new RegExp ("//((.(?!\\\"\\<\\/span\\>))*)(\r|\n|\r\n)","g");
+	re = new RegExp ("//(((.(?!\\\"\\<\\/span\\>))|\"(((?!\").)*)\"\\<\\/span\\>)*)(\r|\n|\r\n)","g");
 	text = text.replace (re,"<span style='color:green'>//$1</span><br/>");
 	
 	re = new RegExp (keywords,"g");
@@ -68,7 +68,17 @@ function formatCs (text)
 	re = new RegExp("\n","g");
 	text = text.replace (re,"<br/>");
 	
-	return text;
+	div = document.createElement("div");
+	div.innerHTML = text;
+	
+	spans = div.getElementsByTagName ("span")
+	for (i = 0; i < spans.length; i++) {
+		if (spans [i].parentNode.nodeName == "SPAN") {
+			spans [i].style.color = "";
+		}
+	}
+	
+	return div.innerHTML;
 }
 
 function formatXml (text)
