@@ -54,7 +54,7 @@ class MonologueWorker {
 		outFeed = new RssFeed ();
 		RssChannel ch = new RssChannel ();
 		ch.Title = "Monologue";
-		ch.Generator = "Monologue worker: b-diddy powerd";
+		ch.Generator = "Monologue worker: b-diddy powered";
 		ch.Description = "The voices of Mono";
 		ch.Link = new Uri ("http://monologue.go-mono.com");
 		
@@ -158,9 +158,9 @@ public class BloggerCollection {
 	{
 		return (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
 	}
-static int x;	
+
 	ArrayList bloggers;
-	Hashtable emailToBlogger;
+	Hashtable idToBlogger;
 	[XmlElement ("Blogger", typeof (Blogger))]
 	public ArrayList Bloggers {
 		get {
@@ -169,18 +169,15 @@ static int x;
 		set {
 			bloggers = value;
 			bloggers.Sort (new BloggerComparer ());
-			emailToBlogger = new Hashtable ();
-			foreach (Blogger b in bloggers) {
-				if (b.Email == "") b.Email = "" + x++;
-
-				emailToBlogger.Add (b.Email, b);
-			}
+			idToBlogger = new Hashtable ();
+			foreach (Blogger b in bloggers)
+				idToBlogger.Add (b.ID, b);
 		}
 	}
 	
-	public Blogger this [string email] {
+	public Blogger this [string id] {
 		get {
-			return (Blogger)emailToBlogger [email];
+			return (Blogger)idToBlogger [id];
 		}
 	}
 	
@@ -195,7 +192,11 @@ static int x;
 public class Blogger {
 	[XmlAttribute] public string Name;
 	[XmlAttribute] public string RssUrl;
-	[XmlAttribute] public string Email;
+	[XmlIgnore]
+	public string ID {
+		// Must look like an email to make rss happy
+		get { return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName (RssUrl); }
+	}
 		
 	RssFeed feed;
 	[XmlIgnore]
@@ -222,14 +223,14 @@ public class Blogger {
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
 			foreach (RssItem i in feed.Channels [0].Items)
-				i.Author = Email;
+				i.Author = ID;
 			return true;
 		} else {
 			RssFeed old = feed;
 			feed = RssFeed.Read (feed);
 			if (feed != old) {
 				foreach (RssItem i in feed.Channels [0].Items)
-					i.Author = Email;
+					i.Author = ID;
 				
 				Console.WriteLine ("Updated {0}", Name);
 			}

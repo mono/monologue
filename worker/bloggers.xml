@@ -1,10 +1,10 @@
 <BloggerCollection>
-	<Blogger Name="Ben Maurer" Email="bmaurer@users.sourceforge.net" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
-	<Blogger Name="Miguel de Icaza" Email="miguel@ximian.com" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
-	<Blogger Name="Jackson Harper" Email="jackson@ximian.com" RssUrl="http://www.jacksonh.net/jackson/blog/jackson.rss2" />
-	<Blogger Name="Sebastien Pouliot" Email="spouliot@videotron.ca" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
-	<Blogger Name="Mike Kestner" Email="mkestner@ximian.com" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
-	<Blogger Name="Lluis Sanchez " Email="lluis@ximian.com" RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
-	<Blogger Name="Duncan Mak " Email="duncan@ximian.com" RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
-	<Blogger Name="Martin Baulig" Email="martin@ximian.com" RssUrl="http://primates.ximian.com/~martin/blog/index.rss2" />
+	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
+	<Blogger Name="Miguel de Icaza" RssUrl="http://primates.ximian.com/~miguel/miguel.rss2" />
+	<Blogger Name="Jackson Harper" RssUrl="http://www.jacksonh.net/jackson/blog/jackson.rss2" />
+	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" />
+	<Blogger Name="Mike Kestner" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" />
+	<Blogger Name="Lluis Sanchez " RssUrl="http://primates.ximian.com/~lluis/blog/index.rss2" />
+	<Blogger Name="Duncan Mak " RssUrl="http://primates.ximian.com/~duncan/blog/index.xml" />
+	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/index.rss2" />
 </BloggerCollection>
