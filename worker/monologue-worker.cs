@@ -17,14 +17,20 @@ class MonologueWorker {
 	
 	static void Main (string [] args)
 	{
-		if (args.Length != 3)
-			throw new Exception ("monologue-worker.exe BLOGGERS_FILE HTML_OUTPUT RSS_OUTPUT");
+		if (args.Length != 3 && args.Length != 4)
+			throw new Exception ("monologue-worker.exe BLOGGERS_FILE HTML_OUTPUT RSS_OUTPUT [--loop]");
 		
 		bloggersFile = args [0];
 		outputFile = args [1];
 		rssOutFile = args [2];
-
-		RunOnce ();
+		if (args.Length != 4 || args [3] != "--loop") {
+			RunOnce ();
+		} else {
+			do {
+				RunOnce ();
+				System.Threading.Thread.Sleep (1000);
+			} while (true);
+		}
 	}
 	
 	static void RunOnce ()
@@ -53,6 +59,7 @@ class MonologueWorker {
 		
 		DateTime minPubDate = DateTime.Now.AddDays (-14);
 		foreach (Blogger b in bloggers.Bloggers) {
+			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
 				if (i.PubDate >= minPubDate)
 					stories.Add (i);
@@ -205,6 +212,7 @@ public class Blogger {
 	
 	public bool UpdateFeed ()
 	{
+		try {
 		Console.WriteLine ("Getting {0}", RssUrl);
 		if (feed == null) {
 			feed = RssFeed.Read (RssUrl);
@@ -221,6 +229,10 @@ public class Blogger {
 				Console.WriteLine ("Updated {0}", Name);
 			}
 			return feed == old;
+		}
+		} catch (Exception e) {
+			Console.WriteLine ("Exception from {0} : {1}", RssUrl, e);
+			return false;
 		}
 	}
 }
