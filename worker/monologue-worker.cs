@@ -23,13 +23,12 @@ class MonologueWorker {
 		bloggersFile = args [0];
 		outputFile = args [1];
 		rssOutFile = args [2];
-		if (args.Length != 4 || args [3] != "--loop") {
+		if (args.Length < 4 || args [3] != "--loop") {
 			RunOnce ();
 		} else {
 			int msToSleep = 600000;
 			if (args.Length >= 5)
 				msToSleep = int.Parse (args [4]);
-				
 			do {
 				RunOnce ();
 				System.Threading.Thread.Sleep (msToSleep);
