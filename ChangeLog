@@ -1,3 +1,9 @@
+2004-08-09  Duncan Mak  <duncan@ximian.com>
+
+	* worker/monologue-worker.cs (Blogger.Author): Add new property to
+	make the author element more pretty. Using Blogger.Id shows all
+	these x0020 spew.
+
 2004-07-27 Sachin Kumar <skumar1@novell.com>
 
 	* worker/bloggers.xml: Added Sureshkumar to Bloggers

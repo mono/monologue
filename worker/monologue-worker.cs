@@ -314,6 +314,18 @@ public class Blogger {
 		set { feed = value; }
 	}
 
+        public string Author {
+                get {
+                        string author;
+                        if (Name.IndexOf (' ') == -1)
+                                author = Name;
+                        else
+                                author = Name.Substring (0, Name.IndexOf (' '));
+
+                        return author + "@monologue.go-mono.com";
+                }
+        }
+
 	public void UpdateFeed ()
 	{
 		if (feed == null)
@@ -321,7 +333,7 @@ public class Blogger {
 
 		if (feed.Channels.Count > 0)
 			foreach (RssItem i in feed.Channels [0].Items)
-				i.Author = ID;
+				i.Author = Author;
 	}
 }
 
