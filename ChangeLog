@@ -1,3 +1,7 @@
+2005-04-14 Peter Johanson <latexer@gentoo.org>
+
+	* worker/blogger.xml: add my "Hacking" feed at todd's request.
+
 2005-03-17 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/monologue-worker.cs: group requests by URL.
