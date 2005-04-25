@@ -1,3 +1,7 @@
+2005-04-24 Christian Hergert <christian.hergert@gmail.com>
+
+	* worker/blogger.xml: Add Aaron Bockover's mono rsss feed.
+
 2005-04-14 Peter Johanson <latexer@gentoo.org>
 
 	* worker/blogger.xml: add my "Hacking" feed at todd's request.
