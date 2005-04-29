@@ -54,5 +54,6 @@
 	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue"/>
+	<Blogger Name="Rafi Mizrahi" RssUrl="http://rafaelmizrahi.blogspot.com/" />
 
 </BloggerCollection>
