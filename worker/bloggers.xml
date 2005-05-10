@@ -10,7 +10,7 @@
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" />
 	<Blogger Name="Mono:" RssUrl="http://www.mono-project.com/news/index.rss2" />
-	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalorss.php" />
+	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalo.rss2" />
 	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
 	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
 <!-- Removed next one. The server is never up 
