@@ -55,5 +55,5 @@
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
-
+	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php"/>
 </BloggerCollection>
