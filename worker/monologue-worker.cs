@@ -93,7 +93,6 @@ class MonologueWorker {
 		
 		foreach (Blogger b in bloggers.BloggersByUrl) {
 			UpdateStatus st;
-			Console.WriteLine ("Handling: " + b.Name);
 			b.Feed = FeedCache.Read (b.Name, b.RssUrl, out st);
 			b.UpdateFeed ();
 			counters [(int) st]++;
