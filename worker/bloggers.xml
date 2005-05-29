@@ -47,7 +47,7 @@
 	<Blogger Name="Christian Hergert" RssUrl="http://blogs.dronelabs.com/chris/index.xml" />
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Eric Butler" RssUrl="http://www.extremeboredom.net/rss.php"/>
-	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/Modules/BlogRSS.aspx?mid=4"/>
+	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&mid=104"/>
 	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss"/>
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
