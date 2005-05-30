@@ -1,3 +1,7 @@
+2005-05-30 Christian Hergert <christian.hergert@gmail.com>
+
+	* worker/blogger.xml: Fix url which had & to use &amp; instead.
+
 2005-04-24 Christian Hergert <christian.hergert@gmail.com>
 
 	* worker/blogger.xml: Add Aaron Bockover's mono rsss feed.
