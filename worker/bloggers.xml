@@ -48,7 +48,9 @@
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Eric Butler" RssUrl="http://www.extremeboredom.net/rss.php"/>
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&amp;mid=104"/>
-	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
+<!--
+Failures and delays most of the time
+<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>-->
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss"/>
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
 	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>
@@ -56,4 +58,5 @@
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php"/>
+	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
 </BloggerCollection>
