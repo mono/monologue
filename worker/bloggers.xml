@@ -56,7 +56,7 @@ Failures and delays most of the time
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php"/>
 	<Blogger Name="Michal Dominik" RssUrl="http://diva.enove.pl/?feed=rss2"/>
-	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&nickname=msopena&content_type=rss"/>
+	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&amp;nickname=msopena&amp;content_type=rss"/>
 	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>
 	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
