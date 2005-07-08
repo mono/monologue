@@ -1,3 +1,28 @@
+<!-- 
+	Note: There are two feeds near the bottom causing a weird exception to
+	be thrown, that isn't being caught, and thus halts Monologue.
+
+	The offending code is somewhere in here:
+
+	using (FileStream f = new FileStream (filename, FileMode.CreateNew)) {
+		int nread = 0;
+		while ((nread = input.Read (buffer, 0, length)) != 0)
+			f.Write (buffer, 0, nread);												}
+
+	Specifically probably in input.Read()
+
+	The exception thrown for both feeds is:
+
+	Unhandled Exception: System.Net.WebException: Read error
+	in <0x00350> System.Net.WebConnection:EndRead (IAsyncResult result)
+	in <0x000ac> System.Net.WebConnectionStream:EndRead (IAsyncResult r)
+
+	Someone familiar with this code should probably look into it, because 
+	accessing those feeds with Mozilla is not a problem.
+
+	-Aaron Bockover (07 July 2005, 23:22 EST)
+-->
+
 <BloggerCollection>
 	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://primates.ximian.com/~cnataren/blog/cesar.rss2" />
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" />
@@ -50,7 +75,8 @@ Failures and delays most of the time
 <Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>-->
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss"/>
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
-	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>
+	<!-- Reading this throws System.Net.WebException: Read error -->
+	<!--<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>-->
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
@@ -58,8 +84,10 @@ Failures and delays most of the time
 	<Blogger Name="Michal Dominik" RssUrl="http://diva.enove.pl/?feed=rss2"/>
 	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&amp;nickname=msopena&amp;content_type=rss"/>
 	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com"/>
-	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>
+	<!-- Reading this throws System.Net.WebException: Read error -->
+	<!--<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>-->
 	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
 	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598"/>
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
+		<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/feed/" />
 </BloggerCollection>
