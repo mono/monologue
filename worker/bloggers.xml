@@ -1,28 +1,3 @@
-<!-- 
-	Note: There are two feeds near the bottom causing a weird exception to
-	be thrown, that isn't being caught, and thus halts Monologue.
-
-	The offending code is somewhere in here:
-
-	using (FileStream f = new FileStream (filename, FileMode.CreateNew)) {
-		int nread = 0;
-		while ((nread = input.Read (buffer, 0, length)) != 0)
-			f.Write (buffer, 0, nread);												}
-
-	Specifically probably in input.Read()
-
-	The exception thrown for both feeds is:
-
-	Unhandled Exception: System.Net.WebException: Read error
-	in <0x00350> System.Net.WebConnection:EndRead (IAsyncResult result)
-	in <0x000ac> System.Net.WebConnectionStream:EndRead (IAsyncResult r)
-
-	Someone familiar with this code should probably look into it, because 
-	accessing those feeds with Mozilla is not a problem.
-
-	-Aaron Bockover (07 July 2005, 23:22 EST)
--->
-
 <BloggerCollection>
 	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://primates.ximian.com/~cnataren/blog/cesar.rss2" />
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" />
