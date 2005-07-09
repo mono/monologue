@@ -36,8 +36,6 @@
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" />
 	<Blogger Name="Mono:" RssUrl="http://www.mono-project.com/news/index.rss2" />
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalo.rss2" />
-	<Blogger Name="Ben Maurer" RssUrl="http://codeblogs.ximian.com/blogs/benm/index.xml" />
-	<Blogger Name="Nick Drochak" RssUrl="http://codeblogs.ximian.com/blogs/ndrochak/index.rdf" />
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/monologue-index.xml"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://monkey.workarea.jp/lb/index.rss2"/>
 	<Blogger Name="Erik Dasque" RssUrl="http://primates.ximian.com/~edasque/erik.rss2"/>
@@ -48,7 +46,6 @@
 	<Blogger Name="Vladimir Vukicevic" RssUrl="http://www.vlad1.com/~vladimir/blog/vladimir.rss2"/>
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91"/>
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf"/>
-	<Blogger Name="BAnirban" RssUrl="http://codeblogs.ximian.com/blogs/banirban/index.rdf"/>
 	<Blogger Name="Kristian" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss"/>
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2"/>
 	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php"/>        
@@ -70,13 +67,10 @@
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Eric Butler" RssUrl="http://www.extremeboredom.net/rss.php"/>
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&amp;mid=104"/>
-<!--
-Failures and delays most of the time
-<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>-->
+	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss"/>
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
-	<!-- Reading this throws System.Net.WebException: Read error -->
-	<!--<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>-->
+	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
@@ -84,8 +78,7 @@ Failures and delays most of the time
 	<Blogger Name="Michal Dominik" RssUrl="http://diva.enove.pl/?feed=rss2"/>
 	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&amp;nickname=msopena&amp;content_type=rss"/>
 	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com"/>
-	<!-- Reading this throws System.Net.WebException: Read error -->
-	<!--<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>-->
+	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>
 	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
 	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598"/>
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
