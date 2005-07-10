@@ -1,3 +1,7 @@
+2005-07-10  Jb Evain  <jbevain@gmail.com>
+
+	* worker/blogger.xml: update my feed
+
 2005-07-08 Aaron Bockover <aaron@aaronbock.net>
 
 	* worker/blogger.xml: Disabled two feeds throwing weird Read exception,
