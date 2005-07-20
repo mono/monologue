@@ -61,4 +61,5 @@
 	<Blogger Name="Blago" RssUrl="http://www.dachev.com/blog/index.rdf"/>
 	<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/category/pub/rss2" />
 	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed"/>
+	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" />
 </BloggerCollection>
