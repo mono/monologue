@@ -12,7 +12,7 @@ h1 {
 	padding: 20px;
 	color: black;
 	font-size: 14pt;
-	font-family: "Trebuchet MS", sans-serif;
+	font-family: "Trebuchet MS", "Bitstream Vera Sans", sans-serif;
 	border: 0;
 	margin: 0;
 }
@@ -24,8 +24,25 @@ h1 {
 	color: #666;
 }
 
+a:link {
+    color: #5a7ac7;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #9f75ad;
+}
+
+a:hover {
+    color: #dd6545;
+    text-decoration: underline;
+}
+
+a:active {
+}
+
 h2, h3, h4, h5, h6 {
-	font-family: Verdana,sans-serif;
+	font-family: "Bitstream Vera Sans", Verdana, sans-serif;
 	font-weight: bold;
 	margin: 9pt;
 }
@@ -52,7 +69,7 @@ blockquote {
 
 body, table {
 	background-color: #ffffff;
-	font-family: Verdana, sans-serif; 
+	font-family: "Trebuchet MS", "Bitstream Vera Sans", sans-serif;
 	color: black;
 	margin: 0;
 	padding: 0;
@@ -80,7 +97,7 @@ img {
 	margin:15px;
 	padding:15px;
 	font-size: small;
-	font-family: "Courier New", Courier;
+	font-family: "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 	background:whitesmoke;
 	border: solid 1px silver;
 	line-height:110%;
@@ -88,7 +105,7 @@ img {
 
 #blogs { 
 	margin-left: 2em;
-	margin-right: 245px;
+	margin-right: 255px;
 }
 #bloggers {
 	position: absolute;
@@ -103,7 +120,7 @@ img {
 }
 #bloggers ul {
 	padding:0;
-	margin:0;
+	margin: 0 0 1.5em 0;
 	list-style-type:none;
 }
 
@@ -136,14 +153,20 @@ img {
 	background-color: #f0f0f0;
 }
 
+#bloggers .ircnick {
+	display: block;
+	color: #666;
+	font-style: italic;
+	padding: 2px;
+}
+
 .code-xml, .code-csharp, .code-mdb, .code-gaim
 {
-	margin:15px;
-	padding:15px;
+	padding:10px;
 	font-size: small;
-	font-family: "Courier New", Courier;
-	background:whitesmoke;
-	border: solid 1px silver;
+	font-family: "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+	background: #f8f8f8;
+	border: solid 1px #eee;
 	line-height:110%;
 }
 
@@ -152,6 +175,7 @@ img {
 	float: right;
 	padding: 20px;
 }
+
 .expander input 
 {
 	border: 0px;

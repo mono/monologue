@@ -1,7 +1,7 @@
 div.entry {
+	clear: both;
 	margin-bottom: 2em;
 	margin-right: 1em;
-	clear: both;
 }
 
 div.person-info {
@@ -30,10 +30,8 @@ div.post2 {
 }
 
 div.post-contents {
-	padding: 0 0px 0 25px;
+	padding: 0 25px 0 25px;
 	margin-right: 10px;
-	overflow: hidden;
-	width: 90%;
 }
 
 div.post-contents p {
@@ -49,6 +47,7 @@ div.post-contents blockquote {
 div.post-contents:after {
 	content: "";
 	display: block;
+	clear: both;
 }
 
 h4.post-title, div.post-title {
@@ -113,5 +112,5 @@ h2.date {
 	font-weight: normal;
 	font-size: 1.5em;
 	clear: both;
-	border-bottom: 1px solid #E1E6F4;
 }
+
