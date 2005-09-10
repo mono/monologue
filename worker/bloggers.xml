@@ -17,7 +17,7 @@
 	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf" Head="Jordi.png" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
 	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing"/>
-	<Blogger Name="John Luke" RssUrl="http://advogato.org/person/jluke/rss.xml" IrcNick="jluke"/>
+	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
 	<Blogger Name="Vladimir Vukicevic" RssUrl="http://blog.vlad1.com/feed/" IrcNick="vlad"/>
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf"/>
