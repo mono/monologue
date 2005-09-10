@@ -1,3 +1,19 @@
+2005-09-09  Eric Butler <eric@extremeboredom.net>
+
+	* General changes:
+	  New look, based on the new mono website and planet gnome
+	  Moved files around to make things cleaner
+	  Added additional images, including hackergotchis
+
+	* AUTHORS: Added my name
+	* worker/monologue-worker.cs: Added support for IRC nicknames and
+	hackergotchies. 
+	* worker/default.tpl: Updated for new look
+	* worker/bloggers.xml: Added many irc nicknames and a few
+	hackergotchies
+	* www/js/collapse.js: New file, some javascript code to
+	expand/collapse posts.
+	  
 2005-07-10  Jb Evain  <jbevain@gmail.com>
 
 	* worker/blogger.xml: update my feed

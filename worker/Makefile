@@ -1,5 +1,5 @@
 MCS=mcs /debug
-MONO=mono 
+MONO=mono  --debug
 monologue-worker.exe : monologue-worker.cs template4dotnet.cs
 	$(MCS) /r:RSS.NET.dll /r:ICSharpCode.SharpZipLib.dll /out:$@ $^
 	

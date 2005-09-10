@@ -1,0 +1,117 @@
+div.entry {
+	margin-bottom: 2em;
+	margin-right: 1em;
+	clear: both;
+}
+
+div.person-info {
+	float: left;
+	position: relative;
+	left: 4px;
+	margin-top: 25px!important;
+	padding: 0 20px 30px 0;
+	width: 120px;
+	background: url(../images/bubble/bubble-nipple.png) top right no-repeat;
+	text-align: center;
+}
+
+div.person-info a {
+	text-decoration: none;
+	color: #666;
+}
+
+div.post {
+	background: #fff url(../images/bubble/bubble-left.png) left repeat-y;
+	margin-left: 140px;
+}
+
+div.post2 {
+	background: url(../images/bubble/bubble-right.png) right repeat-y;
+}
+
+div.post-contents {
+	padding: 0 0px 0 25px;
+	margin-right: 10px;
+	overflow: hidden;
+	width: 90%;
+}
+
+div.post-contents p {
+	line-height: 140%;
+	margin-top: 1em!important;
+}
+
+div.post-contents blockquote {
+	color: #666;
+	line-height: 150%;
+}
+
+div.post-contents:after {
+	content: "";
+	display: block;
+}
+
+h4.post-title, div.post-title {
+	background: url(../images/bubble/bubble-top-left.png) top left no-repeat;
+	margin: 1em 0 0 0;
+}
+
+h4.post-title a, div.post-title span {
+	display: block;
+	background: url(../images/bubble/bubble-top-right.png) top right no-repeat;
+	padding: 22px 25px 0 25px;
+	font-weight: normal;
+	font-size: 140%;
+	text-decoration: none;
+}
+
+h4.post-title a:hover {
+	text-decoration: underline;
+}
+
+div.post-title span {
+	display: block;
+	height: 20px;
+	font-size: 100%;
+}
+
+div.post-title {
+	display: block;
+}
+
+div.post-header {
+	background: url(../images/bubble/bubble-top.png) top repeat-x;
+}
+
+
+div.post-footer {
+	background: url(../images/bubble/bubble-bottom.png) bottom repeat-x;
+}
+
+div.post-footer p {
+	background: url(../images/bubble/bubble-bottom-left.png) bottom left no-repeat;
+	margin: 0;
+}
+
+div.post-footer p a {
+	display: block;
+	background: url(../images/bubble/bubble-bottom-right.png) bottom right no-repeat;
+	padding: 15px 20px 20px 25px;
+	text-align: right;
+	font-size: 85%;
+	color: #999;
+	text-decoration: none;
+}
+
+div.post-footer p a:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+
+h2.date {
+	color: #5a7ac7;
+	font-weight: normal;
+	font-size: 1.5em;
+	clear: both;
+	border-bottom: 1px solid #E1E6F4;
+}

@@ -121,8 +121,6 @@ class MonologueWorker {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
 				if (i.PubDate >= minPubDate) {
-					string realTitle = b.Name + ": " + i.Title;
-					i.Title = realTitle;
 					stories.Add (i);
 				}
 			}
@@ -161,6 +159,17 @@ class MonologueWorker {
 			
 			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
 			tpl.setField ("BLOGGER_NAME", b.Name);
+	
+			if (b.Head != null)
+				tpl.setField ("BLOGGER_HEAD", b.Head);
+			else
+				tpl.setField ("BLOGGER_HEAD", "none.png");
+
+			if (b.IrcNick != null)
+					tpl.setField ("BLOGGER_IRCNICK", "(" + b.IrcNick + ")");
+				else
+					tpl.setField ("BLOGGER_IRCNICK", "");
+
 			tpl.setField ("BLOGGER_RSSURL", b.RssUrl);
 			
 			tpl.appendSection ();
@@ -175,24 +184,26 @@ class MonologueWorker {
 			tpl.selectSection ("DAY_ENTRY");
 			foreach (RssItem itm in day) {
 				tpl.setField ("ENTRY_LINK", itm.Link.ToString ());
-				/*
+				
 				Blogger bl = bloggers [itm.Author];
 				if (bl != null) {
 					tpl.setField ("ENTRY_PERSON", bl.Name);
-				} else {
-					Settings.Log ("'{0}' have no author", itm.Title);
+					
+					if (bl.IrcNick != null)
+						tpl.setField ("ENTRY_PERSON_IRCNICK", "<br/>(" + bl.IrcNick + ")");
+					else
+						tpl.setField ("ENTRY_PERSON_IRCNICK", "");
+					
+					if (bl.Head != null)
+						tpl.setField ("ENTRY_PERSON_HEAD", bl.Head);
+					else
+						tpl.setField ("ENTRY_PERSON_HEAD", "none.png");
 
-					int colon = itm.Title.IndexOf (":");
-					if (colon != -1) {
-						string author = itm.Title.Substring (0, colon);
-						bl = bloggers [author];
-						if (bl != null) {
-							Settings.Log ("Using {0}", author);
-							tpl.setField ("ENTRY_PERSON", author);
-						}
-					}
+					tpl.setField ("ENTRY_PERSON_URL", bl.HtmlUrl.ToString());
+				} else {
+					throw new Exception ("No blogger for " + itm.Author  + ".");
 				}
-				*/
+
 				tpl.setField ("ENTRY_TITLE", itm.Title);
 				tpl.setField ("ENTRY_HTML", itm.Description);
 				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt"));
@@ -299,10 +310,15 @@ public enum UpdateStatus {
 public class Blogger {
 	[XmlAttribute] public string Name;
 	[XmlAttribute] public string RssUrl;
+	[XmlAttribute] public string IrcNick;
+	[XmlAttribute] public string Head;
+
 	[XmlIgnore]
 	public string ID {
 		// Must look like an email to make rss happy
-		get { return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName (RssUrl); }
+		get { 
+			return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com"); 
+		}
 	}
 		
 	RssFeed feed;
@@ -334,13 +350,7 @@ public class Blogger {
 
         public string Author {
                 get {
-                        string author;
-                        if (Name.IndexOf (' ') == -1)
-                                author = Name;
-                        else
-                                author = Name.Substring (0, Name.IndexOf (' '));
-
-                        return author + "@monologue.go-mono.com";
+                        return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com");
                 }
         }
 
@@ -349,6 +359,7 @@ public class Blogger {
 		if (feed == null)
 			return;
 
+		// TODO: Do we still need this?
 		if (feed.Channels.Count > 0)
 			foreach (RssItem i in feed.Channels [0].Items)
 				i.Author = Author;
