@@ -112,5 +112,7 @@ h2.date {
 	font-weight: normal;
 	font-size: 1.5em;
 	clear: both;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1.3em;
 }
 
