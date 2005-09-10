@@ -166,7 +166,7 @@ class MonologueWorker {
 				tpl.setField ("BLOGGER_HEAD", "none.png");
 
 			if (b.IrcNick != null)
-					tpl.setField ("BLOGGER_IRCNICK", "(" + b.IrcNick + ")");
+					tpl.setField ("BLOGGER_IRCNICK", b.IrcNick);
 				else
 					tpl.setField ("BLOGGER_IRCNICK", "");
 
@@ -190,7 +190,7 @@ class MonologueWorker {
 					tpl.setField ("ENTRY_PERSON", bl.Name);
 					
 					if (bl.IrcNick != null)
-						tpl.setField ("ENTRY_PERSON_IRCNICK", "<br/>(" + bl.IrcNick + ")");
+						tpl.setField ("ENTRY_PERSON_IRCNICK", "(" + bl.IrcNick + ")");
 					else
 						tpl.setField ("ENTRY_PERSON_IRCNICK", "");
 					
