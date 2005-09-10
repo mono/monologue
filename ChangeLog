@@ -1,3 +1,11 @@
+2005-09-09  Aaron Bockover  <aaron@aaronbock.net>
+
+	* www/monologue.cs:
+	* www/planet.cs:
+	* worker/default.tpl: Updates to new layout, implemented in template
+	* www/images/monologue-logo.png: A decent logo for monologue
+	* worker/monologue-worker.cs: Minor changes to template variable outputs
+
 2005-09-09  Eric Butler <eric@extremeboredom.net>
 
 	* General changes:
