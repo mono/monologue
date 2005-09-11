@@ -60,6 +60,8 @@
 		<p>Monologue is a window into the world, work, and lives of the community members and developers that make up the <a href="http://mono-project.com/">Mono Project</a>, which is a free cross-platform development environment used primarily on Linux.</p>
 		<p>If you would rather follow Monologue using a newsreader, we provide the following feed:</p>
 		<p><a href="index.rss"><img src="images/xml.gif"></a>  RSS 2.0 Feed</p>
+
+		<p>Monologue is powered by Mono and the <a href="http://svn.myrealbox.com/viewcvs/trunk/monologue/">Monologue</a> software.
 			
 		<h2>Bloggers</h2>
 		<ul>
