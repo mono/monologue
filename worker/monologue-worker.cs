@@ -106,7 +106,7 @@ class MonologueWorker {
 
 		if (!somethingChanged)
 			return;
-		
+
 		outFeed = new RssFeed ();
 		RssChannel ch = new RssChannel ();
 		ch.Title = "Monologue";
@@ -121,6 +121,7 @@ class MonologueWorker {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
 				if (i.PubDate >= minPubDate) {
+					i.Title = b.Name + ": " + i.Title;
 					stories.Add (i);
 				}
 			}
@@ -204,6 +205,7 @@ class MonologueWorker {
 					throw new Exception ("No blogger for " + itm.Author  + ".");
 				}
 
+				itm.Title = itm.Title.Substring (itm.Title.IndexOf (":")+2);
 				tpl.setField ("ENTRY_TITLE", itm.Title);
 				tpl.setField ("ENTRY_HTML", itm.Description);
 				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt"));

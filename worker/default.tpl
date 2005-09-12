@@ -56,27 +56,35 @@
 			
 	<div id="bloggers">
 
-	<h2>Monologue</h2>
-		<p>Monologue is a window into the world, work, and lives of the community members and developers that make up the <a href="http://mono-project.com/">Mono Project</a>, which is a free cross-platform development environment used primarily on Linux.</p>
-		<p>If you would rather follow Monologue using a newsreader, we provide the following feed:</p>
-		<p><a href="index.rss"><img src="images/xml.gif"></a>  RSS 2.0 Feed</p>
+		<h2>Monologue</h2>
+			<p>Monologue is a window into the world, work, and lives of the community members and developers that make up the <a href="http://mono-project.com/">Mono Project</a>, which is a free cross-platform development environment used primarily on Linux.</p>
+			<p>If you would rather follow Monologue using a newsreader, we provide the following feed:</p>
+			<p><a href="index.rss"><img src="images/xml.gif"></a>  RSS 2.0 Feed</p>
 
-		<p>Monologue is powered by Mono and the <a href="http://svn.myrealbox.com/viewcvs/trunk/monologue/">Monologue</a> software.
-			
-		<h2>Bloggers</h2>
-		<ul>
-			<!-- @@BLOGGER@@ -->
-			<li><div><img class="head" src="images/heads/@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
-				<a href="@@BLOGGER_URL@@">@@BLOGGER_NAME@@</a>
-				<div>
-					<a href="@@BLOGGER_RSSURL@@"><img src="images/feed.png" alt="@@BLOGGER_IRCNICK@@ feed"></a>
-					<div class="ircnick">@@BLOGGER_IRCNICK@@</div>
-				</div>
-			</li><!-- @@BLOGGER@@ -->
-		</ul>
-			
-		<a href="http://www.go-mono.com"><img src="images/mono-powered-big.png" /></a>
-	</div>			
+			<p>Monologue is powered by Mono and the <a href="http://svn.myrealbox.com/viewcvs/trunk/monologue/">Monologue</a> software.
+				
+			<h2>Bloggers</h2>
+			<ul>
+				<!-- @@BLOGGER@@ -->
+				<li><div><img class="head" src="images/heads/@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
+					<a href="@@BLOGGER_URL@@">@@BLOGGER_NAME@@</a>
+					<div>
+						<a href="@@BLOGGER_RSSURL@@"><img src="images/feed.png" alt="@@BLOGGER_IRCNICK@@ feed"></a>
+						<div class="ircnick">@@BLOGGER_IRCNICK@@</div>
+					</div>
+				</li><!-- @@BLOGGER@@ -->
+			</ul>
+				
+			<a href="http://www.go-mono.com"><img src="images/mono-powered-big.png" /></a>
+		</div>			
+	</div>
+   	<div id="footer">
+		<p>Powered by <a href="http://www.mono-project.com/Monologue">monologue</a>.
+		<br/>
+		Blog entries aggregated on this page are owned by, and represent the opinion of the author.
+		<br/>
+		Optimised for standards. Hosted by <a href="http://www.novell.com/">Novell</a>.</p>	
+	</div>	
 
 	</body>
 </html>

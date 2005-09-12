@@ -38,12 +38,17 @@ h1 {
 	color: #666;
 }
 
+
 a:link {
     color: #5a7ac7;
 }
 
+#bloggers a:visited {
+    color: #5a7ac7 !important;
+}
+
+
 a:visited {
-    text-decoration: none;
     color: #9f75ad;
 }
 
@@ -192,9 +197,22 @@ img {
 
 .expander input 
 {
+	display: none;
 	border: 0px;
 	background-color: transparent;
 	font-size: x-small;
 	color: #ccc;
 	cursor: pointer;
+}
+
+#footer 
+{
+	margin: 10px;
+}
+
+#footer p, #footer p a 
+{
+	color: #ccc;
+	font-size: x-small;
+	text-align: center;
 }

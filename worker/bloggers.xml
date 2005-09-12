@@ -1,5 +1,5 @@
 <BloggerCollection>
-	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://primates.ximian.com/~cnataren/blog/cesar.rss2" />
+	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://primates.ximian.com/~cnataren/blog/cesar.rss2" IrcNick="cesar"/>
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" IrcNick="miguel"/>
 	<Blogger Name="Jackson Harper" RssUrl="http://primates.ximian.com/~jackson/blog/jackson.rss2" IrcNick="jackson" />
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" IrcNick="spouliot" Head="Spouliot.png"/>
@@ -10,20 +10,20 @@
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" Head="Mwh.png" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" IrcNick="tberman" Head="Tberman.png" />
 	<Blogger Name="Mono:" RssUrl="http://www.mono-project.com/news/index.rss2" />
-	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalo.rss2" IrcNick="gonzalo" Head="gonzalo.png" />
+	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalo.rss2" IrcNick="gonzalo" />
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/monologue-index.xml" IrcNick="danmorg"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://monkey.workarea.jp/lb/index.rss2" IrcNick="eno"/>
 	<Blogger Name="Erik Dasque" RssUrl="http://primates.ximian.com/~edasque/erik.rss2"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf" Head="Jordi.png" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
-	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing"/>
+	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing" Head="lewing.png"/>
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
 	<Blogger Name="Vladimir Vukicevic" RssUrl="http://blog.vlad1.com/feed/" IrcNick="vlad"/>
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf"/>
 	<Blogger Name="Kristian" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss"/>
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2"/>
-	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php"/>
+	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php" IrcNick="trow" Head="trow.png"/>
 	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco"/>        
 	<Blogger Name="Jambunathan K" RssUrl="http://feeds.feedburner.com/DiaryOfAVBDotNetCompilerDeveloper"/>        
 	<Blogger Name="Sanjay Gupta" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/596"/>        
@@ -31,8 +31,8 @@
 	<Blogger Name="Ravindra Kumar" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/601"/>        
 	<Blogger Name="Sureshkumar" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/677" IrcNick="suresh"/>
 	<Blogger Name="Geoff Norton" RssUrl="http://blog.sublimeintervention.com/rss.xml"/>
-	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/wp-rss2.php"/>
-	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok"/>
+	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/wp-rss2.php" IrcNick="orph" Head="orph.png"/>
+	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?" IrcNick="jhill"/>
 	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx"/>
 	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/feed/rss2/" IrcNick="zbowling" />
@@ -46,11 +46,11 @@
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss" IrcNick="danw" Head="danw.png" />
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
 	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/rss.xpd"/>
-	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer"/>
+	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php" IrcNick="hisham"/>
-	<Blogger Name="Michal Dominik" RssUrl="http://diva.mdk.org.pl/?feed=rss2" IrcNick="MDK"/>
+	<Blogger Name="Michael Dominik" RssUrl="http://diva.mdk.org.pl/?feed=rss2" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
 	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com" IrcNick="jey"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
@@ -61,6 +61,6 @@
 	<Blogger Name="Blago" RssUrl="http://www.dachev.com/blog/index.rdf"/>
 	<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/category/pub/rss2" IrcNick="jtickle"/>
 	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed" />
-	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" />
+	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
 </BloggerCollection>
