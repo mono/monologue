@@ -1,3 +1,7 @@
+2005-09-12  Paco Martinez <martinf@mfconsulting.com>
+
+	* worker/bloggers.xml: Corrected Daniel Morgan URL information (MFConsulting Web server was upgraded and path changed) 
+	
 2005-09-11  Eric Butler <eric@extremeboredom.net>
 
 	* worker/monologue-worker.cs: Make RSS Feed include author in post title
