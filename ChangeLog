@@ -1,5 +1,8 @@
 2005-09-14  Aaron Bockover  <aaron@aaronbock.net>
 
+	* www/images/heads/mono.png:
+	* www/images/heads/nemerle.png: Made the logos smaller (75px width)
+
 	* worker/bloggers.xml: Added Brad Taylor, added Heads for the Mono and
 	Nemerle projects (logos)
 	* www/images/heads/nemerle.png: Nemerle logo for a head
