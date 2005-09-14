@@ -1,3 +1,9 @@
+2005-09-14  Aaron Bockover  <aaron@aaronbock.net>
+
+	* worker/bloggers.xml: Added snorp (James Wilcox)... why did no one miss
+	him before :D
+	* www/images/heads/snorp.png: Snorp's head
+
 2005-09-12  Paco Martinez <martinf@mfconsulting.com>
 
 	* worker/bloggers.xml: Corrected Daniel Morgan URL information (MFConsulting Web server was upgraded and path changed) 

@@ -49,6 +49,15 @@
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
+<<<<<<< .mine
+	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php"/>
+	<Blogger Name="Michal Dominik" RssUrl="http://diva.enove.pl/?feed=rss2"/>
+	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&amp;nickname=msopena&amp;content_type=rss"/>
+	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com"/>
+	<!--<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>-->
+	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
+	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598"/>
+=======
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php" IrcNick="hisham"/>
 	<Blogger Name="Michael Dominik" RssUrl="http://diva.mdk.org.pl/?feed=rss2" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
@@ -56,6 +65,7 @@
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
 	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2" IrcNick="tseng"/>
 	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598" Head="Harinath.jpg"/>
+>>>>>>> .r50045
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
 	<Blogger Name="Michael Hutchinson" RssUrl="http://compsoc.dur.ac.uk/~mjh/mono-feed"/>
 	<Blogger Name="Blago" RssUrl="http://www.dachev.com/blog/index.rdf"/>
@@ -63,4 +73,5 @@
 	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed" />
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
+	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
 </BloggerCollection>
