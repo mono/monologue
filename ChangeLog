@@ -1,5 +1,11 @@
 2005-09-14  Aaron Bockover  <aaron@aaronbock.net>
 
+	* worker/bloggers.xml: Added Brad Taylor, added Heads for the Mono and
+	Nemerle projects (logos)
+	* www/images/heads/nemerle.png: Nemerle logo for a head
+	* www/images/heads/mono.png: Mono logo for a head
+	* www/images/heads/brad.png: Brad Taylor's head
+
 	* worker/bloggers.xml: Added snorp (James Wilcox)... why did no one miss
 	him before :D
 	* www/images/heads/snorp.png: Snorp's head

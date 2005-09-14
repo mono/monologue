@@ -9,7 +9,7 @@
 	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" IrcNick="baulig" Head="Martin.png" />
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwh.sysrq.dk/blog/martin.rss2" Head="Mwh.png" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" IrcNick="tberman" Head="Tberman.png" />
-	<Blogger Name="Mono:" RssUrl="http://www.mono-project.com/news/index.rss2" />
+	<Blogger Name="Mono" RssUrl="http://www.mono-project.com/news/index.rss2" Head="mono.png" />
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://primates.ximian.com/~gonzalo/mono/blog/gonzalo.rss2" IrcNick="gonzalo" />
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/blog/monologue-index.xml" IrcNick="danmorg"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://monkey.workarea.jp/lb/index.rss2" IrcNick="eno"/>
@@ -22,7 +22,7 @@
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf"/>
 	<Blogger Name="Kristian" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss"/>
-	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2"/>
+	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2" Head="nemerle.png" />
 	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php" IrcNick="trow" Head="trow.png"/>
 	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco"/>        
 	<Blogger Name="Jambunathan K" RssUrl="http://feeds.feedburner.com/DiaryOfAVBDotNetCompilerDeveloper"/>        
@@ -49,15 +49,6 @@
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://aaronbock.net/journal/rss.php/monologue" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
-<<<<<<< .mine
-	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php"/>
-	<Blogger Name="Michal Dominik" RssUrl="http://diva.enove.pl/?feed=rss2"/>
-	<Blogger Name="Mario Sopena" RssUrl="http://barrapunto.com/search.pl?op=journals&amp;nickname=msopena&amp;content_type=rss"/>
-	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com"/>
-	<!--<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?"/>-->
-	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2"/>
-	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598"/>
-=======
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php" IrcNick="hisham"/>
 	<Blogger Name="Michael Dominik" RssUrl="http://diva.mdk.org.pl/?feed=rss2" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
@@ -65,7 +56,6 @@
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
 	<Blogger Name="Brandon Hale" RssUrl="http://tseng.ath.cx/log/?feed=rss2" IrcNick="tseng"/>
 	<Blogger Name="Raja R Harinath" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/598" Head="Harinath.jpg"/>
->>>>>>> .r50045
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
 	<Blogger Name="Michael Hutchinson" RssUrl="http://compsoc.dur.ac.uk/~mjh/mono-feed"/>
 	<Blogger Name="Blago" RssUrl="http://www.dachev.com/blog/index.rdf"/>
@@ -74,4 +64,5 @@
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
 	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
+	<Blogger Name="Brad Taylor" RssUrl="http://brad.getcoded.net/blog/rss.php" IrcNick="brad" Head="brad.png" /> 
 </BloggerCollection>
