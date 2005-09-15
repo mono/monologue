@@ -1,3 +1,8 @@
+2005-09-15  Christian Hergert	<christian.hergert@gmail.com>
+
+	* www/images/heads/chrish01.png: New hackergotchi
+	* worker/bloggers.xml: Update xml for new hackergotchi
+
 2005-09-14  Aaron Bockover  <aaron@aaronbock.net>
 
 	* www/images/heads/mono.png:
