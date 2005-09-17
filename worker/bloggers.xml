@@ -21,7 +21,7 @@
 	<Blogger Name="Vladimir Vukicevic" RssUrl="http://blog.vlad1.com/feed/" IrcNick="vlad"/>
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf"/>
-	<Blogger Name="Kristian" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss"/>
+	<Blogger Name="Kristian Rietveld" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss" IrcNick="kris" Head="kris.png" />
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2" Head="nemerle.png" />
 	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php" IrcNick="trow" Head="trow.png"/>
 	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco"/>        
