@@ -24,7 +24,7 @@
 	<Blogger Name="Kristian Rietveld" RssUrl="http://www.livejournal.com/~inverted_tree/data/rss" IrcNick="kris" Head="kris.png" />
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2" Head="nemerle.png" />
 	<Blogger Name="Jon Trowbridge" RssUrl="http://blog.trowbridge.org/wp-rss2.php" IrcNick="trow" Head="trow.png"/>
-	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco"/>        
+	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco" Head="paco.png"/>        
 	<Blogger Name="Jambunathan K" RssUrl="http://feeds.feedburner.com/DiaryOfAVBDotNetCompilerDeveloper"/>        
 	<Blogger Name="Sanjay Gupta" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/596"/>        
 	<Blogger Name="Umadevi S" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/599"/>        
