@@ -63,6 +63,7 @@
 	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed" />
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
+	<Blogger Name="Boris Kirzner" RssUrl="http://boriskirzner.blogspot.com/" />
 	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
 	<Blogger Name="Brad Taylor" RssUrl="http://brad.getcoded.net/blog/rss.php" IrcNick="brad" Head="brad.png" /> 
 </BloggerCollection>
