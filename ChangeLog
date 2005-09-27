@@ -1,3 +1,22 @@
+2005-09-26  Eric Butler <eric@extremeboredom.net>
+	
+	* www/images/heads/jhill.png: 
+		- New hackergotchi
+	
+	* worker/bloggers.xml:
+		- Add above hackergotchi
+
+	* www/css/planet.css: 
+		- Add scrollbar to post-contents if needed
+	
+	* www/js/prettyprint.js: 
+		- Work with both <pre> and <xmp>
+		- set class to "formattedcode"
+		
+	* www/css/monologue.css:
+		- Font size tweaks
+		- <pre>/.formattedcode improvments
+	
 2005-09-18  Paco Martinez <martinf@mfconsulting.com>
 
 	* www/images/heads/paco.png: Added 

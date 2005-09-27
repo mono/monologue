@@ -25,6 +25,14 @@ function paintColors()
 	keywords += "string)";
 	
 	var elems = document.getElementsByTagName("xmp");
+	paintColorsForTags (elems);
+
+	elems = document.getElementsByTagName ("pre");
+	paintColorsForTags (elems);
+}
+
+function paintColorsForTags (elems)
+{
 	for(n = elems.length - 1; n >= 0; n--) {
 		if (elems[n].className == "code-csharp")
 			format(elems [n], formatCs);
@@ -41,7 +49,8 @@ function format(node, func)
 {
 	text = node.innerHTML;
 	div = document.createElement("div");
-	var className = node.className;
+	//var className = node.className;
+	var className = "formattedcode";
 	
 	// remove trailing/leading lines
 	while(text.charAt(0) == "\n" || text.charAt(0) == "\r")

@@ -30,6 +30,7 @@ div.post2 {
 }
 
 div.post-contents {
+	overflow: auto;
 	padding: 0 25px 0 25px;
 	margin-right: 10px;
 }
