@@ -66,4 +66,5 @@
 	<Blogger Name="Boris Kirzner" RssUrl="http://feeds.feedburner.com/BorisKirznerBlog" />
 	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
 	<Blogger Name="Brad Taylor" RssUrl="http://brad.getcoded.net/blog/rss.php" IrcNick="brad" Head="brad.png" /> 
+	<Blogger Name="Rafael Teixeira" RssUrl="http://thespoke.net/blogs/monoman/rss.aspx" IrcNick="monoman"/> 
 </BloggerCollection>
