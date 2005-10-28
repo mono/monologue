@@ -34,7 +34,7 @@
 	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/wp-rss2.php" IrcNick="orph" Head="orph.png"/>
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?" IrcNick="jhill" Head="jhill.png"/>
-	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jbevain" />
+	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jbevain" Head="jbevain.png" />
 	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/feed/rss2/" IrcNick="zbowling" />
 	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/code.xml"/>
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
