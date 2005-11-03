@@ -14,7 +14,7 @@
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/blog/monologue-index.xml" IrcNick="danmorg"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://monkey.workarea.jp/lb/index.rss2" IrcNick="eno"/>
 	<Blogger Name="Erik Dasque"
-	RssUrl="http://primates.ximian.com/~edasque/erik.rss2" IrcNick="ferik"
+	RssUrl="http://www.frenchguys.com/wordpress/?feed=rss2" IrcNick="ferik"
 	Head="ferik.png" />
 	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf" Head="Jordi.png" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
