@@ -16,7 +16,6 @@
 	<Blogger Name="Erik Dasque"
 	RssUrl="http://www.frenchguys.com/wordpress/?feed=rss2" IrcNick="ferik"
 	Head="ferik.png" />
-	<Blogger Name="Jordi Mas" RssUrl="http://primates.ximian.com/~jordi/blog/index.rdf" Head="Jordi.png" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
 	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing" Head="lewing.png"/>
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
