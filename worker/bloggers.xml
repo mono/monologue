@@ -49,7 +49,7 @@
 	<Blogger Name="Aaron Bockover" RssUrl="http://abock.org/data/xml/blog.rss" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php" IrcNick="hisham"/>
-	<Blogger Name="Michael Dominik" RssUrl="http://diva.mdk.org.pl/?feed=rss2" IrcNick="mdk" Head="mdk_gotchi.png" />
+	<Blogger Name="Michael Dominik" RssUrl="http://www.mdk.org.pl/xml/rss20/feed.xml" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
 	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com" IrcNick="jey"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
