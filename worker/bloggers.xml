@@ -68,4 +68,5 @@
 	<Blogger Name="Rodrigo B de Oliveira" RssUrl="http://blogs.codehaus.org/people/bamboo/index.rdf" IrcNick="bamboo"/>
 	<Blogger Name="Rafael Teixeira" RssUrl="http://thespoke.net/blogs/monoman/rss.aspx" IrcNick="monoman" Head="monoman.png"/> 
 	<Blogger Name="Alexandre Gomes" RssUrl="http://alexmipego.flmid.com/blog/?feed=rss2" IrcNick="Alexmipego"/>
+	<Blogger Name="Jonathan Chambers" RssUrl="http://feeds.feedburner.com/jonathanchambers" IrcNick="jchambers"/>
 </BloggerCollection>
