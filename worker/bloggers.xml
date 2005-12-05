@@ -69,4 +69,5 @@
 	<Blogger Name="Rafael Teixeira" RssUrl="http://thespoke.net/blogs/monoman/rss.aspx" IrcNick="monoman" Head="monoman.png"/> 
 	<Blogger Name="Alexandre Gomes" RssUrl="http://alexmipego.flmid.com/blog/?feed=rss2" IrcNick="Alexmipego"/>
 	<Blogger Name="Jonathan Chambers" RssUrl="http://feeds.feedburner.com/jonathanchambers" IrcNick="jchambers"/>
+	<Blogger Name="Jordi Mas" RssUrl="http://www.softcatala.org/~jmas/weblog/rss.xml" IrcNick="Jordi" Head="Jordi.png"/>	
 </BloggerCollection>
