@@ -185,7 +185,7 @@ class MonologueWorker {
 			tpl.selectSection ("DAY_ENTRY");
 			foreach (RssItem itm in day) {
 				tpl.setField ("ENTRY_LINK", itm.Link.ToString ());
-				
+
 				Blogger bl = bloggers [itm.Author];
 				if (bl != null) {
 					tpl.setField ("ENTRY_PERSON", bl.Name);
@@ -249,7 +249,9 @@ public class BloggerCollection {
 	
 	public static BloggerCollection LoadFromFile (string file)
 	{
-		return (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
+		BloggerCollection coll = (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
+		coll.Bloggers = coll.bloggers;
+		return coll;
 	}
 
 	ArrayList bloggers;

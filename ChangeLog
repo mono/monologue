@@ -1,3 +1,9 @@
+2005-12-09 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* worker/monologue-worker.cs: fixes odd problem that caused the
+	hashtable mapping from id to data not to be created.
+	* worker/RSS.NET.dll: updated.
+
 2005-11-25  Jonathan Chambers  <jonathan.chambers@ansys.com>
 	* worker/bloggers.xml: Added my feed
 
