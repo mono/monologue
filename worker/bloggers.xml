@@ -47,7 +47,7 @@
 	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/?feed=rss2"/>
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://abock.org/feed" IrcNick="abock" Head="abock.png"/>
-	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" />
+	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" Head="rafi_mizrahi_head.png"/>
 	<Blogger Name="Hisham Mardam Bey" RssUrl="http://hisham.cc/rss.php" IrcNick="hisham"/>
 	<Blogger Name="Michael Dominik" RssUrl="http://www.mdk.org.pl/xml/rss20/feed.xml" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
