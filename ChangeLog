@@ -1,3 +1,7 @@
+2006-01-18  Ankit Jain  <jankit@novell.com>
+
+	* worker/bloggers.xml: Added my feed.
+
 2005-12-09 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/monologue-worker.cs: fixes odd problem that caused the

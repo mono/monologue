@@ -71,4 +71,5 @@
 	<Blogger Name="Jonathan Chambers" RssUrl="http://feeds.feedburner.com/jonathanchambers" IrcNick="jchambers"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://www.softcatala.org/~jmas/weblog/rss.xml" IrcNick="Jordi" Head="Jordi.png"/>	
 	<Blogger Name="Idan Gazit" RssUrl="http://pixane.net/blog/?feed=rss2" IrcNick="idan" Head="Idan.png"/>
+	<Blogger Name="Ankit Jain" RssUrl="http://feeds.feedburner.com/blogspot/ankitj" IrcNick="ankit"/>
 </BloggerCollection>
