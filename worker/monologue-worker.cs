@@ -453,7 +453,16 @@ public class FeedCache {
 		case HttpStatusCode.TemporaryRedirect: // 307
 			string location = resp.Headers ["Location"];
 			resp.Close ();
-			Settings.Log ("Redirecting to {0}", location);
+			try {
+				Uri uri = new Uri (new Uri (url), location);
+				location = uri.ToString ();
+				Settings.Log ("Redirecting to {0}", location);
+			} catch (Exception e) {
+				Settings.Log ("Error in 'Location' header.");
+				st = UpdateStatus.Error;
+				return null;
+			}
+
 			return Read (name, location, out st, ++redirects);
 
 		case HttpStatusCode.NotModified: // 304
