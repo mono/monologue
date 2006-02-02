@@ -1,5 +1,9 @@
 2006-02-02  Jonathan Pryor  <jonpryor@vt.edu>
 
+	* www/images/heads/jonpryor.png: Use a transparent background.
+
+2006-02-02  Jonathan Pryor  <jonpryor@vt.edu>
+
 	* workers/bloggers.xml: Add my feed.
 	* www/images/heads/jonpryor.png: Add my hackergotchi.
 
