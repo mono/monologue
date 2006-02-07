@@ -66,6 +66,7 @@
 	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
 	<Blogger Name="Brad Taylor" RssUrl="http://brad.getcoded.net/blog/rss.php" IrcNick="brad" Head="brad.png" /> 
 	<Blogger Name="Rodrigo B de Oliveira" RssUrl="http://feeds.feedburner.com/Bamboozled" IrcNick="bamboo"/>
+	<Blogger Name="Raphael Romeikat" RssUrl="http://blog.raffa.de/rss.php?ver=2" Head="raphaphp.png"/>
 	<Blogger Name="Rafael Teixeira" RssUrl="http://thespoke.net/blogs/monoman/rss.aspx" IrcNick="monoman" Head="monoman.png"/> 
 	<Blogger Name="Alexandre Gomes" RssUrl="http://www.alexandre-gomes.com/?feed=rss2" IrcNick="Alexmipego"/>
 	<Blogger Name="Jonathan Chambers" RssUrl="http://feeds.feedburner.com/jonathanchambers" IrcNick="jchambers"/>
