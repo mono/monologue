@@ -19,6 +19,8 @@
 	</div>
 		
 	<div id="blogs">
+
+	<p>Disclaimer: this is an automatic aggregator which pulls feeds and comments from many blogs of contributors that have contributed to the Mono project.    The contents of these blog entries do not necessarily reflect Novell's position.
 	
 	<!-- @@BLOG_DAY@@ -->
 	<h2 class="date">@@DAY_DATE@@</h2>
