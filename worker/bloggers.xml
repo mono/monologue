@@ -34,7 +34,7 @@
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?" IrcNick="jhill" Head="jhill.png"/>
 	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jbevain" Head="jbevain.png" />
 	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/category/mono-net/feed/rss2" IrcNick="zbowling" />
-	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/code.xml"/>
+	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
 	<Blogger Name="Christian Hergert" RssUrl="http://blogs.dronelabs.com/chris/index.xml" IrcNick="chrish01" Head="chrish01.png" />
 	<Blogger Name="C.J. Collier" RssUrl="http://wp.colliertech.org/cj/?feed=rss2&amp;cat=7" IrcNick="cj" Head="cj.png" />
