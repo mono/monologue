@@ -74,4 +74,5 @@
 	<Blogger Name="Idan Gazit" RssUrl="http://pixane.net/blog/?feed=rss2&amp;cat=2" IrcNick="idan" Head="Idan.png"/>
 	<Blogger Name="Ankit Jain" RssUrl="http://feeds.feedburner.com/blogspot/ankitj" IrcNick="ankit"/>
 	<Blogger Name="Wade Berrier" RssUrl="http://wade.berrier.org/feed/" IrcNick="wberrier"/>
+	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
 </BloggerCollection>
