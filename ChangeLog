@@ -1,5 +1,10 @@
 2006-08-08 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
+	* worker/monologue-worker.cs: speed this up by making up to 5
+	simultaneous requests.
+
+2006-08-08 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
 	* worker/RSS.NET.dll: updated.
 
 2006-08-02  Martin Willemoes Hansen  <mwh@sysrq.dk>

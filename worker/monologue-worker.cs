@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Net;
+using System.Runtime.Remoting.Messaging;
 using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
@@ -80,7 +81,39 @@ class MonologueWorker {
 
 		return 0;
 	}
-	
+
+	static int [] counters = new int [(int) UpdateStatus.MAX];
+	static int next;
+	static Blogger [] all;
+	static int loaded;
+	delegate ReadResult ReadDelegate (string name, string url);
+	static AsyncCallback feed_done = new AsyncCallback (FeedDone);
+	static bool disable_load;
+	static ManualResetEvent wait_handle = new ManualResetEvent (false);
+
+	static void FeedDone (IAsyncResult ares)
+	{
+		AsyncResult a = (AsyncResult) ares;
+		ReadResult res = ((ReadDelegate) a.AsyncDelegate).EndInvoke (ares);
+		if (disable_load)
+			return;
+		Blogger blogger = (Blogger) ares.AsyncState;
+		blogger.Feed = res.Feed;
+		blogger.UpdateFeed ();
+		Settings.Log ("DONE {0}", blogger.RssUrl);
+		lock (all) {
+			loaded++;
+			counters [(int) res.Status]++;
+			if (loaded >= all.Length)
+				wait_handle.Set ();
+			if (next >= all.Length)
+				return;
+			Blogger b = all [next++];
+			ReadDelegate d = new ReadDelegate (FeedCache.Read);
+			d.BeginInvoke (b.Name, b.RssUrl, feed_done, b);
+		}
+	}
+
 	static void RunOnce ()
 	{
 		if (bloggers == null || File.GetLastWriteTime (bloggersFile) > lastReadOfBloggersFile) {
@@ -88,23 +121,28 @@ class MonologueWorker {
 			bloggers = BloggerCollection.LoadFromFile (bloggersFile);
 		}
 		
-		bool somethingChanged = false;
-		int [] counters = new int [(int) UpdateStatus.MAX];
-		
-		foreach (Blogger b in bloggers.BloggersByUrl) {
-			UpdateStatus st;
-			b.Feed = FeedCache.Read (b.Name, b.RssUrl, out st);
-			b.UpdateFeed ();
-			counters [(int) st]++;
-			if (st != UpdateStatus.Cached && st != UpdateStatus.CachedButError)
-				somethingChanged = true;
+		disable_load = false;
+		all = (Blogger []) bloggers.Bloggers.ToArray (typeof (Blogger));
+		lock (all) {
+			next = 5;
+			for (int i = 0; i < 5 && i < all.Length; i++) {
+				Blogger b = all [i];
+				ReadDelegate d = new ReadDelegate (FeedCache.Read);
+				d.BeginInvoke (b.Name, b.RssUrl, feed_done, b);
+			}
 		}
 
+		wait_handle.WaitOne (300000, false);
+		disable_load = true;
+		
 		for (int i = 0; i < (int) UpdateStatus.MAX; i++) {
 			Console.WriteLine ("{0}: {1}", (UpdateStatus) i, counters [i]);
 		}
 
-		if (!somethingChanged)
+		int error = counters [(int) UpdateStatus.Error];
+		int downloaded = counters [(int) UpdateStatus.Downloaded];
+		int updated = counters [(int) UpdateStatus.Updated];
+		if (error == 0 && downloaded == 0 && updated == 0)
 			return;
 
 		outFeed = new RssFeed ();
@@ -370,7 +408,32 @@ public class Blogger {
 	}
 }
 
-public class FeedCache {
+class ReadResult {
+	UpdateStatus status;
+	RssFeed feed;
+
+	public ReadResult (UpdateStatus status)
+	{
+		this.status = status;
+	}
+
+	public ReadResult (RssFeed feed, UpdateStatus status)
+	{
+		this.feed = feed;
+		this.status = status;
+	}
+
+	public RssFeed Feed {
+		get { return feed; }
+	}
+
+	public UpdateStatus Status {
+		get { return status; }
+	}
+
+}
+
+class FeedCache {
 	static string cacheDir;
 
 	public static string CacheDir {
@@ -390,24 +453,22 @@ public class FeedCache {
 		return Path.Combine (cacheDir, hash.ToString ());
 	}
 
-	public static RssFeed Read (string name, string url, out UpdateStatus st)
+	public static ReadResult Read (string name, string url)
 	{
-		return Read (name, url, out st, 0);
+		return Read (name, url, 0);
 	}
 
-	static RssFeed Read (string name, string url, out UpdateStatus st, int redirects)
+	static ReadResult Read (string name, string url, int redirects)
 	{
 		if (redirects > 10) {
 			Settings.Log ("Too many redirects.");
-			st = UpdateStatus.Error;
-			return null;
+			return new ReadResult (UpdateStatus.Error);
 		}
 			
-		st = UpdateStatus.Downloaded;
 		if (name == null)
 			throw new ArgumentNullException ("name");
 
-		Settings.Log ("Getting {0}", url);
+		Settings.Log ("Starting {0}", url);
 		HttpWebRequest req = (HttpWebRequest) WebRequest.Create (url);
 		req.Headers ["Accept-Encoding"] = "gzip";
 		req.Timeout = 30000;
@@ -431,15 +492,13 @@ public class FeedCache {
 			if (we.Response != null)
 				we.Response.Close ();
 
-			Settings.Log ("1 {0}", we.Message);
+			Settings.Log ("1 {0}: {1}", url, we.Message);
 			if (exists) { // ==> Enabled
-				Settings.Log ("Using the cached file.");
-				st = UpdateStatus.CachedButError;
-				return RssFeed.Read (filename);
+				Settings.Log ("Using the cached file for {0}", url);
+				return new ReadResult (RssFeed.Read (filename), UpdateStatus.CachedButError);
 			}
 
-			st = UpdateStatus.Error;
-			return null;
+			return new ReadResult (UpdateStatus.Error);
 		}
 
 		HttpStatusCode code = resp.StatusCode;
@@ -456,32 +515,28 @@ public class FeedCache {
 			try {
 				Uri uri = new Uri (new Uri (url), location);
 				location = uri.ToString ();
-				Settings.Log ("Redirecting to {0}", location);
+				Settings.Log ("Redirecting from {0} to {1}", req.Address, location);
 			} catch (Exception e) {
-				Settings.Log ("Error in 'Location' header.");
-				st = UpdateStatus.Error;
-				return null;
+				Settings.Log ("Error in 'Location' header for {0}.", req.Address);
+				return new ReadResult (UpdateStatus.Error);
 			}
 
-			return Read (name, location, out st, ++redirects);
+			return Read (name, location, ++redirects);
 
 		case HttpStatusCode.NotModified: // 304
 			resp.Close ();
-			Settings.Log ("Not modified since {0}.", req.Headers ["If-Modified-Since"]);
-			st = UpdateStatus.Cached;
-			return RssFeed.Read (filename);
+			Settings.Log ("{0} not modified since {1}.", req.Address, req.Headers ["If-Modified-Since"]);
+			return new ReadResult (RssFeed.Read (filename), UpdateStatus.Cached);
 
 		default:
 			resp.Close ();
 			Settings.Log ("2 {0} getting {1}", code, url);
 
 			if (exists) {
-				Settings.Log ("Using the cached file.");
-				st = UpdateStatus.CachedButError;
-				return RssFeed.Read (filename);
+				Settings.Log ("Using the cached file for {0}.", url);
+				return new ReadResult (RssFeed.Read (filename), UpdateStatus.CachedButError);
 			}
-			st = UpdateStatus.Error;
-			return null;
+			return new ReadResult (UpdateStatus.Error);
 		}
 
 		byte [] buffer = new byte [16384];
@@ -494,20 +549,18 @@ public class FeedCache {
 					name, url, we.Message);
 
 			if (exists) {
-				Settings.Log ("Using the cached file.");
-				st = UpdateStatus.CachedButError;
-				return RssFeed.Read (filename);
+				Settings.Log ("Using the cached file for {0}.", url);
+				return new ReadResult (RssFeed.Read (filename), UpdateStatus.CachedButError);
 			}
 
-			st = UpdateStatus.Error;
-			return null;
+			return new ReadResult (UpdateStatus.Error);
 		}
 
 		string cenc = resp.Headers ["Content-Encoding"];
 		if (cenc != null) {
 			cenc = cenc.ToLower ().Trim ();
 			if (cenc == "gzip") {
-				Settings.Log ("Gzipped");
+				Settings.Log ("{0} is gzipped.", url);
 				input = new GZipInputStream (input);
 			}
 		}
@@ -523,12 +576,11 @@ public class FeedCache {
 					f.Write (buffer, 0, nread);
 			}
 
-			return RssFeed.Read (filename);
+			return new ReadResult (RssFeed.Read (filename), UpdateStatus.Downloaded);
 		} catch (Exception e) {
 			Console.Error.WriteLine ("4 {0} reading {1}", e, url);
 			File.Delete (filename);
-			st = UpdateStatus.Error;
-			return null;
+			return new ReadResult (UpdateStatus.Error);
 		} finally {
 			resp.Close ();
 			if (!Enabled)
