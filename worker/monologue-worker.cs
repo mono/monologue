@@ -158,7 +158,7 @@ class MonologueWorker {
 		foreach (Blogger b in bloggers.BloggersByUrl) {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
-				if (i.PubDate >= minPubDate) {
+				if (i.PubDate == DateTime.MinValue || i.PubDate >= minPubDate) {
 					i.Title = b.Name + ": " + i.Title;
 					stories.Add (i);
 				}
@@ -169,7 +169,11 @@ class MonologueWorker {
 		
 		foreach (RssItem itm in stories)
 			ch.Items.Add (itm);
-		
+
+		if (ch.Items.Count == 0) {
+			Settings.Log ("No feeds to store.");
+			return;
+		}
 		outFeed.Channels.Add (ch);
 		outFeed.Write (rssOutFile);
 		
@@ -516,7 +520,7 @@ class FeedCache {
 				Uri uri = new Uri (new Uri (url), location);
 				location = uri.ToString ();
 				Settings.Log ("Redirecting from {0} to {1}", req.Address, location);
-			} catch (Exception e) {
+			} catch (Exception) {
 				Settings.Log ("Error in 'Location' header for {0}.", req.Address);
 				return new ReadResult (UpdateStatus.Error);
 			}

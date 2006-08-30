@@ -10,7 +10,7 @@
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwhansen.blogspot.com/rss.xml" Head="Mwh.png" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" IrcNick="tberman" Head="Tberman.png" />
 	<Blogger Name="Mono" RssUrl="http://www.mono-project.com/news/index.rss2" Head="mono.png" />
-	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://gonzalo.name/blog/gonzalo.rss2" IrcNick="gonzalo" />
+	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://gonzalo.name/blog/gonzalo.rss2" IrcNick="gonzalo" Head="gonzalo.png"/>
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/blog/monologue-index.xml" IrcNick="danmorg"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://monkey.workarea.jp/lb/index.rss2" IrcNick="eno"/>
 	<Blogger Name="Erik Dasque"
