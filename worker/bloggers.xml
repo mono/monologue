@@ -78,4 +78,5 @@
 	<Blogger Name="Wade Berrier" RssUrl="http://wade.berrier.org/feed/" IrcNick="wberrier"/>
 	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
 	<Blogger Name="Michael Zucchi" RssUrl="http://www.users.on.net/~notzed/notzed.rdf"/>
+	<Blogger Name="Gabriel Burt" RssUrl="http://gburt.blogspot.com/rss.xml" IrcNick="gabaug" />
 </BloggerCollection>
