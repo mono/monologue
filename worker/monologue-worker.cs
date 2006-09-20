@@ -192,14 +192,17 @@ class MonologueWorker {
 			return DateTime.Compare (((RssItem)((ArrayList)y) [0]).PubDate.Date, ((RssItem)((ArrayList)x) [0]).PubDate.Date);
 		}
 	}
-	
+
+	static string error_msg = "<div class='ircnick' style='color:red'>Error retrieving/loading feed</div>";
+	static string error_img = "<img src='images/error.png' alt='Error retrieving/loading feed'>";
 	static void Render ()
 	{
 		Template tpl = new Template("default.tpl");
 
 		tpl.selectSection ("BLOGGER");
 		foreach (Blogger b in bloggers.Bloggers) {
-			
+			tpl.setField ("BLOGGER_ERROR_MSG", b.Error ? error_msg : "");
+			tpl.setField ("BLOGGER_ERROR_IMG", b.Error ? error_img : "");
 			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
 			tpl.setField ("BLOGGER_NAME", b.Name);
 	
@@ -399,6 +402,10 @@ public class Blogger {
                         return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com");
                 }
         }
+
+	public bool Error {
+		get { return (feed == null); }
+	}
 
 	public void UpdateFeed ()
 	{

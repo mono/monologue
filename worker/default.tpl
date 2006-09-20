@@ -68,11 +68,11 @@
 			<h2>Bloggers</h2>
 			<ul>
 				<!-- @@BLOGGER@@ -->
-				<li><div><img class="head" src="images/heads/@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
+				<li>@@BLOGGER_ERROR_IMG@@<div><img class="head" src="images/heads/@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
 					<a href="@@BLOGGER_URL@@">@@BLOGGER_NAME@@</a>
 					<div>
 						<a href="@@BLOGGER_RSSURL@@"><img src="images/feed.png" alt="@@BLOGGER_IRCNICK@@ feed"></a>
-						<div class="ircnick">@@BLOGGER_IRCNICK@@</div>
+						<div class="ircnick">@@BLOGGER_IRCNICK@@@@BLOGGER_ERROR_MSG@@</div>
 					</div>
 				</li><!-- @@BLOGGER@@ -->
 			</ul>

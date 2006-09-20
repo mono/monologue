@@ -1,3 +1,10 @@
+2006-09-20 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* www/images/error.png:
+	* worker/monologue-worker.cs:
+	* worker/default.tpl: display an error icon and message for feeds that
+	fail to be downloaded/parsed.
+
 2006-09-16	Christian Hergert	<christian.hergert@gmail.com>
 
 	* www/images/heads/vwdude.png: moved from chrish01.png
