@@ -100,6 +100,8 @@ class MonologueWorker {
 		Blogger blogger = (Blogger) ares.AsyncState;
 		blogger.Feed = res.Feed;
 		blogger.UpdateFeed ();
+		if (res.Status == UpdateStatus.CachedButError)
+			blogger.Error = true;
 		Settings.Log ("DONE {0}", blogger.RssUrl);
 		lock (all) {
 			loaded++;
@@ -361,6 +363,7 @@ public class Blogger {
 	[XmlAttribute] public string RssUrl;
 	[XmlAttribute] public string IrcNick;
 	[XmlAttribute] public string Head;
+	bool error;
 
 	[XmlIgnore]
 	public string ID {
@@ -404,7 +407,8 @@ public class Blogger {
         }
 
 	public bool Error {
-		get { return (feed == null); }
+		get { return (error || feed == null); }
+		set { error = value; }
 	}
 
 	public void UpdateFeed ()

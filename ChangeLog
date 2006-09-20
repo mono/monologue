@@ -1,5 +1,10 @@
 2006-09-20 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
+	* worker/monologue-worker.cs: set the error status when we have a
+	cached feed that failed.
+
+2006-09-20 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
 	* www/images/error.png:
 	* worker/monologue-worker.cs:
 	* worker/default.tpl: display an error icon and message for feeds that
