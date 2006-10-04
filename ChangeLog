@@ -1,3 +1,7 @@
+2006-10-04	Boris Kirzner	<borisk@mainsoft.com>
+
+	* worker/bloggers.xml, www/images/heads/borisk.png: added head.
+
 2006-09-20 Gonzalo Paniagua Javier <gonzalo@ximian.com>
 
 	* worker/monologue-worker.cs: set the error status when we have a
