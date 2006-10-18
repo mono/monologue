@@ -78,6 +78,7 @@
 	<Blogger Name="Wade Berrier" RssUrl="http://wade.berrier.org/feed/" IrcNick="wberrier"/>
 	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
 	<Blogger Name="Michael Zucchi" RssUrl="http://www.users.on.net/~notzed/notzed.rdf"/>
+	<Blogger Name="Kenneth Christiansen" RssUrl="http://feeds.feedburner.com/CodePosts"/>
 	<Blogger Name="Gabriel Burt" RssUrl="http://feeds.feedburner.com/blogspot/lWNb" IrcNick="gabaug" />
 	<Blogger Name="Joe Shaw" RssUrl="http://joeshaw.org/feed/" IrcNick="joe" Head="joe.png" />
 </BloggerCollection>
