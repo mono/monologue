@@ -37,7 +37,15 @@
 	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
 	<Blogger Name="Christian Hergert" RssUrl="http://www.vwdude.com/xml/mono/feed.xml" IrcNick="vwdude" Head="vwdude.png" />
-	<Blogger Name="C.J. Adams-Collier" RssUrl="http://wp.colliertech.org/cj/?feed=rss2&amp;cat=7" IrcNick="cj" Head="cj.png" />
+  <Blogger Name  ="Monocast"
+           RssUrl="http://mono-cast.com/?feed=rss2&amp;category_name=mono"
+           Head  ="monocast.png"
+           />
+  <Blogger Name   ="C.J. Adams-Collier"
+           RssUrl ="http://wp.colliertech.org/cj/?feed=rss2&amp;cat=7"
+           IrcNick="cj"
+           Head   ="cj.png"
+           />
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss" IrcNick="jeroen"/>
 	<Blogger Name="Eric Butler" RssUrl="http://eric.extremeboredom.net/rss.xml" IrcNick="FireRabbit"/>
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&amp;mid=104"/>
