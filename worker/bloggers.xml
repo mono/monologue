@@ -46,6 +46,10 @@
            IrcNick="cj"
            Head   ="cj.png"
            />
+  <Blogger Name   ="Rafael Ferreira"
+           RssUrl ="http://ophion.org/data/xml/blog.rss"
+           IrcNick="raf"
+	   />
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss" IrcNick="jeroen"/>
 	<Blogger Name="Eric Butler" RssUrl="http://eric.extremeboredom.net/rss.xml" IrcNick="FireRabbit"/>
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&amp;mid=104"/>
