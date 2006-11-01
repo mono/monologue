@@ -62,13 +62,11 @@
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" Head="rafi_mizrahi_head.png"/>
 	<Blogger Name="Michael Dominik" RssUrl="http://www.mdk.org.pl/xml/rss20/feed.xml" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
-	<Blogger Name="Jeyasankar Kottalam" RssUrl="http://eggminus.com/blogger-rss.php?url=http://gcc-cil.blogspot.com" IrcNick="jey"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
 	<Blogger Name="Brandon Hale" RssUrl="http://blog.brandonhale.us/xml/rss20/feed.xml" IrcNick="tseng"/>
 	<Blogger Name="Raja R Harinath" RssUrl="http://feeds.feedburner.com/hurrynot" Head="Harinath.jpg"/>
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
 	<Blogger Name="Michael Hutchinson" RssUrl="http://compsoc.dur.ac.uk/~mjh/mono-feed"/>
-	<Blogger Name="Blago" RssUrl="http://www.dachev.com/blog/index.rdf"/>
 	<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/category/pub/rss2" IrcNick="jtickle" Head="jtickle.png" />
 	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed" />
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
@@ -89,9 +87,9 @@
 	<Blogger Name="Ankit Jain" RssUrl="http://feeds.feedburner.com/blogspot/ankitj" IrcNick="ankit"/>
 	<Blogger Name="Wade Berrier" RssUrl="http://wade.berrier.org/feed/" IrcNick="wberrier"/>
 	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
-	<Blogger Name="Michael Zucchi" RssUrl="http://www.users.on.net/~notzed/notzed.rdf"/>
+	<Blogger Name="Michael Zucchi" RssUrl="http://www.users.on.net/~notzed/notzed.rdf" IrcNick="NotZed"/>
 	<Blogger Name="Kenneth Christiansen" RssUrl="http://feeds.feedburner.com/CodePosts"/>
 	<Blogger Name="Gabriel Burt" RssUrl="http://feeds.feedburner.com/blogspot/lWNb" IrcNick="gabaug" />
 	<Blogger Name="Joe Shaw" RssUrl="http://joeshaw.org/feed/" IrcNick="joe" Head="joe.png" />
-	<Blogger Name="Alan McGovern" RssUrl="http://feeds.feedburner.com/MonoTorrent"/>
+	<Blogger Name="Alan McGovern" RssUrl="http://feeds.feedburner.com/MonoTorrent" IrcNick="_Alan_"/>
 </BloggerCollection>
