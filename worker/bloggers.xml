@@ -68,7 +68,7 @@
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
 	<Blogger Name="Michael Hutchinson" RssUrl="http://compsoc.dur.ac.uk/~mjh/mono-feed"/>
 	<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/category/pub/rss2" IrcNick="jtickle" Head="jtickle.png" />
-	<Blogger Name="Marek Sieradzki" RssUrl="http://www.planetsoc.com/blog/32/feed" />
+	<Blogger Name="Marek Sieradzki" RssUrl="http://feeds.feedburner.com/MarekSieradzki" IrcNick="msieradzki" />
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
 	<Blogger Name="Boris Kirzner" RssUrl="http://boriskirzner.wordpress.com/feed" IrcNick="borisk" Head="borisk.png"/>
