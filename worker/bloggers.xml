@@ -93,5 +93,6 @@
 	<Blogger Name="Joe Shaw" RssUrl="http://joeshaw.org/feed/" IrcNick="joe" Head="joe.png" />
 	<Blogger Name="Alan McGovern" RssUrl="http://feeds.feedburner.com/MonoTorrent" IrcNick="_Alan_"/>
 	<Blogger Name="Boyd Timothy" RssUrl="http://blog.timothy.ws/rss.xml" IrcNick="boyd" Head="boyd.png" />
+	<Blogger Name="Patrick van Staveren" RssUrl="http://trick.vanstaveren.us/wp/feed/" IrcNick="trick" />
 	<Blogger Name="Andreia Gaita" RssUrl="http://worldofcoding.blogspot.com/feeds/posts/default?alt=rss" IrcNick="shana" />
 </BloggerCollection>
