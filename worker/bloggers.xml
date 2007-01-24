@@ -3,7 +3,7 @@
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" IrcNick="miguel"/>
 	<Blogger Name="Jackson Harper" RssUrl="http://feeds.feedburner.com/JacksonsActivityLog" IrcNick="jackson" />
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" IrcNick="spouliot" Head="Spouliot.png"/>
-	<Blogger Name="Mike Kestner" RssUrl="http://primates.ximian.com/~mkestner/blog/index.rss2" IrcNick="mkestner"/>
+	<Blogger Name="Mike Kestner" RssUrl="http://mkestner.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkestner"/>
 	<Blogger Name="Lluis Sanchez " RssUrl="http://foodformonkeys.blogspot.com/feeds/posts/default?alt=rss" IrcNick="lluis" Head="Lluis.png"/>
 	<Blogger Name="Duncan Mak " RssUrl="http://www.a-chinaman.com/category/monologue/feed" IrcNick="duncan" Head="Duncan.png"/>
 	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" IrcNick="baulig" Head="Martin.png" />
