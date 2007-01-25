@@ -1,5 +1,9 @@
 2007-01-25  Alexandre Gomes  <alexmipego@gmail.com>
 
+	* worker/bloggers.xml: Updated my feed.
+	
+2007-01-25  Alexandre Gomes  <alexmipego@gmail.com>
+
 	* worker/monologue-worker.cs: Fixes a problem when servers return
 	empty feeds with HTTP OK status.
 
