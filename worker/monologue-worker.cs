@@ -500,7 +500,7 @@ class FeedCache {
 			}
 		}
 
-		HttpWebResponse resp= null;
+		HttpWebResponse resp = null;
 		try {
 			resp = (HttpWebResponse) req.GetResponse ();
 		} catch (WebException we) {
@@ -582,19 +582,24 @@ class FeedCache {
 
 		if (filename == null)
 			filename = Path.GetTempFileName ();
-
-		File.Delete (filename);
+		
 		try {
-			using (FileStream f = new FileStream (filename, FileMode.CreateNew)) {
-				int nread = 0;
-				while ((nread = input.Read (buffer, 0, length)) != 0)
-					f.Write (buffer, 0, nread);
+			int nread = 0;
+			if ((nread = input.Read (buffer, 0, length)) != 0)
+			{
+				File.Delete (filename);
+				using (FileStream f = new FileStream (filename, FileMode.CreateNew))
+				{
+					do
+					{
+						f.Write (buffer, 0, nread);
+					} while ((nread = input.Read (buffer, 0, length)) != 0);
+				}
 			}
 
 			return new ReadResult (RssFeed.Read (filename), UpdateStatus.Downloaded);
 		} catch (Exception e) {
 			Console.Error.WriteLine ("4 {0} reading {1}", e, url);
-			File.Delete (filename);
 			return new ReadResult (UpdateStatus.Error);
 		} finally {
 			resp.Close ();
