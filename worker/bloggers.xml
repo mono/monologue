@@ -56,7 +56,7 @@
 	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss" IrcNick="danw" Head="danw.png" />
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
-	<Blogger Name="Joshua Tauberer" RssUrl="http://taubz.for.net/blog/?feed=rss2"/>
+	<Blogger Name="Joshua Tauberer" RssUrl="http://razor.occams.info/blog/category/mono/feed"/>
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://abock.org/feed" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" Head="rafi_mizrahi_head.png"/>
