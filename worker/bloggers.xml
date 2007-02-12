@@ -97,4 +97,5 @@
 	<Blogger Name="Andreia Gaita" RssUrl="http://worldofcoding.blogspot.com/feeds/posts/default?alt=rss" IrcNick="shana" />
 	<Blogger Name="Antti Juhani Oja" RssUrl="http://sandriman.wordpress.com/feed/" IrcNick="Sandriman"/>
 	<Blogger Name="Nagappan Alagappan" RssUrl="http://nagappanal.blogspot.com/rss.xml" IrcNick="nags"/>
+	<Blogger Name="Everaldo Canuto" RssUrl="http://everaldo.simios.org/rss/mono" IrcNick="everaldo"/>
 </BloggerCollection>
