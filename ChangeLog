@@ -1,3 +1,10 @@
+2007-02-12  Wade Berrier  <wberrier@novell.com>
+
+	* worker/monologue-worker.cs: Don't show posts with invalid dates (DateTime.MinValue),
+	instead, show error flag by user if they have entries with invalid dates.
+	(Invalid dates are probably a bug in the originating rss feed, but as least if it happens,
+	we will no longer have permalinks resulting from it)
+
 2007-01-28  Joshua Tauberer
 
 	* worker/bloggers.xml: Updated my feed URL.

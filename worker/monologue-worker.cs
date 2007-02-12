@@ -160,7 +160,9 @@ class MonologueWorker {
 		foreach (Blogger b in bloggers.BloggersByUrl) {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
-				if (i.PubDate == DateTime.MinValue || i.PubDate >= minPubDate) {
+				if (i.PubDate == DateTime.MinValue) {
+					b.DateError = true;
+				} else if (i.PubDate >= minPubDate) {
 					i.Title = b.Name + ": " + i.Title;
 					stories.Add (i);
 				}
@@ -196,6 +198,7 @@ class MonologueWorker {
 	}
 
 	static string error_msg = "<div class='ircnick' style='color:red'>Error retrieving/loading feed</div>";
+	static string date_error_msg = "<div class='ircnick' style='color:red'>Invalid dates in feed</div>";
 	static string error_img = "<img src='images/error.png' alt='Error retrieving/loading feed'>";
 	static void Render ()
 	{
@@ -203,8 +206,8 @@ class MonologueWorker {
 
 		tpl.selectSection ("BLOGGER");
 		foreach (Blogger b in bloggers.Bloggers) {
-			tpl.setField ("BLOGGER_ERROR_MSG", b.Error ? error_msg : "");
-			tpl.setField ("BLOGGER_ERROR_IMG", b.Error ? error_img : "");
+			tpl.setField ("BLOGGER_ERROR_MSG", b.Error ? error_msg : b.DateError ? date_error_msg : "");
+			tpl.setField ("BLOGGER_ERROR_IMG", b.Error || b.DateError ? error_img : "");
 			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
 			tpl.setField ("BLOGGER_NAME", b.Name);
 	
@@ -364,6 +367,7 @@ public class Blogger {
 	[XmlAttribute] public string IrcNick;
 	[XmlAttribute] public string Head;
 	bool error;
+	bool date_error;
 
 	[XmlIgnore]
 	public string ID {
@@ -405,6 +409,11 @@ public class Blogger {
                         return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com");
                 }
         }
+
+	public bool DateError {
+		get { return (date_error || feed == null); }
+		set { date_error = value; }
+	}
 
 	public bool Error {
 		get { return (error || feed == null); }
