@@ -99,4 +99,5 @@
 	<Blogger Name="Nagappan Alagappan" RssUrl="http://nagappanal.blogspot.com/rss.xml" IrcNick="nags"/>
 	<Blogger Name="Everaldo Canuto" RssUrl="http://everaldo.simios.org/rss/mono" IrcNick="everaldo"/>
 	<Blogger Name="Jonathan Pobst" RssUrl="http://jpobst.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jpobst"/>
+	<Blogger Name="Rolf Bjarne Kvinge" RssUrl="http://rolfkvinge.blogspot.com/feeds/posts/default?alt=rss" IrcNick="rolf"/>
 </BloggerCollection>
