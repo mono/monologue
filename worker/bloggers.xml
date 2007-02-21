@@ -81,7 +81,7 @@
 	<Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" IrcNick="jonp" Head="jonpryor.png"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://www.softcatala.org/~jmas/weblog/rss.xml" IrcNick="Jordi" Head="Jordi.png"/>	
 	<Blogger Name="Idan Gazit" RssUrl="http://pixane.net/blog/?feed=rss2&amp;cat=2" IrcNick="idan" Head="Idan.png"/>
-	<Blogger Name="Ankit Jain" RssUrl="http://ankitjain.org/blog/?feed=rss2" IrcNick="ankit"/>
+	<Blogger Name="Ankit Jain" RssUrl="http://ankitjain.org/blog/?feed=rss2&amp;cat=2" IrcNick="ankit"/>
 	<Blogger Name="Wade Berrier" RssUrl="http://wadeberrier.blogspot.com/feeds/posts/default?alt=rss" IrcNick="wberrier"/>
 	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
 	<Blogger Name="Michael Zucchi" RssUrl="http://www.users.on.net/~notzed/notzed.rdf" IrcNick="NotZed"/>
