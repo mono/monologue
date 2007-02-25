@@ -60,7 +60,7 @@
 	<Blogger Name="Michael Dominik" RssUrl="http://www.mdk.org.pl/xml/rss20/feed.xml" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
-	<Blogger Name="Brandon Hale" RssUrl="http://blog.brandonhale.us/xml/rss20/feed.xml" IrcNick="tseng"/>
+	<!--<Blogger Name="Brandon Hale" RssUrl="http://blog.brandonhale.us/xml/rss20/feed.xml" IrcNick="bhale"/>-->
 	<Blogger Name="Raja R Harinath" RssUrl="http://feeds.feedburner.com/hurrynot" Head="Harinath.jpg"/>
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" />
 	<Blogger Name="Michael Hutchinson" RssUrl="http://compsoc.dur.ac.uk/~mjh/mono-feed"/>
