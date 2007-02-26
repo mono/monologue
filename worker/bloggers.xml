@@ -1,5 +1,5 @@
 <BloggerCollection>
-	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://primates.ximian.com/~cnataren/blog/cesar.rss2" IrcNick="cesar" Head="cesar.png"/>
+	<Blogger Name="C&eacute;sar L&oacute;pez Natar&eacute;n" RssUrl="http://cesarnataren.blogspot.com/feeds/posts/default?alt=rss" IrcNick="cesar" Head="cesar.png"/>
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" IrcNick="miguel"/>
 	<Blogger Name="Jackson Harper" RssUrl="http://feeds.feedburner.com/JacksonsActivityLog" IrcNick="jackson" />
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" IrcNick="spouliot" Head="Spouliot.png"/>
