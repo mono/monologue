@@ -99,4 +99,5 @@
 	<Blogger Name="Rolf Bjarne Kvinge" RssUrl="http://rolfkvinge.blogspot.com/feeds/posts/default?alt=rss" IrcNick="rolf"/>
 	<Blogger Name="Marek Safar" RssUrl="http://mareksafar.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Marek"/>
 	<Blogger Name="Wbem Tools" RssUrl="http://wbemtools.blogspot.com/feeds/posts/default?alt=rss" Head="WbemTools.png"/>
+	<Blogger Name="Marek Habersack" RssUrl="http://grendello.blogspot.com/feeds/posts/default?alt=rss" IrcNick="grendel" />
 </BloggerCollection>
