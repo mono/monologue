@@ -75,7 +75,7 @@
 	<!-- Removed: returning 404 for quite a while now.
 	<Blogger Name="Raphael Romeikat" RssUrl="http://blog.raffa.de/rss.php?ver=2" Head="raphaphp.png"/>
 	-->
-	<Blogger Name="Rafael Teixeira" RssUrl="http://thespoke.net/blogs/monoman/rss.aspx" IrcNick="monoman" Head="monoman.png"/> 
+	<Blogger Name="Rafael Teixeira" RssUrl="http://monoblog.blogspot.com/feeds/posts/default?alt=rss" IrcNick="monoman" Head="monoman.png"/> 
 	<Blogger Name="Alexandre Gomes" RssUrl="http://www.alexandre-gomes.com/?feed=rss2&amp;cat=19" IrcNick="Alexmipego"/>
 	<Blogger Name="Jonathan Chambers" RssUrl="http://jonathanchambers.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jchambers"/>
 	<Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" IrcNick="jonp" Head="jonpryor.png"/>
