@@ -101,4 +101,5 @@
 	<Blogger Name="Wbem Tools" RssUrl="http://wbemtools.blogspot.com/feeds/posts/default?alt=rss" Head="WbemTools.png"/>
 	<Blogger Name="Marek Habersack" RssUrl="http://grendello.blogspot.com/feeds/posts/default?alt=rss" IrcNick="grendel" />
 	<Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" IrcNick="fejj"/>
+	<Blogger Name="Codice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
 </BloggerCollection>
