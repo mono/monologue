@@ -1,3 +1,7 @@
+2007-03-11  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
+	* worker/bloggers.xml: Switched to my blogger/blogspot feed, as I've found out how to extract an rss feed (instead 
+	of the default atom one) to use here. My theSpoke blog is being deactivated.
+	
 2007-02-25  Aaron Bockover  <abockover@novell.com>
 
 	* worker/bloggers.xml: Commented out Brandon Hale until he's done messing
