@@ -1,3 +1,8 @@
+2007-03-26 Gonzalo Paniagua Javier <gonzalo@ximian.com>
+
+	* worker/monologue-worker.cs: set the error statuif EndInvoke throws.
+
+	
 2007-03-11  Rafael Teixeira <rafaelteixeirabr@hotmail.com>
 	* worker/bloggers.xml: Switched to my blogger/blogspot feed, as I've found out how to extract an rss feed (instead 
 	of the default atom one) to use here. My theSpoke blog is being deactivated.

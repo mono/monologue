@@ -94,7 +94,13 @@ class MonologueWorker {
 	static void FeedDone (IAsyncResult ares)
 	{
 		AsyncResult a = (AsyncResult) ares;
-		ReadResult res = ((ReadDelegate) a.AsyncDelegate).EndInvoke (ares);
+		ReadResult res = null;
+		try {
+			res = ((ReadDelegate) a.AsyncDelegate).EndInvoke (ares);
+		} catch {
+			res = new ReadResult (UpdateStatus.Error);
+		}
+
 		if (disable_load)
 			return;
 		Blogger blogger = (Blogger) ares.AsyncState;
