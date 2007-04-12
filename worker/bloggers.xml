@@ -105,7 +105,9 @@
 	<Blogger Name="Wbem Tools" RssUrl="http://wbemtools.blogspot.com/feeds/posts/default?alt=rss" Head="WbemTools.png"/>
 	<Blogger Name="Marek Habersack" RssUrl="http://grendello.blogspot.com/feeds/posts/default?alt=rss" IrcNick="grendel" />
 	<Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" IrcNick="fejj"/>
-	<Blogger Name="Codice Software" RssUrl="http://codicesoftware.blogspot.com/rss.xml"/>
+	<Blogger Name="Codice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Jamie Cansdale" RssUrl="http://weblogs.asp.net/nunitaddin/rss.aspx?Tags=Mono&amp;AndTags=1"/>
-	<Blogger Name="Albert Gnandt" RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
+	<Blogger Name="Albert Gnandt"
+	RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
+        <Blogger Name="Scott Peterson" RssUrl="http://www.themonkeysgrinder.blogspot.com/feeds/posts/default?alt=rss"/>
 </BloggerCollection>
