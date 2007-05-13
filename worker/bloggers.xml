@@ -30,7 +30,7 @@
 	<Blogger Name="Geoff Norton" RssUrl="http://blog.sublimeintervention.com/rss.xml"/>
 	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/wp-rss2.php" IrcNick="orph" Head="orph.png"/>
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
-	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?" IrcNick="jhill" Head="jhill.png"/>
+	<!--Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/WeblogX/BlogXBrowsing.asmx/GetRss?" IrcNick="jhill" Head="jhill.png"/-->
 	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jbevain" Head="jbevain.png" />
 	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/category/mono-net/feed/rss2" IrcNick="zbowling" />
 	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
@@ -111,15 +111,24 @@
 	RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
         <Blogger Name="Scott Peterson" RssUrl="http://www.themonkeysgrinder.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Ivan N. Zlatev" RssUrl="http://i-nz.net/category/software-development/mono/feed" IrcNick="i-nz"/>
-	<Blogger Name="Ben Mostmans" RssUrl="http://tremor.be/index.php/category/programming/mono/feed"/>
 	<Blogger Name="Brian Nickel" RssUrl="http://kerrick.wordpress.com/tag/summer-of-code-2007/feed/"/>
 	<Blogger Name="Gernot Margreitner" RssUrl="http://gernot.wordpress.com/tag/mono-image-processing/feed/"/>
 	<Blogger Name="Hector Gomez"
 	RssUrl="http://hectoregm.blogspot.com/feeds/posts/default?alt=rss"/>
-	<Blogger Name="Kenneth Parnell"
-	RssUrl="http://tremor.be/index.php/category/programming/mono/feed"/>
+	<Blogger Name="Ben Motmans"
+	RssUrl="http://tremor.be/index.php/category/programming/mono/feed" IrcNick="tremor"/>
 	<Blogger Name="Nestor Salceda"
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
-	<Blogger Name="Marcos Cobeña Morián" RssUrl="http://www.youcannoteatbits.org/Blog/SoC.xml" IrcNick="m4rc05" /> 
+	<Blogger Name="Marcos Cobena" RssUrl="http://www.youcannoteatbits.org/Blog/SoC.xml" IrcNick="m4rc05" /> 
+	<Blogger Name="Matej Spiller" RssUrl="http://matejsp.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Marcos Marin" RssUrl="http://mdmagsoc.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Leonardo Pires" RssUrl="http://aspnetajax.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Kenny Parnell" RssUrl="http://feeds.feedburner.com/soc2007" IrcNick="kennyp"/>
+	<Blogger Name="Khaled" RssUrl="http://madinatek.blogspot.com/feeds/posts/default?alt=rss" />
+	<Blogger Name="Debackerl" RssUrl="http://debackerl.wordpress.com/tag/soc-2007/feed/" />
+	<Blogger Name="Nidhi" RssUrl="http://nidhi24.wordpress.com/?feed=rss" />
+	<Blogger Name="Jared Hendry" RssUrl="http://buchan.esoteriq.org/weblog/category/mono/feed" />
 	<Blogger Name="Chris Howie" RssUrl="http://www.chrishowie.com/feed/" IrcNick="SerajewelKS"/>
+	<Blogger Name="Jared Henry" RssUrl="http://buchan.esoteriq.org/weblog/category/mono/feed" />
+	<Blogger Name="David Srbecky" RssUrl="http://dsrbecky.blogspot.com/feeds/posts/default/-/Mono?alt=rss"/>
 </BloggerCollection>
