@@ -128,7 +128,8 @@
 	<Blogger Name="Debackerl" RssUrl="http://debackerl.wordpress.com/tag/soc-2007/feed/" />
 	<Blogger Name="Nidhi Rawal" RssUrl="http://nidhi24.wordpress.com/?feed=rss" />
 	<Blogger Name="Jared Hendry" RssUrl="http://buchan.esoteriq.org/weblog/category/mono/feed" />
-	<Blogger Name="Chris Howie" RssUrl="http://www.chrishowie.com/feed/" IrcNick="SerajewelKS"/>
-	<Blogger Name="Jared Henry" RssUrl="http://buchan.esoteriq.org/weblog/category/mono/feed" />
+	<Blogger Name="Chris Howie" RssUrl="http://www.chrishowie.com/feed/" IrcNick="SerajewelKS" Head="chrishowie.png"/>
 	<Blogger Name="David Srbecky" RssUrl="http://dsrbecky.blogspot.com/feeds/posts/default/-/Mono?alt=rss"/>
+	<Blogger Name="Chris Gameweld" RssUrl="http://gameweld-soc.blogspot.com/feeds/posts/default?alt=rss" />
+	<Blogger Name="Joel Reed" RssUrl="http://ropeonfire.blogspot.com/feeds/posts/default?alt=rss" />
 </BloggerCollection>
