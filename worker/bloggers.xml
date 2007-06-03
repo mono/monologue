@@ -132,4 +132,6 @@
 	<Blogger Name="David Srbecky" RssUrl="http://dsrbecky.blogspot.com/feeds/posts/default/-/Mono?alt=rss"/>
 	<Blogger Name="Chris Gameweld" RssUrl="http://gameweld-soc.blogspot.com/feeds/posts/default?alt=rss" />
 	<Blogger Name="Joel Reed" RssUrl="http://ropeonfire.blogspot.com/feeds/posts/default?alt=rss" />
+	<Blogger Name="Valentin Sawadski" RssUrl="http://achblah.blogspot.com/feeds/posts/default?alt=rss" />
+	<Blogger Name="Seo Sanghyeon" RssUrl="http://fepy.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanxiyn"/>
 </BloggerCollection>
