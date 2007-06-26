@@ -135,4 +135,5 @@
 	<Blogger Name="Valentin Sawadski" RssUrl="http://achblah.blogspot.com/feeds/posts/default?alt=rss" />
 	<Blogger Name="Seo Sanghyeon" RssUrl="http://fepy.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanxiyn"/>
 	<Blogger Name="Alp Toker" RssUrl="http://www.atoker.com/blog/feed" IrcNick="alp"/>
+	<Blogger Name="Mark Probst" RssUrl="http://schani.wordpress.com/feed/" IrcNick="schani"/>
 </BloggerCollection>
