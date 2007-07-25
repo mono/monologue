@@ -137,5 +137,5 @@
 	<Blogger Name="Alp Toker" RssUrl="http://www.atoker.com/blog/feed" IrcNick="alp"/>
 	<Blogger Name="Mark Probst" RssUrl="http://schani.wordpress.com/feed/" IrcNick="schani"/>
 	<Blogger Name="Will Johansson" RssUrl="http://mwfosx.blogspot.com/feeds/posts/default?alt=rss"/>
-
+	<Blogger Name="Mainsoft Grasshopper" RssUrl="http://feeds.feedburner.com/grasshopper"/>
 </BloggerCollection>
