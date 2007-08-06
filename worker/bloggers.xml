@@ -116,7 +116,7 @@
 	<Blogger Name="Hector Gomez"
 	RssUrl="http://hectoregm.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Ben Motmans"
-	RssUrl="http://tremor.be/index.php/category/programming/mono/feed" IrcNick="tremor"/>
+	RssUrl="http://bmotmans.blogspot.com/feeds/posts/default?alt=rss" IrcNick="tremor"/>
 	<Blogger Name="Nestor Salceda"
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
 	<Blogger Name="Marcos Cobena" RssUrl="http://www.youcannoteatbits.org/Blog/SoC.xml" IrcNick="m4rc05" /> 
