@@ -139,4 +139,5 @@
 	<Blogger Name="Will Johansson" RssUrl="http://mwfosx.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Mainsoft Grasshopper" RssUrl="http://feeds.feedburner.com/grasshopper"/>
 	<Blogger Name="Francisco Figueiredo" RssUrl="http://fxjr.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="R. Tyler Ballance" RssUrl="http://www.unethicalblogger.com/blog_categories/mono/feed" IrcNick="rtyler"/>
 </BloggerCollection>
