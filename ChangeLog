@@ -1,3 +1,7 @@
+2007-08-25  Zac Bowling <zac@zacbowling.com>
+	
+	* worker/default.tpl: fix anon svn link to monologue source
+
 2007-06-12  Alp Toker  <alp.toker@collabora.co.uk>
 
 	* worker/bloggers.xml: Add Alp.
