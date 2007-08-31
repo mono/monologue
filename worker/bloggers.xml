@@ -53,7 +53,7 @@
 	   />
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss" IrcNick="jeroen"/>
 	<Blogger Name="Eric Butler" RssUrl="http://eric.extremeboredom.net/rss.xml" IrcNick="FireRabbit"/>
-	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/RSS.aspx?pageid=101&amp;mid=104"/>
+	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/aggregator283rss.aspx"/>
 	<Blogger Name="Michael Giagnocavo" RssUrl="http://www.atrevido.net/blog/SyndicationService.asmx/GetRss"/>
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss" IrcNick="danw" Head="danw.png" />
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
