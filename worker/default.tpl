@@ -4,7 +4,7 @@
 <title>Monologue - Voices of the Mono Project</title>
 <link rel="stylesheet" href="css/monologue.css" type="text/css" />
 <link rel="stylesheet" href="css/planet.css" type="text/css" />
-<link rel="alternate" title="Monologue" href="index.rss" type="application/rss+xml" />
+<link rel="alternate" title="Monologue" href="http://www.go-mono.com/monologue/index.rss" type="application/rss+xml" />
 <!--[if IE]>
 <link rel="stylesheet" href="css/ie.css" type="text/css" />
 <![endif]-->
