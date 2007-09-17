@@ -1,3 +1,7 @@
+2007-09-17  Geoff Norton  <gnorton@customerdna.com>
+
+	* worker/bloggers.xml: Update kangaroo's entry.
+
 2007-08-25  Zac Bowling <zac@zacbowling.com>
 	
 	* worker/default.tpl: fix anon svn link to monologue source
