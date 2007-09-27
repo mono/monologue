@@ -141,6 +141,6 @@
 	<Blogger Name="Francisco Figueiredo" RssUrl="http://fxjr.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="R. Tyler Ballance" RssUrl="http://www.unethicalblogger.com/blog_categories/mono/feed" IrcNick="rtyler"/>
 	<Blogger Name="Olivier Dufour" RssUrl="http://dufoli.wordpress.com/feed/"/>
-	<Blogger Name="Andrew Jorgensen" RssUrl="http://andrew.jorgensenfamily.us/feed/" Head="ajorg.png" IrcNick="ajorgensen"/>	
+	<Blogger Name="Andrew Jorgensen" RssUrl="http://andrew.jorgensenfamily.us/feed/" Head="ajorg.png" IrcNick="ajorg"/>	
 	<Blogger Name="Veerapuram Varadhan" RssUrl="http://vvaradhan.blogspot.com/rss.xml" IrcNick="varadhan"/>
 </BloggerCollection>
