@@ -119,7 +119,7 @@
 	RssUrl="http://bmotmans.blogspot.com/feeds/posts/default?alt=rss" IrcNick="tremor"/>
 	<Blogger Name="Nestor Salceda"
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
-	<Blogger Name="Marcos Cobena" RssUrl="http://www.youcannoteatbits.org/Blog/SoC.xml" IrcNick="m4rc05" /> 
+	<Blogger Name="Marcos Cobena" RssUrl="http://straybirds130.blogspot.com/feeds/posts/default/-/Mono?alt=rss" IrcNick="m4rc05" /> 
 	<Blogger Name="Matej Spiller" RssUrl="http://matejsp.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Marcos Marin" RssUrl="http://mdmagsoc.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Leonardo Pires" RssUrl="http://aspnetajax.blogspot.com/feeds/posts/default?alt=rss"/>
