@@ -81,7 +81,7 @@
 	-->
 	<Blogger Name="Rafael Teixeira" RssUrl="http://monoblog.blogspot.com/feeds/posts/default?alt=rss" IrcNick="monoman" Head="monoman.png"/> 
 	<Blogger Name="Alexandre Gomes" RssUrl="http://www.alexandre-gomes.com/?feed=rss2&amp;cat=19" IrcNick="Alexmipego"/>
-	<Blogger Name="Jonathan Chambers" RssUrl="http://jonathanchambers.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jchambers"/>
+	<Blogger Name="Jonathan Chambers" RssUrl="http://feeds.feedburner.com/jonathanchambers" IrcNick="jchambers"/>
 	<Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" IrcNick="jonp" Head="jonpryor.png"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://www.softcatala.org/~jmas/weblog/rss.xml" IrcNick="Jordi" Head="Jordi.png"/>	
 	<Blogger Name="Idan Gazit" RssUrl="http://pixane.net/blog/?feed=rss2&amp;cat=2" IrcNick="idan" Head="Idan.png"/>
