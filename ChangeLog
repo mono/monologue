@@ -1,3 +1,8 @@
+2007-10-31  Alp Toker  <alp@atoker.com>
+
+	* worker/bloggers.xml: Give Monologue a simplified RSS feed to work around
+	the RSS.NET WordPress incompatibility.
+
 2007-10-27  Jonathan Chambers  <joncham@gmail.com>
 
 	* worker/bloggers.xml: Try that again.
