@@ -143,4 +143,5 @@
 	<Blogger Name="Olivier Dufour" RssUrl="http://dufoli.wordpress.com/feed/"/>
 	<Blogger Name="Andrew Jorgensen" RssUrl="http://andrew.jorgensenfamily.us/category/technology/feed" IrcNick="ajorg" Head="ajorg.png"/>
 	<Blogger Name="Veerapuram Varadhan" RssUrl="http://monoadonet.blogspot.com/rss.xml" IrcNick="varadhan"/>
+	<Blogger Name="Fernando Herrera" RssUrl="http://www.gnome.org/~fherrera/blog/Madrid/?flav=rss" IrcNick="fer"/>
 </BloggerCollection>
