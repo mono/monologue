@@ -147,4 +147,5 @@
 	<Blogger Name="AjaxWidgets" RssUrl="http://ajaxwidgets.com/Blogs/system_rss.bb?rss=true"/> 
 	<Blogger Name="Torello Querci" RssUrl="http://tquerci.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mk8"/>
 	<Blogger Name="Rusty Howell" RssUrl="http://rustyhowell.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="rusty"/>
+	<Blogger Name="Calvin Gaisford" RssUrl="http://calvinrg.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="calvin"/>
 </BloggerCollection>
