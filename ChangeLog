@@ -1,3 +1,7 @@
+2008-01-25  Calvin Gaisford  <cgaisford@novell.com>
+
+	* worker/bloggers.xml: Added head tag.
+
 2008-01-24  Calvin Gaisford  <cgaisford@novell.com>
 
 	* worker/bloggers.xml: Added my blog URL.
