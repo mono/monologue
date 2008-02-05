@@ -61,7 +61,7 @@
 	<Blogger Name="Peter Johanson" RssUrl="http://www.tenslashsix.com/wp-feed.php?cat=5" IrcNick="latexer" Head="latexer.png"/>
 	<Blogger Name="Aaron Bockover" RssUrl="http://abock.org/feed" IrcNick="abock" Head="abock.png"/>
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" Head="rafi_mizrahi_head.png"/>
-	<Blogger Name="Michael Dominik" RssUrl="http://www.mdk.org.pl/xml/rss20/feed.xml" IrcNick="mdk" Head="mdk_gotchi.png" />
+    <Blogger Name="Michael Dominik" RssUrl="http://feeds.feedburner.com/mdk" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
 	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
 	<!--<Blogger Name="Brandon Hale" RssUrl="http://blog.brandonhale.us/xml/rss20/feed.xml" IrcNick="bhale"/>-->
