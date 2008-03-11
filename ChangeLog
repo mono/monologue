@@ -1,4 +1,8 @@
-2008-03-11  Andres G. Aragoneses <knocte@gmail.com>
+2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
+
+	* worker/bloggers.xml: Corrected the accent (HTMLish).
+
+2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
 
 	* worker/bloggers.xml: Added my feed URL (without head yet).
 
