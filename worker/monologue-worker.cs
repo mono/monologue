@@ -207,14 +207,14 @@ class MonologueWorker {
 	static string date_error_msg = "<div class='ircnick' style='color:red'>Invalid dates in feed</div>";
 	static string error_img = "<img src='images/error.png' alt='Error retrieving/loading feed'>";
 	
-	static string ProcessHeadEntryAndReturnUrl(string head)
+	static string ProcessHeadEntryAndReturnUrl (string head)
 	{
 		string localHeadsPath = "images/heads/";
 		
-		if (String.IsNullOrEmpty(head))
+		if (String.IsNullOrEmpty (head))
 			head = "none.png";
 		
-		if (!((new Uri(head, UriKind.RelativeOrAbsolute)).IsAbsoluteUri))
+		if (!(new Uri (head, UriKind.RelativeOrAbsolute).IsAbsoluteUri))
 			head = localHeadsPath + head;
 		
 		return head;
@@ -231,7 +231,7 @@ class MonologueWorker {
 			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
 			tpl.setField ("BLOGGER_NAME", b.Name);
 
-			tpl.setField ("BLOGGER_HEAD", ProcessHeadEntryAndReturnUrl(b.Head));
+			tpl.setField ("BLOGGER_HEAD", ProcessHeadEntryAndReturnUrl (b.Head));
 
 			if (b.IrcNick != null)
 				tpl.setField ("BLOGGER_IRCNICK", b.IrcNick);
@@ -262,7 +262,7 @@ class MonologueWorker {
 					else
 						tpl.setField ("ENTRY_PERSON_IRCNICK", "");
 					
-					tpl.setField ("ENTRY_PERSON_HEAD", ProcessHeadEntryAndReturnUrl(bl.Head));
+					tpl.setField ("ENTRY_PERSON_HEAD", ProcessHeadEntryAndReturnUrl (bl.Head));
 
 					tpl.setField ("ENTRY_PERSON_URL", bl.HtmlUrl.ToString());
 				} else {
@@ -418,11 +418,11 @@ public class Blogger {
 		set { feed = value; }
 	}
 
-        public string Author {
-                get {
-                        return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com");
-                }
-        }
+	public string Author {
+		get {
+			return XmlConvert.EncodeLocalName (Name) + "@" + XmlConvert.EncodeLocalName ("monologue.go-mono.com");
+		}
+	}
 
 	public bool DateError {
 		get { return (date_error || feed == null); }
