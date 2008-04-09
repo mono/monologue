@@ -29,7 +29,7 @@
 	<div class="entry">
 		<div class="person-info">
 		<a href="@@ENTRY_PERSON_URL@@">
-			<img class="face" src="images/heads/@@ENTRY_PERSON_HEAD@@" alt="@@ENTRY_PERSON_IRCNICK@@"/>
+			<img class="face" src="@@ENTRY_PERSON_HEAD@@" alt="@@ENTRY_PERSON_IRCNICK@@"/>
 			<br /><br />
 			@@ENTRY_PERSON@@
 			<br />@@ENTRY_PERSON_IRCNICK@@
@@ -68,7 +68,7 @@
 			<h2>Bloggers</h2>
 			<ul>
 				<!-- @@BLOGGER@@ -->
-				<li>@@BLOGGER_ERROR_IMG@@<div><img class="head" src="images/heads/@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
+				<li>@@BLOGGER_ERROR_IMG@@<div><img class="head" src="@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
 					<a href="@@BLOGGER_URL@@">@@BLOGGER_NAME@@</a>
 					<div>
 						<a href="@@BLOGGER_RSSURL@@"><img src="images/feed.png" alt="@@BLOGGER_IRCNICK@@ feed"></a>

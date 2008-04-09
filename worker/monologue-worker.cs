@@ -206,6 +206,20 @@ class MonologueWorker {
 	static string error_msg = "<div class='ircnick' style='color:red'>Error retrieving/loading feed</div>";
 	static string date_error_msg = "<div class='ircnick' style='color:red'>Invalid dates in feed</div>";
 	static string error_img = "<img src='images/error.png' alt='Error retrieving/loading feed'>";
+	
+	static string ProcessHeadEntryAndReturnUrl(string head)
+	{
+		string localHeadsPath = "images/heads/";
+		
+		if (String.IsNullOrEmpty(head))
+			head = "none.png";
+		
+		if (!((new Uri(head, UriKind.RelativeOrAbsolute)).IsAbsoluteUri))
+			head = localHeadsPath + head;
+		
+		return head;
+	}
+	
 	static void Render ()
 	{
 		Template tpl = new Template("default.tpl");
@@ -216,16 +230,13 @@ class MonologueWorker {
 			tpl.setField ("BLOGGER_ERROR_IMG", b.Error || b.DateError ? error_img : "");
 			tpl.setField ("BLOGGER_URL", b.HtmlUrl.ToString ());
 			tpl.setField ("BLOGGER_NAME", b.Name);
-	
-			if (b.Head != null)
-				tpl.setField ("BLOGGER_HEAD", b.Head);
-			else
-				tpl.setField ("BLOGGER_HEAD", "none.png");
+
+			tpl.setField ("BLOGGER_HEAD", ProcessHeadEntryAndReturnUrl(b.Head));
 
 			if (b.IrcNick != null)
-					tpl.setField ("BLOGGER_IRCNICK", b.IrcNick);
-				else
-					tpl.setField ("BLOGGER_IRCNICK", "");
+				tpl.setField ("BLOGGER_IRCNICK", b.IrcNick);
+			else
+				tpl.setField ("BLOGGER_IRCNICK", String.Empty);
 
 			tpl.setField ("BLOGGER_RSSURL", b.RssUrl);
 			
@@ -251,10 +262,7 @@ class MonologueWorker {
 					else
 						tpl.setField ("ENTRY_PERSON_IRCNICK", "");
 					
-					if (bl.Head != null)
-						tpl.setField ("ENTRY_PERSON_HEAD", bl.Head);
-					else
-						tpl.setField ("ENTRY_PERSON_HEAD", "none.png");
+					tpl.setField ("ENTRY_PERSON_HEAD", ProcessHeadEntryAndReturnUrl(bl.Head));
 
 					tpl.setField ("ENTRY_PERSON_URL", bl.HtmlUrl.ToString());
 				} else {

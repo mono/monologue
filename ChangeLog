@@ -1,5 +1,16 @@
 2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
 
+	* worker/monologue-worker.cs: Support absolute URLs for heads,
+	use String.Empty instead of "", and fix some indentation.
+	* worker/default.tpl: move local path for heads into the .cs
+	file in order to support absolute URLs.
+	* worker/Makefile: Use gmcs, since now we use String.IsNullOrEmpty
+	and Uri.IsAbsoluteUri.
+	* worker/bloggers.xml: add my absolute hackergotchi, using the 
+	above feature (we reuse the binaries on the wiki this way).
+
+2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
+
 	* worker/bloggers.xml: Corrected the accent (HTMLish).
 
 2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
