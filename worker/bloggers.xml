@@ -150,7 +150,7 @@
 	<Blogger Name="Rusty Howell" RssUrl="http://rustyhowell.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="rusty"/>
 	<Blogger Name="Calvin Gaisford" RssUrl="http://calvinrg.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="calvin" Head="calvin.png"/>
 	<Blogger Name="Sandy Armstrong" RssUrl="http://automorphic.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sandy" Head="sandy.png"/>
-	<Blogger Name="Marc Christensen" RssUrl="feed://http//blog.mecworks.com/feed/" IrcNick="mecworks"/>
+	<Blogger Name="Marc Christensen" RssUrl="http://blog.mecworks.com/feed/" IrcNick="mecworks"/>
   <Blogger Name    = "Andres G. Aragoneses"
            RssUrl  = "http://knocte.blogspot.com/feeds/posts/default?alt=rss"
            IrcNick = "knocte"
