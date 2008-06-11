@@ -159,4 +159,5 @@
            Head    = "http://www.mono-project.com/files/5/54/Knocte.png"
            />
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="David Siegel" RssUrl="http://blog.davebsd.com/category/gnome-do/feed/"/>
 </BloggerCollection>
