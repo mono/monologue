@@ -1,3 +1,7 @@
+2008-06-12  Alp Toker  <alp@atoker.com>
+
+	* worker/bloggers.xml: Attempt to get my blog back on the air.
+
 2008-03-11  Andrés G. Aragoneses <knocte@gmail.com>
 
 	* worker/monologue-worker.cs: Support absolute URLs for heads,
