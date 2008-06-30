@@ -160,4 +160,5 @@
            />
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="David Siegel" RssUrl="http://blog.davebsd.com/category/gnome-do/feed/"/>
+	<Blogger Name="Gendarme" RssUrl="http://pages.infinit.net/ctech/gendarme-weekly.rss" IrcNick="#gendarme" Head="gendarme.png"/>
 </BloggerCollection>
