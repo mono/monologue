@@ -115,8 +115,7 @@
 	<Blogger Name="Gernot Margreitner" RssUrl="http://gernot.wordpress.com/tag/mono-image-processing/feed/"/>
 	<Blogger Name="Hector Gomez"
 	RssUrl="http://hectoregm.blogspot.com/feeds/posts/default?alt=rss"/>
-	<Blogger Name="Ben Motmans"
-	RssUrl="http://bmotmans.blogspot.com/feeds/posts/default?alt=rss" IrcNick="tremor"/>
+	<Blogger Name="Ben Motmans" RssUrl="http://bmotmans.blogspot.com/feeds/posts/default?alt=rss" IrcNick="bmotmans"/>
 	<Blogger Name="Nestor Salceda"
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
 	<Blogger Name="Marcos Cobena" RssUrl="http://straybirds130.blogspot.com/feeds/posts/default/-/Mono?alt=rss" IrcNick="m4rc05" /> 
@@ -161,4 +160,7 @@
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="David Siegel" RssUrl="http://blog.davebsd.com/category/gnome-do/feed/"/>
 	<Blogger Name="Gendarme" RssUrl="http://pages.infinit.net/ctech/gendarme-weekly.rss" IrcNick="#gendarme" Head="gendarme.png"/>
+	<Blogger Name="Jérémie Laval" RssUrl="http://garuma.wordpress.com/category/english/" IrcNick="Garuma" Head="jeremielaval.png" />
+	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/blog/mono/feed.rss" IrcNick="eropple" />
+	<Blogger Name="Igor Guerrero Fonseca"  RssUrl="http://igordevlog.blogspot.com/" IrcNick="igorge" />
 </BloggerCollection>
