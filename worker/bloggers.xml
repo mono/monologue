@@ -32,7 +32,7 @@
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/RSS.aspx?mid=2" IrcNick="jhill" Head="jhill.png"/>
 	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jb" Head="jbevain.png" />
-	<Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/tag/mono-net/feed/rss2" IrcNick="zbowling" />
+	<!-- Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/tag/mono-net/feed/rss2" IrcNick="zbowling" /i-->
 	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
 	<!-- no longer maintained and Novell no longer owns this domain
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
@@ -160,7 +160,7 @@
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="David Siegel" RssUrl="http://blog.davebsd.com/category/gnome-do/feed/"/>
 	<Blogger Name="Gendarme" RssUrl="http://pages.infinit.net/ctech/gendarme-weekly.rss" IrcNick="#gendarme" Head="gendarme.png"/>
-	<Blogger Name="Jérémie Laval" RssUrl="http://garuma.wordpress.com/category/english/" IrcNick="Garuma" Head="jeremielaval.png" />
+	<Blogger Name="Jérémie Laval" RssUrl="http://feeds.feedburner.com/YetAnotherACompleter" IrcNick="Garuma" Head="jeremielaval.png" />
 	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/blog/mono/feed.rss" IrcNick="eropple" />
 	<Blogger Name="Igor Guerrero Fonseca"  RssUrl="http://igordevlog.blogspot.com/" IrcNick="igorge" />
 </BloggerCollection>
