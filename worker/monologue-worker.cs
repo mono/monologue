@@ -508,6 +508,7 @@ class FeedCache {
 
 		Settings.Log ("Starting {0}", url);
 		HttpWebRequest req = (HttpWebRequest) WebRequest.Create (url);
+		req.UserAgent = "Monologue";
 		req.Headers ["Accept-Encoding"] = "gzip";
 		req.Timeout = 30000;
 

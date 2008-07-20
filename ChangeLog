@@ -1,3 +1,10 @@
+2008-07-20  Jackson Harper  <jackson@ximian.com>
+
+	* worker/monologue-worker.cs: Add a user agent.  Some load
+	balancers (like feedburners) require us to have a user-agent.
+	Without one, people could miss out on the excitement of the
+	blogosphere.
+
 2008-06-12  Alp Toker  <alp@atoker.com>
 
 	* worker/bloggers.xml: Attempt to get my blog back on the air.
