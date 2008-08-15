@@ -28,7 +28,7 @@
 	<Blogger Name="Umadevi S" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/599"/>        
 	<Blogger Name="Sureshkumar" RssUrl="http://www.gnomebangalore.org/?q=blog/feed/677" IrcNick="suresh"/>
 	<Blogger Name="Geoff Norton" RssUrl="http://blog.sublimeintervention.com/kangaroo.rss2" IrcNick="kangaroo" />
-	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/?cat=6&feed=rss2" IrcNick="orph" Head="orph.png"/>
+	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/?cat=6&amp;feed=rss2" IrcNick="orph" Head="orph.png"/>
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/RSS.aspx?mid=2" IrcNick="jhill" Head="jhill.png"/>
 	<Blogger Name="Jb Evain" RssUrl="http://evain.net/ruby/userland.rbx" IrcNick="jb" Head="jbevain.png" />
