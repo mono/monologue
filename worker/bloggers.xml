@@ -148,7 +148,7 @@
 	<!-- Removed: Rarely related to Mono.  Can re-enable if filtered by a mono tag	
 	<Blogger Name="Mindtouch" RssUrl="http://feeds.feedburner.com/Mindtouch"/>
 	-->
-	<Blogger Name="Rusty Howell" RssUrl="http://rustyhowell.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="rusty"/>
+	<Blogger Name="Rusty Howell" RssUrl="http://rustyhowell-mono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="rusty"/>
 	<Blogger Name="Calvin Gaisford" RssUrl="http://calvinrg.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="calvin" Head="calvin.png"/>
 	<Blogger Name="Sandy Armstrong" RssUrl="http://automorphic.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sandy" Head="sandy.png"/>
 	<Blogger Name="Marc Christensen" RssUrl="http://blog.mecworks.com/feed/" IrcNick="mecworks"/>
