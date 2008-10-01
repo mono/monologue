@@ -12,7 +12,7 @@
 	<Blogger Name="Mono" RssUrl="http://www.mono-project.com/news/index.rss2" Head="mono.png" />
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://gonzalo.name/blog/gonzalo.rss2" IrcNick="gonzalo" Head="gonzalo.png"/>
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/blog/monologue-index.xml" IrcNick="danmorg"/>
-	<Blogger Name="Atsushi Enomoto" RssUrl="http://veritas-vos-liberabit.com/monogatari/index.xml" IrcNick="eno" Head="atsushieno.png" />
+	<Blogger Name="Atsushi Enomoto" RssUrl="http://veritas-vos-liberabit.com/monogatari/index.rss" IrcNick="eno" Head="atsushieno.png" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
 	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing" Head="lewing.png"/>
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
