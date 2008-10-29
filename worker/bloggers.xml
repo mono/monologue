@@ -161,4 +161,5 @@
 	<Blogger Name="Jérémie Laval" RssUrl="http://feeds.feedburner.com/YetAnotherACompleter" IrcNick="Garuma" Head="jeremielaval.png" />
 	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/feed" IrcNick="eropple" Head="edropple.png" />
 	<Blogger Name="Igor Guerrero Fonseca"  RssUrl="http://igordevlog.blogspot.com/" IrcNick="igorge" />
+	<Blogger Name="Mario Carrion" RssUrl="http://blog.carrion.ws/tag/mono/wp-rss2.php" IrcNick="mario" Head="http://www.mariocarrion.com/images/hackergotchi-mario.png" />
 </BloggerCollection>
