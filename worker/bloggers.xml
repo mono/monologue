@@ -151,7 +151,7 @@
 	<Blogger Name="Sandy Armstrong" RssUrl="http://automorphic.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sandy" Head="sandy.png"/>
 	<Blogger Name="Marc Christensen" RssUrl="http://blog.mecworks.com/articles/category/tech/feed" IrcNick="mecworks"/>
   <Blogger Name    = "Andres G. Aragoneses"
-           RssUrl  = "http://knocte.blogspot.com/feeds/posts/default?alt=rss"
+           RssUrl  = "http://knocte.blogspot.com/feeds/posts/default/-/Mono?alt=rss"
            IrcNick = "knocte"
            Head    = "http://www.mono-project.com/files/5/54/Knocte.png"
            />
