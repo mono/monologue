@@ -30,7 +30,7 @@
 	<Blogger Name="Geoff Norton" RssUrl="http://blog.sublimeintervention.com/kangaroo.rss2" IrcNick="kangaroo" />
 	<Blogger Name="Alex Graveley" RssUrl="http://www.beatniksoftware.com/blog/?cat=6&amp;feed=rss2" IrcNick="orph" Head="orph.png"/>
 	<Blogger Name="Chris Toshok" RssUrl="http://squeedlyspooch.com/blog/geek-index.xml" IrcNick="toshok" Head="toshok.png" />
-	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/RSS.aspx?mid=2" IrcNick="jhill" Head="jhill.png"/>
+	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/feed/" IrcNick="jhill" Head="jhill.png"/>
 	<Blogger Name="Jb Evain" RssUrl="http://feeds.feedburner.com/jbevain" IrcNick="jb" Head="jbevain.png" />
 	<!-- Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/tag/mono-net/feed/rss2" IrcNick="zbowling" /i-->
 	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
