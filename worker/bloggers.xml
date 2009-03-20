@@ -141,7 +141,7 @@
 	<Blogger Name="Andrew Jorgensen" RssUrl="http://andrew.jorgensenfamily.us/category/technology/feed" IrcNick="ajorg" Head="ajorg.png"/>
 	<Blogger Name="Veerapuram Varadhan" RssUrl="http://monoadonet.blogspot.com/rss.xml" IrcNick="varadhan"/>
 	<Blogger Name="Fernando Herrera" RssUrl="http://www.gnome.org/~fherrera/blog/Madrid/?flav=rss" IrcNick="fer"/>
-	<Blogger Name="AjaxWidgets" RssUrl="http://ajaxwidgets.com/Blogs/system_rss.bb?rss=true"/> 
+	<Blogger Name="Gaia Ajax" RssUrl="http://blogs.gaiaware.net/syndication.axd?category=8c698f6b-44d1-46d5-8b57-40958e936c81"/> 
 	<Blogger Name="Torello Querci" RssUrl="http://tquerci.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mk8"/>
 	<!-- Removed: Rarely related to Mono.  Can re-enable if filtered by a mono tag	
 	<Blogger Name="Mindtouch" RssUrl="http://feeds.feedburner.com/Mindtouch"/>
