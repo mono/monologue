@@ -1,3 +1,7 @@
+2009-03-29  Ivan N. Zlatev  <contact@i-nz.net>
+
+	* worker/bloggers.xml: Filter out my personal feed.
+
 2008-07-20  Jackson Harper  <jackson@ximian.com>
 
 	* worker/monologue-worker.cs: Add a user agent.  Some load
