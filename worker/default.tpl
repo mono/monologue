@@ -68,7 +68,7 @@
 			<h2>Bloggers</h2>
 			<ul>
 				<!-- @@BLOGGER@@ -->
-				<li>@@BLOGGER_ERROR_IMG@@<div><img class="head" src="@@BLOGGER_HEAD@@" alt="@@BLOGGER_IRCNICK@@" /></div>
+				<li>@@BLOGGER_ERROR_IMG@@<div></div>
 					<a href="@@BLOGGER_URL@@">@@BLOGGER_NAME@@</a>
 					<div>
 						<a href="@@BLOGGER_RSSURL@@"><img src="images/feed.png" alt="@@BLOGGER_IRCNICK@@ feed"></a>

@@ -132,8 +132,8 @@ class MonologueWorker {
 		disable_load = false;
 		all = (Blogger []) bloggers.Bloggers.ToArray (typeof (Blogger));
 		lock (all) {
-			next = 5;
-			for (int i = 0; i < 5 && i < all.Length; i++) {
+			next = 10;
+			for (int i = 0; i < 10 && i < all.Length; i++) {
 				Blogger b = all [i];
 				ReadDelegate d = new ReadDelegate (FeedCache.Read);
 				d.BeginInvoke (b.Name, b.RssUrl, feed_done, b);
