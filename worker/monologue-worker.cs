@@ -170,6 +170,7 @@ class MonologueWorker {
 					b.DateError = true;
 				} else if (i.PubDate >= minPubDate) {
 					i.Title = b.Name + ": " + i.Title;
+					i.PubDate = i.PubDate.ToUniversalTime ();
 					stories.Add (i);
 				}
 			}
@@ -272,7 +273,7 @@ class MonologueWorker {
 				itm.Title = itm.Title.Substring (itm.Title.IndexOf (":")+2);
 				tpl.setField ("ENTRY_TITLE", itm.Title);
 				tpl.setField ("ENTRY_HTML", itm.Description);
-				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt"));
+				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt 'GMT'"));
 
 				tpl.appendSection ();
 			}
