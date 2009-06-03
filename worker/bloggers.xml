@@ -164,4 +164,5 @@
 	<Blogger Name="Michael Barker" RssUrl="http://mikes-tech.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Stephane Delcroix" RssUrl="http://blog.reblochon.org/feeds/posts/default?alt=rss" IrcNick="sde" />
 	<Blogger Name="Jo Shields" RssUrl="http://apebox.org/wordpress/tag/mono/feed" IrcNick="directhex" Head="directhex.png"/>
+	<Blogger Name="Lucas Meijer" RssUrl="http://lucasmeijer.com/feed/" IrcNick="lucas"/>
 </BloggerCollection>
