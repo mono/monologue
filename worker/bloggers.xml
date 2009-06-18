@@ -108,7 +108,7 @@
 	<Blogger Name="Albert Gnandt"
 	RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
         <Blogger Name="Scott Peterson" RssUrl="http://www.themonkeysgrinder.blogspot.com/feeds/posts/default?alt=rss"/>
-	<Blogger Name="Ivan N. Zlatev" RssUrl="http://i-nz.net/category/coding/feed/" IrcNick="ivanz"/>
+	<Blogger Name="Ivan Zlatev" RssUrl="http://i-nz.net/category/coding/feed/" IrcNick="ivanz"/>
 	<Blogger Name="Brian Nickel" RssUrl="http://kerrick.wordpress.com/tag/summer-of-code-2007/feed/"/>
 	<Blogger Name="Gernot Margreitner" RssUrl="http://gernot.wordpress.com/tag/mono-image-processing/feed/"/>
 	<Blogger Name="Hector Gomez"
