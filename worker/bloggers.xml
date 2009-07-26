@@ -167,5 +167,5 @@
 	<Blogger Name="Jo Shields" RssUrl="http://apebox.org/wordpress/tag/mono/feed" IrcNick="directhex" Head="directhex.png"/>
 	<Blogger Name="Lucas Meijer" RssUrl="http://lucasmeijer.com/feed/" IrcNick="lucas"/>
 	<Blogger Name="Sam Hocevar" RssUrl="http://sam.zoy.org/blog/rss20.xml?cat=mono" IrcNick="sam" Head="sam.png"/>
-	<Blogger Name="Mike Krueger" RssUrl="http://mkruegermono.blogspot.com/" IrcNick="mkrueger"/>
+	<Blogger Name="Mike Krueger" RssUrl="http://mkruegermono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkrueger"/>
 </BloggerCollection>
