@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Monologue - Voices of the Mono Project</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" href="css/monologue.css" type="text/css" />
 <link rel="stylesheet" href="css/planet.css" type="text/css" />
 <link rel="alternate" title="Monologue" href="http://www.go-mono.com/monologue/index.rss" type="application/rss+xml" />

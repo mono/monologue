@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <BloggerCollection>
-	<Blogger Name="Cesar Lopez Nataren" RssUrl="http://cesarnataren.blogspot.com/feeds/posts/default?alt=rss" IrcNick="cesar" Head="cesar.png"/>
+	<Blogger Name="César López Natarén" RssUrl="http://cesarnataren.blogspot.com/feeds/posts/default?alt=rss" IrcNick="cesar" Head="cesar.png"/>
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" IrcNick="miguel"/>
 	<Blogger Name="Jackson Harper" RssUrl="http://feeds.feedburner.com/JacksonsActivityLog" IrcNick="jackson" />
 	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" IrcNick="spouliot" Head="Spouliot.png"/>
 	<Blogger Name="Mike Kestner" RssUrl="http://mkestner.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkestner"/>
-	<Blogger Name="Lluis Sanchez " RssUrl="http://foodformonkeys.blogspot.com/feeds/posts/default?alt=rss" IrcNick="lluis" Head="Lluis.png"/>
-	<Blogger Name="Duncan Mak " RssUrl="http://www.a-chinaman.com/category/monologue/feed" IrcNick="duncan" Head="Duncan.png"/>
+	<Blogger Name="Lluis Sánchez " RssUrl="http://foodformonkeys.blogspot.com/feeds/posts/default?alt=rss" IrcNick="lluis" Head="Lluis.png"/>
+	<Blogger Name="Duncan Mak" RssUrl="http://www.a-chinaman.com/category/monologue/feed" IrcNick="duncan" Head="Duncan.png"/>
 	<Blogger Name="Martin Baulig" RssUrl="http://primates.ximian.com/~martin/blog/martin.rss2" IrcNick="baulig" Head="Martin.png" />
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwhansen.blogspot.com/rss.xml" Head="Mwh.png" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" IrcNick="tberman" Head="Tberman.png" />
@@ -63,7 +64,7 @@
 	<Blogger Name="Rafi Mizrahi" RssUrl="http://feeds.feedburner.com/RafaelMizrahisWebLog" Head="rafi_mizrahi_head.png"/>
     <Blogger Name="Michael Dominik" RssUrl="http://feeds.feedburner.com/mdk" IrcNick="mdk" Head="mdk_gotchi.png" />
 	<Blogger Name="Mario Sopena" RssUrl="http://feeds.feedburner.com/marioRss" IrcNick="mario"/>
-	<Blogger Name="Pedro Martinez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
+	<Blogger Name="Pedro Martínez" RssUrl="http://pedromj.dyndns.org/blog/BlogXBrowsing.asmx/GetRss?" Head="Pedro.png"/>
 	<!--<Blogger Name="Brandon Hale" RssUrl="http://blog.brandonhale.us/xml/rss20/feed.xml" IrcNick="bhale"/>-->
 	<!--Blogger Name="Raja R Harinath" RssUrl="http://feeds.feedburner.com/hurrynot" Head="Harinath.jpg"/-->
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/jaws/data/xml/blog.Mono.rss" IrcNick="meebey" Head="meebey.png"/>
@@ -104,7 +105,7 @@
 	<Blogger Name="Wbem Tools" RssUrl="http://wbemtools.blogspot.com/feeds/posts/default?alt=rss" Head="WbemTools.png"/>
 	<Blogger Name="Marek Habersack" RssUrl="http://twistedcode.net/blog/syndication.axd?format=rss" IrcNick="grendel" />
 	<Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jeff"/>
-	<Blogger Name="Codice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Códice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Jamie Cansdale" RssUrl="http://weblogs.asp.net/nunitaddin/rss.aspx?Tags=Mono&amp;AndTags=1"/>
 	<Blogger Name="Albert Gnandt"
 	RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
@@ -119,7 +120,7 @@
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
 	<Blogger Name="Marcos Cobena" RssUrl="http://straybirds130.blogspot.com/feeds/posts/default/-/Mono?alt=rss" IrcNick="m4rc05" /> 
 	<Blogger Name="Matej Spiller" RssUrl="http://matejsp.blogspot.com/feeds/posts/default?alt=rss"/>
-	<Blogger Name="Marcos Marin" RssUrl="http://mdmagsoc.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Marcos Marín" RssUrl="http://mdmagsoc.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Leonardo Pires" RssUrl="http://aspnetajax.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Kenny Parnell" RssUrl="http://feeds.feedburner.com/soc2007" IrcNick="kennyp"/>
 	<Blogger Name="Khaled" RssUrl="http://madinatek.blogspot.com/feeds/posts/default?alt=rss" />
@@ -150,7 +151,7 @@
 	<Blogger Name="Calvin Gaisford" RssUrl="http://calvinrg.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="calvin" Head="calvin.png"/>
 	<Blogger Name="Sandy Armstrong" RssUrl="http://automorphic.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sandy" Head="sandy.png"/>
 	<Blogger Name="Marc Christensen" RssUrl="http://blog.mecworks.com/articles/category/tech/feed" IrcNick="mecworks"/>
-  <Blogger Name    = "Andres G. Aragoneses"
+  <Blogger Name    = "Andrés G. Aragoneses"
            RssUrl  = "http://knocte.blogspot.com/feeds/posts/default/-/Mono?alt=rss"
            IrcNick = "knocte"
            Head    = "http://www.mono-project.com/files/5/54/Knocte.png"
@@ -167,5 +168,5 @@
 	<Blogger Name="Jo Shields" RssUrl="http://apebox.org/wordpress/tag/mono/feed" IrcNick="directhex" Head="directhex.png"/>
 	<Blogger Name="Lucas Meijer" RssUrl="http://lucasmeijer.com/feed/" IrcNick="lucas"/>
 	<Blogger Name="Sam Hocevar" RssUrl="http://sam.zoy.org/blog/rss20.xml?cat=mono" IrcNick="sam" Head="sam.png"/>
-	<Blogger Name="Mike Krueger" RssUrl="http://mkruegermono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkrueger"/>
+	<Blogger Name="Mike Krüeger" RssUrl="http://mkruegermono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkrueger"/>
 </BloggerCollection>
