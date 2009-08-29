@@ -64,7 +64,7 @@
 			<p>If you would rather follow Monologue using a newsreader, we provide the following feed:</p>
 			<p><a href="index.rss"><img src="images/xml.gif"></a>  RSS 2.0 Feed</p>
 
-			<p>Monologue is powered by Mono and the <a href="http://anonsvn.mono-project.com/viewcvs/trunk/monologue/">Monologue</a> software.
+			<p>Monologue is powered by Mono and the <a href="http://anonsvn.mono-project.com/viewvc/trunk/monologue/">Monologue</a> software.
 				
 			<h2>Bloggers</h2>
 			<ul>
