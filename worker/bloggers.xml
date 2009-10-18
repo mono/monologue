@@ -169,4 +169,6 @@
 	<Blogger Name="Sam Hocevar" RssUrl="http://sam.zoy.org/blog/rss20.xml?cat=mono" IrcNick="sam" Head="sam.png"/>
 	<Blogger Name="Mike Krüger" RssUrl="http://mkruegermono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkrueger"/>
 	<Blogger Name="Craig Dunn" RssUrl="http://conceptdev.blogspot.com/feeds/posts/default?alt=rss"/>
+	<Blogger Name="Brent Schooley" RssUrl="http://www.codesnack.com/blog/atom.xml?categoryId=1677945" IrcNick="brent"/>
+	<Blogger Name="Simon Guindon" RssUrl="http://simon.nureality.ca/?feed=rss2&cat=10" IrcNick="simon"/>
 </BloggerCollection>
