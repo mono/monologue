@@ -171,4 +171,5 @@
 	<Blogger Name="Craig Dunn" RssUrl="http://conceptdev.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Brent Schooley" RssUrl="http://www.codesnack.com/blog/atom.xml?categoryId=1677945" IrcNick="brent"/>
 	<Blogger Name="Simon Guindon" RssUrl="http://simon.nureality.ca/?feed=rss2&amp;cat=10" IrcNick="simon"/>
+	<Blogger Name="Bertrand Lorentz" RssUrl="http://bl-log.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Bertrand"/>
 </BloggerCollection>
