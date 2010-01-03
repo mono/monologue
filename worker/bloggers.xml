@@ -157,7 +157,7 @@
            />
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="David Siegel" RssUrl="http://blog.davebsd.com/category/gnome-do/feed/"/>
-	<Blogger Name="Gendarme" RssUrl="http://pages.infinit.net/ctech/gendarme-weekly.rss" IrcNick="#gendarme" Head="gendarme.png"/>
+	<Blogger Name="Gendarme" RssUrl="https://www.ohloh.net/p/gendarme/messages.rss" IrcNick="#gendarme" Head="gendarme.png"/>
 	<Blogger Name="Jérémie Laval" RssUrl="http://feeds.feedburner.com/YetAnotherACompleter" IrcNick="Garuma" Head="jeremielaval.png" />
 	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/taxonomy/term/9/0/feed" IrcNick="eropple" Head="edropple.png" />
 	<!--Blogger Name="Igor Guerrero Fonseca"  RssUrl="http://igordevlog.blogspot.com/" IrcNick="igorge" /-->
