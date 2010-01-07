@@ -16,7 +16,6 @@
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
 	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing" Head="lewing.png"/>
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
-	<Blogger Name="Vladimir Vukicevic" RssUrl="http://blog.vlad1.com/feed/" IrcNick="vlad"/>
 	<Blogger Name="Unity Technologies" RssUrl="http://blogs.unity3d.com/feed/"/>
 	<!-- by popular demand 
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
@@ -173,4 +172,5 @@
 	<Blogger Name="Simon Guindon" RssUrl="http://simon.nureality.ca/?feed=rss2&amp;cat=10" IrcNick="simon"/>
 	<Blogger Name="Bertrand Lorentz" RssUrl="http://bl-log.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Bertrand"/>
 	<Blogger Name="MindTouch" RssUrl="http://blog.developer.mindtouch.com/tag/mono/feed/" />
+	<Blogger Name="Jerry Maine" RssUrl="http://jerrymaine.wordpress.com/category/mono/feed/" />
 </BloggerCollection>
