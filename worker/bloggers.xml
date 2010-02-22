@@ -126,7 +126,6 @@
 	<Blogger Name="Nidhi Rawal" RssUrl="http://nidhi24.wordpress.com/?feed=rss" />
 	<Blogger Name="Jared Hendry" RssUrl="http://buchan.esoteriq.org/weblog/category/mono/feed" />
 	<Blogger Name="Chris Howie" RssUrl="http://www.chrishowie.com/feed/" IrcNick="SerajewelKS" Head="chrishowie.png"/>
-	<Blogger Name="David Srbecky" RssUrl="http://community.sharpdevelop.net/blogs/dsrbecky/rss.aspx?Tags=Mono"/>
 	<Blogger Name="Chris Gameweld" RssUrl="http://gameweld-soc.blogspot.com/feeds/posts/default?alt=rss" />
 	<Blogger Name="Valentin Sawadski" RssUrl="http://achblah.blogspot.com/feeds/posts/default?alt=rss" />
 	<Blogger Name="Seo Sanghyeon" RssUrl="http://fepy.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanxiyn"/>
@@ -170,6 +169,7 @@
 	<Blogger Name="Craig Dunn" RssUrl="http://conceptdev.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Brent Schooley" RssUrl="http://www.codesnack.com/blog/atom.xml?categoryId=1677945" IrcNick="brent"/>
 	<Blogger Name="Simon Guindon" RssUrl="http://simon.nureality.ca/?feed=rss2&amp;cat=10" IrcNick="simon"/>
+	<Blogger Name="Jim Purbrick" RssUrl="http://jimpurbrick.com/feeds/rss/blog/" IrcNick="babbage"/>
 	<Blogger Name="Bertrand Lorentz" RssUrl="http://bl-log.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Bertrand"/>
 	<Blogger Name="MindTouch" RssUrl="http://blog.developer.mindtouch.com/tag/mono/feed/" />
 	<Blogger Name="Jerry Maine" RssUrl="http://jerrymaine.wordpress.com/category/mono/feed/" />
