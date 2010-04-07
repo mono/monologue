@@ -173,5 +173,7 @@
 	<Blogger Name="Bertrand Lorentz" RssUrl="http://bl-log.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Bertrand"/>
 	<Blogger Name="MindTouch" RssUrl="http://blog.developer.mindtouch.com/tag/mono/feed/" />
 	<Blogger Name="Jerry Maine" RssUrl="http://jerrymaine.wordpress.com/category/mono/feed/" />
+	<Blogger Name="Ruben Vermeersch" RssUrl="http://weblog.savanne.be/feeds/ruben-tech+monologue-en.rss" IrcNick="rubenv"/>
+	<Blogger Name="Chris Hardy" RssUrl="http://feeds.feedburner.com/Chrisntr" IrcNick="chrisntr"/>
 	<Blogger Name="Mono Summer of Code" RssUrl="http://monosoc.blogspot.com/feeds/posts/default?alt=rss" />
 </BloggerCollection>
