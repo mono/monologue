@@ -176,4 +176,5 @@
 	<Blogger Name="Ruben Vermeersch" RssUrl="http://weblog.savanne.be/feeds/ruben-tech+monologue-en.rss" IrcNick="rubenv"/>
 	<Blogger Name="Chris Hardy" RssUrl="http://feeds.feedburner.com/Chrisntr" IrcNick="chrisntr"/>
 	<Blogger Name="Mono Summer of Code" RssUrl="http://monosoc.blogspot.com/feeds/posts/default?alt=rss" />
+	<Blogger Name="Sanjoy Das" RssUrl="http://safe-points-mono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanjoyd" />
 </BloggerCollection>
