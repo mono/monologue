@@ -1,0 +1,5 @@
+worker/cache/
+worker/monologue-worker.exe
+worker/monologue-worker.exe.mdb
+www/index.html
+www/index.rss
