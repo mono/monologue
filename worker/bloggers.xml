@@ -178,4 +178,5 @@
 	<Blogger Name="Sanjoy Das" RssUrl="http://safe-points-mono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanjoyd" />
 	<Blogger Name="Chris Bacon" RssUrl="http://monocodecontracts.blogspot.com/feeds/posts/default?alt=rss" IrcNick="chrisb" />
 	<Blogger Name="miguel de icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" IrcNick="miguelx"/>
+	<Blogger Name="Tomas Petricek" RssUrl="http://tomasp.net/blog/rss.aspx"/>
 </BloggerCollection>
