@@ -7,7 +7,6 @@ using System.Threading;
 using System.Xml;
 using System.Xml.Serialization;
 using Rss;
-using ICSharpCode.SharpZipLib.GZip;
 
 class Settings {
 	public static bool Verbose;
@@ -510,8 +509,9 @@ class FeedCache {
 		Settings.Log ("Starting {0}", url);
 		HttpWebRequest req = (HttpWebRequest) WebRequest.Create (url);
 		req.UserAgent = "Monologue";
-		req.Headers ["Accept-Encoding"] = "gzip";
 		req.Timeout = 30000;
+		req.ReadWriteTimeout = 30000;
+		req.AutomaticDecompression = DecompressionMethods.GZip;
 
 		string filename = null;
 		bool exists = false;
@@ -594,15 +594,6 @@ class FeedCache {
 			}
 
 			return new ReadResult (UpdateStatus.Error);
-		}
-
-		string cenc = resp.Headers ["Content-Encoding"];
-		if (cenc != null) {
-			cenc = cenc.ToLower ().Trim ();
-			if (cenc == "gzip") {
-				Settings.Log ("{0} is gzipped.", url);
-				input = new GZipInputStream (input);
-			}
 		}
 
 		if (filename == null)

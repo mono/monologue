@@ -1,7 +1,7 @@
 MCS=gmcs -debug
 MONO=mono
 monologue-worker.exe : monologue-worker.cs template4dotnet.cs
-	$(MCS) /r:RSS.NET.dll /r:ICSharpCode.SharpZipLib.dll /out:$@ $^
+	$(MCS) /r:RSS.NET.dll /out:$@ $^
 	
 run : monologue-worker.exe default.tpl
 	$(MONO) --debug $< bloggers.xml ../www/index.html ../www/index.rss --verbose
