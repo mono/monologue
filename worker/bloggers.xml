@@ -177,5 +177,5 @@
 	<Blogger Name="Mono Summer of Code" RssUrl="http://monosoc.blogspot.com/feeds/posts/default?alt=rss" />
 	<Blogger Name="Sanjoy Das" RssUrl="http://safe-points-mono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sanjoyd" />
 	<Blogger Name="Chris Bacon" RssUrl="http://monocodecontracts.blogspot.com/feeds/posts/default?alt=rss" IrcNick="chrisb" />
-	<Blogger Name="miguel de icaza" RssUrl="http://monomac.wordpress.com/feed/" IrcNick="miguelx"/>
+	<Blogger Name="miguel de icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" IrcNick="miguelx"/>
 </BloggerCollection>

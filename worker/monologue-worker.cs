@@ -270,8 +270,7 @@ class MonologueWorker {
 				}
 
 				itm.Title = itm.Title.Substring (itm.Title.IndexOf (":")+2);
-				tpl.setField ("ENTRY_TITLE", itm.Title);
-				tpl.setField ("ENTRY_HTML", itm.Description);
+				tpl.setField ("ENTRY_HTML", itm.Content ?? itm.Description);
 				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt 'GMT'"));
 
 				tpl.appendSection ();
