@@ -1,0 +1,8 @@
+doc.xml
+*.snk
+*.user
+*.sln
+*.suo
+bin
+obj
+local
