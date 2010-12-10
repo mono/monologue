@@ -35,9 +35,9 @@ class MonologueWorker {
 			return 1;
 		}
 		
-		bloggersFile = args [0];
-		outputFile = args [1];
-		rssOutFile = args [2];
+		bloggersFile = args[0];
+		outputFile = args[1];
+		rssOutFile = args[2];
 
 		bool loop = false;
 		int msToSleep = 0;
@@ -46,6 +46,7 @@ class MonologueWorker {
 		for (int i = 3; i < aLength; i++) {
 			if (args [i] == "--verbose") {
 				Settings.Verbose = true;
+				Console.WriteLine("Processing using the list of bloggers: '{0}'", bloggersFile);
 				continue;
 			}
 
@@ -74,8 +75,8 @@ class MonologueWorker {
 		}
 		
 		do {
-			RunOnce ();
-			Thread.Sleep (msToSleep);
+			Thread.Sleep(msToSleep);
+			RunOnce();
 		} while (loop);
 
 		return 0;
@@ -185,7 +186,11 @@ class MonologueWorker {
 			return;
 		}
 		outFeed.Channels.Add (ch);
-		outFeed.Write (rssOutFile);
+
+		if (Settings.Verbose)
+			Console.WriteLine("Building aggregated feed at '{0}'", rssOutFile);
+		
+		outFeed.Write(rssOutFile);
 		
 		Render ();
 	}
@@ -222,7 +227,12 @@ class MonologueWorker {
 	
 	static void Render ()
 	{
-		Template tpl = new Template("default.tpl");
+		string templatefile = "default.tpl";
+
+		if (Settings.Verbose)
+			Console.WriteLine("Starting to render '{0}' using template '{1}'", outputFile, templatefile);
+
+		Template tpl = new Template(templatefile);
 
 		tpl.selectSection ("BLOGGER");
 		foreach (Blogger b in bloggers.Bloggers) {
@@ -272,6 +282,7 @@ class MonologueWorker {
 				itm.Title = itm.Title.Substring (itm.Title.IndexOf (":")+2);
 				tpl.setField ("ENTRY_HTML", itm.Content ?? itm.Description);
 				tpl.setField ("ENTRY_DATE", itm.PubDate.ToString ("h:mm tt 'GMT'"));
+				//tpl.setField("ENTRY_HTML", itm.Content ?? itm.Description);
 
 				tpl.appendSection ();
 			}
@@ -313,13 +324,13 @@ public class BloggerCollection {
 	public static BloggerCollection LoadFromFile (string file)
 	{
 		BloggerCollection coll = (BloggerCollection)serializer.Deserialize (new XmlTextReader (file));
-		coll.Bloggers = coll.bloggers;
-		return coll;
+		return coll.PrepareForUse();
 	}
 
 	ArrayList bloggers;
 	ArrayList bloggersByUrl;
 	Hashtable idToBlogger;
+
 	[XmlElement ("Blogger", typeof (Blogger))]
 	public ArrayList Bloggers {
 		get {
@@ -327,11 +338,17 @@ public class BloggerCollection {
 		}
 		set {
 			bloggers = value;
-			bloggers.Sort (new BloggerComparer ());
-			idToBlogger = new Hashtable ();
-			foreach (Blogger b in bloggers)
-				idToBlogger.Add (b.ID, b);
 		}
+	}
+
+	private BloggerCollection PrepareForUse()
+	{
+		bloggers.Sort(new BloggerComparer());
+		idToBlogger = new Hashtable();
+		foreach (Blogger b in bloggers)
+			idToBlogger.Add(b.ID, b);
+		bloggersByUrl = null;
+		return this;
 	}
 
 	public ArrayList BloggersByUrl {

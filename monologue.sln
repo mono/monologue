@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "worker", "worker\worker.csproj", "{904953FE-AD4C-4388-9990-A86C00CDEB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSS.NET", "RSS.NET\RSS.NET.csproj", "{C42FC014-7E12-4FAF-9BC9-79BF1529440D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Output", "Output", "{3C2FA4F9-33E5-4BED-8EFE-9D8EC2E6F284}"
+	ProjectSection(SolutionItems) = preProject
+		www\index.html = www\index.html
+		www\index.rss = www\index.rss
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Debug|x86.ActiveCfg = Debug|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Debug|x86.Build.0 = Debug|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Release|Any CPU.ActiveCfg = Release|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Release|Mixed Platforms.Build.0 = Release|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Release|x86.ActiveCfg = Release|x86
+		{904953FE-AD4C-4388-9990-A86C00CDEB49}.Release|x86.Build.0 = Release|x86
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

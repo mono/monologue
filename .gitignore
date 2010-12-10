@@ -3,3 +3,11 @@ worker/monologue-worker.exe
 worker/monologue-worker.exe.mdb
 www/index.html
 www/index.rss
+*.pdb
+*.exe
+*.dll
+bin/
+obj/
+worker/*.config
+RSS.NET/doc.xml
+monologue.suo
