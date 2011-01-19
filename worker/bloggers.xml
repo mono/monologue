@@ -180,4 +180,5 @@
 	<Blogger Name="miguel de icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" IrcNick="miguelx"/>
 	<Blogger Name="Tomas Petricek" RssUrl="http://tomasp.net/blog/rss.aspx"/>
 	<Blogger Name="Kenneth Pouncey" RssUrl="http://cocoa-mono.org/?feed=rss2" IrcNick="kjpou1"/>
+	<Blogger Name="Touch4Apps" RssUrl="http://blog.touch4apps.com/home/feed?type=rss"/>
 </BloggerCollection>
