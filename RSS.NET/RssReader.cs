@@ -2,7 +2,7 @@
  * ============
  * 
  * RSS.NET (http://rss-net.sf.net/)
- * Copyright © 2002, 2003 George Tsiokos. All Rights Reserved.
+ * Copyright ï¿½ 2002, 2003 George Tsiokos. All Rights Reserved.
  * 
  * RSS 2.0 (http://blogs.law.harvard.edu/tech/rss)
  * RSS 2.0 is offered by the Berkman Center for Internet & Society at 
@@ -476,7 +476,8 @@ namespace Rss
 											try {
 											string tmp = elementText.ToString ();
 											tmp = tmp.Substring (0, tmp.Length - 5);
-											tmp += "GMT";
+                                                                                        if (!tmp.EndsWith("GMT"))
+											    tmp += "GMT";
 											item.PubDate = DateTime.Parse (tmp);
 											}
 											catch 
