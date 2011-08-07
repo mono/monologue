@@ -3,7 +3,7 @@
 	<Blogger Name="César López Natarén" RssUrl="http://cesarnataren.blogspot.com/feeds/posts/default?alt=rss" IrcNick="cesar" Head="cesar.png"/>
 	<Blogger Name="Miguel de Icaza" RssUrl="http://tirania.org/blog/miguel.rss2" IrcNick="miguel"/>
 	<Blogger Name="Jackson Harper" RssUrl="http://jacksonh.tumblr.com/rss" IrcNick="jackson" />
-	<Blogger Name="Sebastien Pouliot" RssUrl="http://pages.infinit.net/ctech/poupou.rss" IrcNick="spouliot" Head="Spouliot.png"/>
+	<Blogger Name="Sebastien Pouliot" RssUrl="http://spouliot.wordpress.com/category/mono/feed/" IrcNick="spouliot" Head="Spouliot.png"/>
 	<Blogger Name="Mike Kestner" RssUrl="http://mkestner.blogspot.com/feeds/posts/default?alt=rss" IrcNick="mkestner"/>
 	<Blogger Name="Lluis Sánchez " RssUrl="http://foodformonkeys.blogspot.com/feeds/posts/default?alt=rss" IrcNick="lluis" Head="Lluis.png"/>
 	<Blogger Name="Duncan Mak" RssUrl="http://www.a-chinaman.com/category/monologue/feed" IrcNick="duncan" Head="Duncan.png"/>
