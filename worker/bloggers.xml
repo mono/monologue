@@ -10,18 +10,26 @@
 	<Blogger Name="Martin Baulig" RssUrl="http://baulig.blogspot.com/feeds/posts/default?alt=rss" IrcNick="baulig" Head="Martin.png" />
 	<Blogger Name="Martin Willemoes Hansen" RssUrl="http://mwhansen.blogspot.com/rss.xml" Head="Mwh.png" />
 	<Blogger Name="Todd Berman" RssUrl="http://off.net/~tberman/diary/index.xml" IrcNick="tberman" Head="Tberman.png" />
+	<!-- 404
 	<Blogger Name="Mono" RssUrl="http://www.mono-project.com/news/index.rss2" Head="mono.png" />
+	-->
 	<Blogger Name="Gonzalo Paniagua Javier" RssUrl="http://gonzalo.name/blog/gonzalo.rss2" IrcNick="gonzalo" Head="gonzalo.png"/>
 	<Blogger Name="Daniel Morgan" RssUrl="http://www.mfconsulting.com/danmorg/blog/monologue-index.xml" IrcNick="danmorg"/>
 	<Blogger Name="Atsushi Enomoto" RssUrl="http://veritas-vos-liberabit.com/monogatari/index.rss" IrcNick="eno" Head="atsushieno.jpg" />
 	<Blogger Name="Paolo Molaro" RssUrl="http://www.advogato.org/person/lupus/rss.xml"/>
+	<!-- Not found
 	<Blogger Name="Larry Ewing" RssUrl="http://primates.ximian.com/~lewing/blog/index.rdf" IrcNick="lewing" Head="lewing.png"/>
+	-->
+	<!-- 410
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
+	-->
 	<Blogger Name="Unity Technologies" RssUrl="http://blogs.unity3d.com/feed/"/>
 	<!-- by popular demand 
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	-->
+	<!-- 404
 	<Blogger Name="Massimiliano Mantione" RssUrl="http://primates.ximian.com/~massi/blog/index.rdf" Head="massi-hackergotchi.png" IrcNick="massi" />
+	-->
 	<Blogger Name="Nemerle" RssUrl="http://nemerle.org/blog/nemerle.rss2" Head="nemerle.png" />
 	<Blogger Name="Paco Martinez" RssUrl="http://www.mfconsulting.com/blog/index.rdf" IrcNick="paco" Head="paco.png"/>        
 	<Blogger Name="Jambunathan K" RssUrl="http://feeds.feedburner.com/DiaryOfAVBDotNetCompilerDeveloper"/>        
@@ -33,15 +41,17 @@
 	<Blogger Name="Joseph Hill" RssUrl="http://www.beyondfocus.com/feed/" IrcNick="jhill" Head="jhill.png"/>
 	<Blogger Name="Jb Evain" RssUrl="http://feeds.feedburner.com/jbevain" IrcNick="jb" Head="jbevain.png" />
 	<!-- Blogger Name="Zac Bowling" RssUrl="http://zacbowling.com/blog/tag/mono-net/feed/rss2" IrcNick="zbowling" /i-->
-	<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />
+	<!--<Blogger Name="Mark Crichton" RssUrl="http://www.fishysnax.com/category/code/feed/rss2" IrcNick="mmarker" Head="crichtma.png" />-->
 	<!-- no longer maintained and Novell no longer owns this domain
 	<Blogger Name="MWF Weblog" RssUrl="http://svn.myrealbox.com/blog/rss.xml"/>
 	 -->
 	<Blogger Name="Christian Hergert" RssUrl="http://www.audidude.com/xml/mono/feed.xml" IrcNick="vwdude" Head="vwdude.png" />
+	<!-- No route to host
   <Blogger Name  ="Monocast"
            RssUrl="http://mono-cast.com/?feed=rss2&amp;category_name=mono"
            Head  ="monocast.png"
            />
+	  -->
   <Blogger Name   ="C.J. Adams-Collier"
            RssUrl ="http://wp.colliertech.org/cj/?feed=rss2&amp;cat=7"
            IrcNick="cj"
@@ -52,7 +62,9 @@
            IrcNick="raf"
 	   />
 	<Blogger Name="Jeroen Frijters" RssUrl="http://weblog.ikvm.net/SyndicationService.asmx/GetRss" IrcNick="jeroen"/>
+	<!-- 404
 	<Blogger Name="Eric Butler" RssUrl="http://eric.extremeboredom.net/rss.xml" IrcNick="FireRabbit"/>
+	-->
 	<Blogger Name="Joe Audette" RssUrl="http://www.joeaudette.com/aggregator283rss.aspx"/>
 	<Blogger Name="Dan Winship" RssUrl="http://mysterion.org/~danw/blog/index.rss" IrcNick="danw" Head="danw.png" />
 	<Blogger Name="Carlos Alberto Cortez" RssUrl="http://feeds.feedburner.com/carlos"/>
@@ -67,12 +79,16 @@
 	<!--Blogger Name="Raja R Harinath" RssUrl="http://feeds.feedburner.com/hurrynot" Head="Harinath.jpg"/-->
 	<Blogger Name="Mirco Bauer" RssUrl="http://www.meebey.net/tags/planet-mono/index.rss" IrcNick="meebey" Head="meebey.png"/>
 	<Blogger Name="Michael Hutchinson" RssUrl="http://mjhutchinson.com/mono-feed" IrcNick="mhutch" Head="mhutch.png"/>
+	<!-- 404
 	<Blogger Name="Jeff Tickle" RssUrl="http://blog.jefftickle.com/category/pub/rss2" IrcNick="jtickle" Head="jtickle.png" />
+	-->
 	<Blogger Name="Marek Sieradzki" RssUrl="http://msieradzki.wordpress.com/feed/" IrcNick="msieradzki" />
 	<Blogger Name="Ben Maurer" RssUrl="http://feeds.feedburner.com/bmaurer" IrcNick="BenM" Head="benm-face.png"/>
 	<Blogger Name="Ritvik Mayank" RssUrl="http://feeds.feedburner.com/mritvik" />
 	<Blogger Name="Boris Kirzner" RssUrl="http://boriskirzner.wordpress.com/feed" IrcNick="borisk" Head="borisk.png"/>
+	<!-- 404
 	<Blogger Name="James Wilcox" RssUrl="http://www.snorp.net/log/?feed=rss2" IrcNick="snorp" Head="snorp.png" />
+	-->
 	<Blogger Name="Brad Taylor" RssUrl="http://brad.getcoded.net/blog/rss.php" IrcNick="brad" Head="brad.png" /> 
 	<Blogger Name="Rodrigo B de Oliveira" RssUrl="http://feeds.feedburner.com/Bamboozled" IrcNick="bamboo"/>
 	<!-- Removed: returning 404 for quite a while now.
@@ -83,7 +99,9 @@
 	<Blogger Name="Jonathan Chambers" RssUrl="http://jonathanchambers.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="jchambers"/>
 	<Blogger Name="Jonathan Pryor" RssUrl="http://www.jprl.com/Blog/jon.rss2" IrcNick="jonp" Head="jonpryor.png"/>
 	<Blogger Name="Jordi Mas" RssUrl="http://www.softcatala.org/~jmas/weblog/rss.xml" IrcNick="Jordi" Head="Jordi.png"/>	
+	<!-- 500
 	<Blogger Name="Idan Gazit" RssUrl="http://pixane.net/blog/?feed=rss2&amp;cat=2" IrcNick="idan" Head="Idan.png"/>
+	-->
 	<Blogger Name="Ankit Jain" RssUrl="http://ankitjain.org/blog/?feed=rss2&amp;cat=2" IrcNick="ankit"/>
 	<Blogger Name="Wade Berrier" RssUrl="http://wadeberrier.blogspot.com/feeds/posts/default/-/Mono?alt=rss" IrcNick="wberrier"/>
 	<Blogger Name="Maurits Rijk" RssUrl="http://maurits.wordpress.com/feed/" />
@@ -94,7 +112,9 @@
 	<Blogger Name="Boyd Timothy" RssUrl="http://blog.timothy.ws/rss.xml" IrcNick="boyd" Head="boyd.png" />
 	<Blogger Name="Patrick van Staveren" RssUrl="http://trick.vanstaveren.us/wp/category/banshee/feed" IrcNick="trick" />
 	<Blogger Name="Andreia Gaita" RssUrl="http://blog.worldofcoding.com/feeds/posts/default?alt=rss" IrcNick="shana" />
+	<!-- 410
 	<Blogger Name="Antti Juhani Oja" RssUrl="http://sandriman.wordpress.com/feed/" IrcNick="Sandriman"/>
+	-->
 	<Blogger Name="Nagappan Alagappan" RssUrl="http://nagappanal.blogspot.com/rss.xml" IrcNick="nags"/>
 	<Blogger Name="Everaldo Canuto" RssUrl="http://ecanuto.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="everaldo"/>
 	<Blogger Name="Jonathan Pobst" RssUrl="http://jpobst.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jpobst"/>
@@ -105,8 +125,10 @@
 	<Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jeff"/>
 	<Blogger Name="Códice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Jamie Cansdale" RssUrl="http://weblogs.asp.net/nunitaddin/rss.aspx?Tags=Mono&amp;AndTags=1"/>
+	<!-- 401
 	<Blogger Name="Albert Gnandt"
 	RssUrl="http://gnandt.blogspot.com/feeds/posts/default/-/Monologue?alt=rss"/>
+	-->
         <Blogger Name="Scott Peterson" RssUrl="http://www.themonkeysgrinder.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Ivan Zlatev" RssUrl="http://i-nz.net/category/coding/feed/" IrcNick="ivanz"/>
 	<Blogger Name="Brian Nickel" RssUrl="http://kerrick.wordpress.com/tag/summer-of-code-2007/feed/"/>
@@ -116,7 +138,9 @@
 	<Blogger Name="Ben Motmans" RssUrl="http://bmotmans.blogspot.com/feeds/posts/default?alt=rss" IrcNick="bmotmans"/>
 	<Blogger Name="Nestor Salceda"
 	RssUrl="http://nestor.babuine.net/?cat=8&amp;feed=rss2"/>
+	<!-- Not found
 	<Blogger Name="Marcos Cobena" RssUrl="http://straybirds130.blogspot.com/feeds/posts/default/-/Mono?alt=rss" IrcNick="m4rc05" /> 
+	-->
 	<Blogger Name="Matej Spiller" RssUrl="http://matejsp.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Marcos Marín" RssUrl="http://mdmagsoc.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Kenny Parnell" RssUrl="http://feeds.feedburner.com/soc2007" IrcNick="kennyp"/>
@@ -131,7 +155,9 @@
 	<Blogger Name="Mark Probst" RssUrl="http://schani.wordpress.com/feed/" IrcNick="schani"/>
 	<Blogger Name="Will Johansson" RssUrl="http://mwfosx.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Francisco Figueiredo" RssUrl="http://fxjr.blogspot.com/feeds/posts/default?alt=rss"/>
+	<!-- Not found
 	<Blogger Name="R. Tyler Ballance" RssUrl="http://www.unethicalblogger.com/blog_categories/mono/feed" IrcNick="rtyler"/>
+	-->
 	<Blogger Name="Olivier Dufour" RssUrl="http://dufoli.wordpress.com/feed/"/>
 	<Blogger Name="Andrew Jorgensen" RssUrl="http://andrew.jorgensenfamily.us/category/mono/feed" IrcNick="ajorg" Head="ajorg.png"/>
 	<Blogger Name="Veerapuram Varadhan" RssUrl="http://monoadonet.blogspot.com/rss.xml" IrcNick="varadhan"/>
@@ -140,7 +166,9 @@
 	<!-- Removed: Rarely related to Mono.  Can re-enable if filtered by a mono tag	
 	<Blogger Name="Mindtouch" RssUrl="http://feeds.feedburner.com/Mindtouch"/>
 	-->
+	<!-- Not found
 	<Blogger Name="Rusty Howell" RssUrl="http://rustyhowell-mono.blogspot.com/feeds/posts/default?alt=rss" IrcNick="rusty"/>
+	-->
 	<Blogger Name="Calvin Gaisford" RssUrl="http://calvinrg.blogspot.com/feeds/posts/default/-/mono?alt=rss" IrcNick="calvin" Head="calvin.png"/>
 	<Blogger Name="Sandy Armstrong" RssUrl="http://automorphic.blogspot.com/feeds/posts/default?alt=rss" IrcNick="sandy" Head="sandy.png"/>
 	<Blogger Name="Marc Christensen" RssUrl="http://blog.mecworks.com/articles/category/tech/feed" IrcNick="mecworks"/>
@@ -150,10 +178,14 @@
            Head    = "http://www.mono-project.com/files/5/54/Knocte.png"
            />
 	<Blogger Name="Noam Lampert" RssUrl="http://noamlampert.blogspot.com/feeds/posts/default?alt=rss"/>
+	<!-- 404
 	<Blogger Name="David Siegel" RssUrl="http://davidsiegel.org/tag/mono/feed"/>
+	-->
 	<Blogger Name="Gendarme" RssUrl="https://www.ohloh.net/p/gendarme/messages.rss" IrcNick="#gendarme" Head="gendarme.png"/>
 	<Blogger Name="Jérémie Laval" RssUrl="http://feeds.feedburner.com/YetAnotherACompleter" IrcNick="Garuma" Head="jeremielaval.png" />
+	<!-- 404
 	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/taxonomy/term/9/0/feed" IrcNick="eropple" Head="edropple.png" />
+	-->
 	<!--Blogger Name="Igor Guerrero Fonseca"  RssUrl="http://igordevlog.blogspot.com/" IrcNick="igorge" /-->
 	<Blogger Name="Mario Carrion" RssUrl="http://blog.carrion.ws/tag/mono/feed" IrcNick="mario" Head="http://www.mariocarrion.com/images/hackergotchi-mario.png" />
 	<Blogger Name="Michael Barker" RssUrl="http://mikes-tech.blogspot.com/feeds/posts/default?alt=rss"/>
