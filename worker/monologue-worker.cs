@@ -29,6 +29,7 @@ class MonologueWorker {
 	
 	static int Main (string [] args)
 	{
+		ServicePointManager.ServerCertificateValidationCallback = (a, b, c, d) => { return true; };
 		if (args.Length < 3 || args.Length > 8) {
 			Console.WriteLine ("monologue-worker.exe BLOGGERS_FILE HTML_OUTPUT RSS_OUTPUT " +
 						"[--loop [ms to sleep]] [--cachedir dirname] [--verbose]");
