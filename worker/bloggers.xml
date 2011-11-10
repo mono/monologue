@@ -214,4 +214,5 @@
 	<Blogger Name="Touch4Apps" RssUrl="http://blog.touch4apps.com/home/feed?type=rss"/>
 	<Blogger Name="Alex Rønne Petersen" RssUrl="http://xtzgzorex.wordpress.com/category/mono/feed/" IrcNick="Zor"/>
 	<Blogger Name="Xamarin" RssUrl="http://blog.xamarin.com/feed/" IrcNick="xamarin_com"/>
+	<Blogger Name="Eric Maupin" RssUrl="http://ermau.com/feed/" IrcNick="ermau"/>
 </BloggerCollection>
