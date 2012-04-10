@@ -21,7 +21,7 @@
 		
 	<div id="blogs">
 
-	<p>Disclaimer: this is an automatic aggregator which pulls feeds and comments from many blogs of contributors that have contributed to the Mono project.    The contents of these blog entries do not necessarily reflect Novell's position.
+	<p>Disclaimer: this is an automatic aggregator which pulls feeds and comments from many blogs of contributors that have contributed to the Mono project.    The contents of these blog entries do not necessarily reflect Xamarin's position.
 	
 	<!-- @@BLOG_DAY@@ -->
 	<h2 class="date">@@DAY_DATE@@</h2>
@@ -86,7 +86,7 @@
 		<br/>
 		Blog entries aggregated on this page are owned by, and represent the opinion of the author.
 		<br/>
-		Optimised for standards. Hosted by <a href="http://www.novell.com/">Novell</a>.</p>	
+		Optimised for standards. Hosted by <a href="http://www.xamarin.com/">Xamarin</a>.</p>	
 	</div>	
 
 	</body>
