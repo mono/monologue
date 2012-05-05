@@ -222,4 +222,6 @@
 	<Blogger Name="Xamarin" RssUrl="http://blog.xamarin.com/feed/" IrcNick="xamarin_com"/>
 	<Blogger Name="Eric Maupin" RssUrl="http://ermau.com/feed/" IrcNick="ermau"/>
 	<Blogger Name='Jeremie Laval' RssUrl="http://blog.neteril.org/feed/" IrcNick="jeremie"/>
+	<Blogger Name="Piotr Dowgiallo" RssUrl="http://pdowgiallo.pl/gsoc/feed/" IrcNick="sparek" />
+	<Blogger Name="Petar Dodev" RssUrl="http://petardodev.blogspot.com/feeds/posts/default/-/GSoC2012" IrcNick="dodev" />
 </BloggerCollection>
