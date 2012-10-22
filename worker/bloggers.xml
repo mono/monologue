@@ -225,4 +225,5 @@
 	<Blogger Name="Piotr Dowgiallo" RssUrl="http://pdowgiallo.pl/gsoc/feed/" IrcNick="sparek" />
 	<Blogger Name="Petar Dodev" RssUrl="http://petardodev.blogspot.com/feeds/posts/default/-/GSoC2012" IrcNick="dodev" />
 	<Blogger Name="Simon Lindgren" RssUrl="http://feeds.feedburner.com/simonl" IrcNick="simonl" />
+	<Blogger Name="Mike Bluestein" RssUrl="http://mikebluestein.wordpress.com/feed/" IrcNick="mikeb"/>
 </BloggerCollection>
