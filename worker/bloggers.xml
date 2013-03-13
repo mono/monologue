@@ -226,4 +226,5 @@
 	<Blogger Name="Petar Dodev" RssUrl="http://petardodev.blogspot.com/feeds/posts/default/-/GSoC2012" IrcNick="dodev" />
 	<Blogger Name="Simon Lindgren" RssUrl="http://feeds.feedburner.com/simonl" IrcNick="simonl" />
 	<Blogger Name="Mike Bluestein" RssUrl="http://mikebluestein.wordpress.com/feed/" IrcNick="mikeb"/>
+	<Blogger Name="Daniel Hughes" RssUrl="http://trampster.blogspot.co.nz/feeds/posts/default?alt=rss" IrcNick="trampster" />
 </BloggerCollection>
