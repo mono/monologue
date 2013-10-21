@@ -26,6 +26,7 @@
 	<Blogger Name="John Luke" RssUrl="http://spaces.msn.com/members/jluke19/feed.rss" IrcNick="jluke"/>
 	-->
 	<Blogger Name="Unity Technologies" RssUrl="http://blogs.unity3d.com/feed/"/>
+	<Blogger Name="MonoGame" RssUrl="http://monogame.net/rss.xml" Head="https://pbs.twimg.com/profile_images/1822586970/MonogameLogo512x512_bigger.png" />
 	<!-- by popular demand 
 	<Blogger Name="Edd Dumbill" RssUrl="http://usefulinc.com/edd/blog/rss91" Head="edd.png" IrcNick="edd" />
 	-->
