@@ -189,7 +189,7 @@
 	<Blogger Name="David Siegel" RssUrl="http://davidsiegel.org/tag/mono/feed"/>
 	-->
 	<Blogger Name="Gendarme" RssUrl="https://www.ohloh.net/p/gendarme/messages.rss" IrcNick="#gendarme" Head="gendarme.png"/>
-	<Blogger Name="Jérémie Laval" RssUrl="http://feeds.feedburner.com/YetAnotherACompleter" IrcNick="Garuma" Head="jeremielaval.png" />
+	<Blogger Name="Jérémie Laval" RssUrl="https://blog.neteril.org/feed.xml" IrcNick="Garuma" Head="jeremielaval.png" />
 	<!-- 404
 	<Blogger Name="Ed Ropple" RssUrl="http://edropple.com/taxonomy/term/9/0/feed" IrcNick="eropple" Head="edropple.png" />
 	-->
