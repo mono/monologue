@@ -329,6 +329,7 @@ public class BloggerCollection {
 		}
 		set {
 			bloggers = value;
+            bloggersByUrl = null;
 			bloggers.Sort (new BloggerComparer ());
 			idToBlogger = new Hashtable ();
 			foreach (Blogger b in bloggers)
