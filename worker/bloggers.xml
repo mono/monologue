@@ -128,7 +128,7 @@
 	<Blogger Name="Rolf Bjarne Kvinge" RssUrl="http://rolfkvinge.blogspot.com/feeds/posts/default?alt=rss" IrcNick="rolf"/>
 	<Blogger Name="Marek Safar" RssUrl="http://mareksafar.blogspot.com/feeds/posts/default?alt=rss" IrcNick="Marek"/>
 	<Blogger Name="Wbem Tools" RssUrl="http://wbemtools.blogspot.com/feeds/posts/default?alt=rss" Head="WbemTools.png"/>
-	<Blogger Name="Marek Habersack" RssUrl="http://twistedcode.net/blog/syndication.axd?format=rss" IrcNick="grendel" />
+	<Blogger Name="Marek Habersack" RssUrl="http://twistedcode.net/index.xml" IrcNick="grendel" />
 	<Blogger Name="Jeffrey Stedfast" RssUrl="http://jeffreystedfast.blogspot.com/feeds/posts/default?alt=rss" IrcNick="jeff"/>
 	<Blogger Name="Códice Software" RssUrl="http://codicesoftware.blogspot.com/feeds/posts/default?alt=rss"/>
 	<Blogger Name="Jamie Cansdale" RssUrl="http://weblogs.asp.net/nunitaddin/rss.aspx?Tags=Mono&amp;AndTags=1"/>
