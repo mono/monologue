@@ -219,7 +219,11 @@
 	<Blogger Name="Chris Bacon" RssUrl="http://monocodecontracts.blogspot.com/feeds/posts/default?alt=rss" IrcNick="chrisb" />
 	<Blogger Name="miguel de icaza" RssUrl="http://feeds.feedburner.com/MiguelsOsxAndIosBlog" IrcNick="miguelx"/>
 	<Blogger Name="Tomas Petricek" RssUrl="http://tomasp.net/blog/rss.aspx"/>
-	<Blogger Name="Kenneth Pouncey" RssUrl="http://cocoa-mono.org/?feed=rss2" IrcNick="kjpou1"/>
+	<!-- 
+		No longer control the domain and the feed has started back up with non-sense posts that are not related to
+		this person
+		<Blogger Name="Kenneth Pouncey" RssUrl="http://cocoa-mono.org/?feed=rss2" IrcNick="kjpou1"/> 
+	-->
 	<Blogger Name="Touch4Apps" RssUrl="http://blog.touch4apps.com/home/feed?type=rss"/>
 	<Blogger Name="Alex Rønne Petersen" RssUrl="http://blog.alexrp.com/categories/mono/atom.xml" IrcNick="alexrp"/>
 	<Blogger Name="Xamarin" RssUrl="http://blog.xamarin.com/feed/" IrcNick="xamarin_com"/>
