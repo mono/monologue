@@ -1,4 +1,4 @@
-MCS=gmcs -debug
+MCS=mcs -debug
 MONO=mono
 
 monologue-worker.exe : monologue-worker.cs template4dotnet.cs RSS.NET.dll
