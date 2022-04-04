@@ -162,7 +162,7 @@ class MonologueWorker {
 		
 		ArrayList stories = new ArrayList ();
 		
-		DateTime minPubDate = DateTime.Now.AddDays (-14);
+		DateTime minPubDate = DateTime.Now.AddDays (-120);
 		foreach (Blogger b in bloggers.BloggersByUrl) {
 			if (b.Channel == null) continue;
 			foreach (RssItem i in b.Channel.Items) {
